@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Comments - Initiator Radio</title>
+<link rel="icon" type="image/x-icon" href="../logo big.png">
+<script src="pubnub.min.js"></script>
+<link rel='stylesheet' href='style.css'/>
+<link href='http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head> 
+<body>
+<center>
+	<!-- <h3><i class="fa fa-circle text-danger Blink" style="color:red"></i> LIVE Comments</h3> -->
+	<input class="inputChat" maxlength="10" id="input2" type="text" placeholder="Your Name" style="height:10px; border-radius: 9px; font-family:open sans; width:95%; margin-bottom: 2px; margin-left: -2px;">
+	<textarea class="inputChat" maxlength="70" id="input" type="text" placeholder="Comment" style="-user-select:none; border-radius: 9px; resize:none; font-family:open sans; width:95%; margin-left: -3px; height: 60px;"></textarea>
+	</br>
+	<button id="button"></button>
+	</br></br>
+<script type="text/javascript">
+//make buttons icon or text
+    var buttons = document.getElementById("button");
+    buttons.innerHTML = '<i class="fa fa-paper-plane-o" aria-hidden="true"></i> Send';
+</script>
+
+<script type="text/javascript">
+//auto scroll to bottom to show the latest message when submited or recieved 
+function scroll(){
+    document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
+}
+</script></center>
+
+<script type="text/javascript">
+//clear the textarea on submit
+function cleartextarea(){
+    document.getElementById('input').value = "";
+}
+</script>
+
+
+<script type="text/javascript">
+//function to trigger when enter is pressed inside the textarea to submit message
+document.getElementById("input")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        document.getElementById("button").click();
+    }
+});
+</script>
+
+
+</center>
+
+	<div id="chatbox" style="overflow-x: hidden; overflow-y: auto; height: 280px;"></div>
+
+	<script src='script3.js'></script>
+</body>
+</html>
