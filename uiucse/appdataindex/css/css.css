@@ -204,11 +204,12 @@ h2.apptitle{
 	padding-right: 19px !important;
 	float: right;
 }
-.sec{
+.sec {
 	padding-left: 18px;
+	padding-right: 18px;
 }
 .popapphold{
-    width: 100%;
+    width: 90%;
 	
 	/*Use This Code To Override the forced CSS Backgrpund color " background-color: rgba(255, 255, 255, 0.6) !important; "*/
 	background-color: rgba(255, 255, 255, 0.6); 
