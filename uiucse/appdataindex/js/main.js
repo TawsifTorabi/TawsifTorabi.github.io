@@ -3,6 +3,8 @@
 		'appdataindex/json/courseRecordings.json'
 	];
 	
+	
+	//Set Some Page Elements
 	window.addEventListener('load', (event) => {
 			var xmlhttpRoutine = new XMLHttpRequest();
 			var url = jsonFiles[0];
@@ -42,12 +44,12 @@
 					
 					var out = "";
 					var i, j;
+					var matchCounter = 0;
 
 					//console.log('Courses  Count - > ' + CourseArr.length);
 
 					out += 	"<table width='100%' border id='searchresultTable'>" +
 							"<tr>"+
-							"<th class='rtTh'>No.</th>"+
 							"<th class='rtTh'>Course Title</th>"+
 							"<th class='rtTh'>Teacher</th>"+
 							"<th class='rtTh'>Trimester</th>"+
@@ -78,6 +80,9 @@
 
 							if(CourseCode.isMatch(querry) == true || arr[i].CourseTitle.isMatch(querry) == true || arr[i].Faculty.isMatch(querry) == true){
 								
+								matchCounter++;
+								console.log(matchCounter);
+								
 								var linkText;
 								if(arr[i].Link.split('/')[2] == 'terabox.com'){
 									var linkText = 'Terabox';
@@ -89,7 +94,6 @@
 								console.log("JSON Course Code -> "+ arr[i].CourseTitle);
 
 								out += 	"<tr>"+
-										"<td align='center'>" + i + " </td>"+
 										"<td align='center'>("+ CourseCode +") " + arr[i].CourseTitle + " </td>"+
 										"<td align='center'>" + arr[i].Faculty + " </td>"+
 										"<td align='center'>" + Trimester + " </td>"+
@@ -102,8 +106,11 @@
 					
 					out += "</table>";
 					
-					document.getElementById('searchresult').innerHTML = out;
-							
+					if(matchCounter > 0){
+						document.getElementById('searchresult').innerHTML = out;
+					}else{
+						document.getElementById('searchresult').innerHTML = '<h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Kicchu Nai Bhai! Try Different Keywords Please Bhai!</h3>';						
+					}	
 							
 					
 					

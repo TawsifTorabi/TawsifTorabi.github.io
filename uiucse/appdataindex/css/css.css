@@ -1,3 +1,4 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Raleway:wght@100&display=swap');*/
 html {
   background: url(https://img.freepik.com/free-vector/white-background-with-triangle-patterns_1017-18410.jpg?w=2000) fixed;
 }
@@ -8,6 +9,7 @@ body{
     font: normal normal 15px Raleway;
 	
 }
+a{color: unset;}
 /*
  <!--By 4urThoH1N-->
  kalboishakhi HTML SOft Website templete By Tawsif Toarbi and GR+ bangladesh
@@ -106,13 +108,14 @@ ul.topnav li.icon {display: none;}
 }
 
 .phone {
-	background-color: #ececec;
-	padding: 10px 13px;
-	border-radius: 3px;
-	font-family: raleway;
-	font-weight: bold;
-	box-shadow: 0px 2px 12px #00000054;
+  background-color: #ececec;
+  padding: 10px 13px;
+  border-radius: 3px;
+  font-family: raleway;
+  font-weight: bold;
+  box-shadow: 0px 2px 12px #00000054;
 }
+
 .social{
 	font-size: 30px;
 	background-color: white;
@@ -141,7 +144,7 @@ a.gplusnav{
 	font-size: 28px;
 }
 .footer {
-    height: 400px;
+    height: auto;
     width: 100%;
     padding-bottom: 30px;
     border-top: 3px solid black;
@@ -259,10 +262,10 @@ a.download{
     text-decoration: none;
     text-align: center;
     border-radius: 5px;
-    font-size: 100% !important;
+    font-size: 76% !important;
     transition: 0.5s;
     /*! border: 1px solid black; */
-    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.98);
+	box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.45);
     font-weight: bold;
     text-shadow: 0 -1px 0 #000;
 }
