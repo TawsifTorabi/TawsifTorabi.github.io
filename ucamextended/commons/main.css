@@ -10,6 +10,9 @@
 	  text-shadow: 0px 2px 3px #00000038;
 	  margin: unset;
 	}
+	html{
+		scroll-behavior: smooth;
+	}
 	td{
 		vertical-align: top;
 	}
