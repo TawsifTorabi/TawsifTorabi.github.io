@@ -1251,6 +1251,4 @@
     }else if(U1customFunctions.PageChecker('login') == true){
         console.log('This is login Page, Daddy told me to do nothing.')
     }
-
-
 })();
