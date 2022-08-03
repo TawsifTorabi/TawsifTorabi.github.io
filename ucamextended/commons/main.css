@@ -32,6 +32,18 @@
 		padding-left: unset;
 	}
 
+	.footsoc{
+		color: #fff;
+		font-size: 34px;
+		text-decoration: none;
+		transition: 0.3s;
+	}
+	.footsoc:hover{
+		color: #fff;
+		font-size: 39px;
+		text-decoration: none;
+		transition: 0.3s;
+	}
 
 	.icon-bar {
 	  position: fixed;
