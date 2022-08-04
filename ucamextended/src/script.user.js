@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UCAM Extended
 // @namespace    http://tampermonkey.net/
-// @version      0.1.2
+// @version      0.1.3
 // @description  A Web Plugin for UIU UCAM Portal to add more functionalities.
 // @author       Tawsif Torabi
 // @match        *://ucam.uiu.ac.bd/*
@@ -25,7 +25,7 @@
         'https://facebook.com/tawsiftorabi',
         'https://github.com/TawsifTorabi/UCAMextended',
         'UCAM Extended Plugin',
-        'v0.1.1 Beta',
+        'v0.1.3 Beta',
         'Tawsif Torabi',
         'http://tawsiftorabi.github.io'
     ];
@@ -874,23 +874,6 @@
 
 
     ///////////////////////////////////////////////
-    //Fresher Welcome Message Starts//////////
-    ///////////////////////////////////////////////
-
-    U1customFunctions.fresherWelcome = function(){
-        if(U1customFunctions.GetTrimesterInfo('CurrentBatch') == localStorage.getItem('studentBatchNumber')){
-            alert('Hello Freshers!');
-        }
-    };
-    ///////////////////////////////////////////////
-    //Fresher Welcome Message Ends//////////
-    ///////////////////////////////////////////////
-
-
-
-
-
-    ///////////////////////////////////////////////
     //Array Matching Function Starts//////////
     ///////////////////////////////////////////////
 
@@ -1251,4 +1234,6 @@
     }else if(U1customFunctions.PageChecker('login') == true){
         console.log('This is login Page, Daddy told me to do nothing.')
     }
+
+
 })();
