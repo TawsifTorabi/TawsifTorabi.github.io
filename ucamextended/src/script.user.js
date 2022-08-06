@@ -6,7 +6,7 @@
 // @author       Tawsif Torabi
 // @match        *://ucam.uiu.ac.bd/*
 // @icon         https://www.google.com/s2/favicons?domain=ac.bd
-// @grant        unsafeWindow
+// @grant        none
 // ==/UserScript==
 
 (function() {
