@@ -1,3 +1,7 @@
+//Version 0.1.4 - 12 Aug, 2022
+- Added A Blink Text Alarm on The Exam Routine to tell user which exam is Today.
+- Passed Exam row will be faded.
+
 //Version 0.1.3 - 5 Aug, 2022
 - Fixed a bug, Showing a message to fresher was throwing an alert function.
 - Minimized some codes.
