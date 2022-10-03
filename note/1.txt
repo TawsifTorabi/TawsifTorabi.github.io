@@ -1,0 +1,5 @@
+https://github.com/kahagon/phpmake_serialport
+https://www.researchgate.net/post/How-can-I-access-serial-port-using-PHP
+open com port with php
+https://www.instructables.com/Control-an-Arduino-with-PHP/
+https://www.intorobotics.com/controlling-arduino-board-php-web-based-script-tutorials/
