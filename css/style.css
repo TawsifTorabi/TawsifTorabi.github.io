@@ -11,7 +11,10 @@
 	html{
 		scroll-behavior: smooth;
 	}
-	
+	.parentdetail{
+		font-family: Trebuchet MS;
+		font-size: 14px;
+	}
 	.filterEmo{
 		/* filter: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><filter id='f'><feColorMatrix color-interpolation-filters='sRGB' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 1 0 0'/></filter></svg>#f"); */
 	}
@@ -25,15 +28,17 @@
 		font-size: 31px;
 		border: none;
 		outline: none;
-		background-color: #8888888a;
-		color: #890058;
+		background-color: #343434bd;
+		color: #ffffff;
 		cursor: pointer;
 		padding: 8px;
 		border-radius: 50%;
+		transition: 0.2s;
 	}
 
 	#BTT:hover {
-		background-color: #55555585;
+		/* background-color: #fff; */
+		bottom: 25px;
 	}
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
