@@ -19,6 +19,25 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+<!-- loader script starts -->
+<script>
+function loaded() {
+  setTimeout(showPage, 3000);
+  setTimeout(function(){document.getElementById("loaderCont").style.display = "none"}, 4000);
+}
+function showPage() {
+  document.getElementById("loaderCont").classList.add("fadeout");
+  //document.getElementById("loaderCont").style.display = "none";
+}
+loaded();
+</script>
+<div id="loaderCont">
+	<div id="loader"></div>
+</div>
+<!-- loader script end -->
+
+
 <!-- Facebook Plugin -->
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="5EzOheSE"></script>
@@ -276,7 +295,9 @@
 			<div class='clearfix'></div>
 			<span class="thishead">WANT TO SEE EXCITING VIDEOS? </br> HERE I AM</span>
 			<br>
-			<a style='text-decoration: none;' href='https://youtube.com/amazingvangari' target='_blank'><span class="namehead">MR. VANGARI</span></a>
+			<a style='text-decoration: none;' href='https://youtube.com/amazingvangari' target='_blank'>				
+				<span class="namehead" style="color: #e62117;"><i class="fa fa-youtube-play" aria-hidden="true"></i> MR. VANGARI</span>
+			</a>
 			<br>
 			<p class="parentdetail">
 				I am a content creator, I know I am too lazy to create someting but I do love to make videos about the things that</br>
@@ -331,7 +352,7 @@
 </br>
 <hr>
 <div class="container-fluid bg-3 text-center" style="margin-left: 50px; margin-right: 20px;">    
-  <h2>My Projects</h2>
+  <h2><span class="namehead">My Projects</span></h2>
   <a href="projects.html">See More Projects</a>
   <br>
   <br>
@@ -346,8 +367,8 @@
 		  <span class="cat html">HTML</span>
 		  <span class="cat css">CSS</span>
 	  </div>
-	  <a href="realtimeHTML" class="button">Demo</a>
-	  <a href="realtimeHTML" class="button">Source Code</a>
+	  <a href="https://tawsiftorabi.github.io/realtimeHTML" class="button"><i class="fa fa-external-link-square" aria-hidden="true"></i> Demo</a>
+	  <a href="https://github.com/TawsifTorabi/realtimeHTML" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
     </div>
 
     <div class="col-sm-3 portfolio-elements">
@@ -357,8 +378,19 @@
 	  <div class="used">
 		  <span class="cat js">Javascript</span>
 	  </div>
-	  <a href="ucamextended" class="button">Demo</a>
-	  <a href="ucamextended" class="button">Source Code</a>
+	  <a href="https://tawsiftorabi.github.io/ucamextended" class="button"><i class="fa fa-external-link-square" aria-hidden="true"></i> Demo</a>
+	  <a href="https://github.com/TawsifTorabi/ucamextended" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
+    </div>
+
+    <div class="col-sm-3 portfolio-elements">
+      <h3>AurnaLightbox</h3>
+      <p>A Lightbox for Websites to showcase Iframes and Images</p>
+      <span class="image-portfolio"><img src="images/AurnaLightbox.png" class="img-responsive" style="width:100%" alt="Image"></br></span>
+	  <div class="used">
+		  <span class="cat js">Javascript</span>
+	  </div>
+	  <a href="https://tawsiftorabi.github.io/AurnaLightbox" class="button"><i class="fa fa-external-link-square" aria-hidden="true"></i> Demo</a>
+	  <a href="https://github.com/TawsifTorabi/AurnaLightbox" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
     </div>
 
 	<div class="col-sm-3 portfolio-elements">
@@ -370,8 +402,8 @@
 		  <span class="cat html">HTML</span>
 		  <span class="cat css">CSS</span>
 	  </div>
-	  <a href="UIUcse" class="button">Demo</a>
-	  <a href="UIUcse" class="button">Source Code</a>
+	  <a href="https://tawsiftorabi.github.io/UIUcse" class="button"><i class="fa fa-external-link-square" aria-hidden="true"></i> Demo</a>
+	  <a href="https://github.com/TawsifTorabi/UIUcse" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
     </div>	
 	
 	<div class="col-sm-3 portfolio-elements">
@@ -383,16 +415,10 @@
 		  <span class="cat html">HTML</span>
 		  <span class="cat css">CSS</span>
 	  </div>	  
-	  <a href="ResponsiveTester/" class="button">Demo</a>
-	  <a href="ResponsiveTester/" class="button">Source Code</a>
+	  <a href="https://tawsiftorabi.github.io/ResponsiveTester/" class="button"><i class="fa fa-external-link-square" aria-hidden="true"></i> Demo</a>
+	  <a href="https://github.com/TawsifTorabi/ResponsiveTester" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
     </div>
 	
-  </div>
- 
- <hr>
-  
-  <div class="row">
-  
 	<div class="col-sm-3 portfolio-elements">
       <h3>MiniForum</h3>
       <p>A Simple PHP Online Q&A Forum for Student Groups</p>
@@ -404,11 +430,39 @@
 		  <span class="cat php">PHP</span>
 		  <span class="cat sql">MySQL</span>
 	  </div>
-	  <a href="MiniForum/" class="button">Demo</a>
-	  <a href="MiniForum/" class="button">Source Code</a>
+	  <a href="https://github.com/TawsifTorabi/MiniForum/" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
+    </div>
+
+	<div class="col-sm-3 portfolio-elements">
+      <h3>DocChamber</h3>
+      <p>Appointment System for Doctor Chamber</p>
+      <span class="image-portfolio"><img src="images/DocChamber.png" class="img-responsive" style="width:100%" alt="Image"></br></span>
+	  <div class="used">
+		  <span class="cat js">Javascript</span>
+		  <span class="cat html">HTML</span>
+		  <span class="cat css">CSS</span>
+		  <span class="cat php">PHP</span>
+		  <span class="cat sql">MySQL</span>
+	  </div>
+	  <a href="https://github.com/TawsifTorabi/DocChamber_Appointment_System" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
     </div>
 	
-  
+
+	<div class="col-sm-3 portfolio-elements">
+      <h3>ContentLinkage</h3>
+      <p>Simple Content Sharing System Concept for DBMS Project</p>
+      <span class="image-portfolio"><img src="images/ContentLinkage.png" class="img-responsive" style="width:100%" alt="Image"></br></span>
+	  <div class="used">
+		  <span class="cat js">Javascript</span>
+		  <span class="cat html">HTML</span>
+		  <span class="cat css">CSS</span>
+		  <span class="cat php">PHP</span>
+		  <span class="cat sql">MySQL</span>
+	  </div>
+	  <a href="https://github.com/TawsifTorabi/ContentLinkage" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
+    </div>
+	
+
 	<div class="col-sm-3 portfolio-elements">
       <h3>WeeklySalesRegister</h3>
       <p>Weekly Magazine Sales Tracking System in PHP and SQLite</p>
@@ -420,7 +474,7 @@
 		  <span class="cat php">PHP</span>
 		  <span class="cat sqlite">SQLite</span>
 	  </div>
-	  <a href="WeeklySalesRegister/" class="button">Source Code</a>
+	  <a href="https://github.com/TawsifTorabi/WeeklySalesRegister" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
     </div>
 
 	<div class="col-sm-3 portfolio-elements">
@@ -433,17 +487,24 @@
 		  <span class="cat css">CSS</span>
 		  <span class="cat php">PHP</span>
 	  </div>
-	  <a href="Web_Photobooth/" class="button">Demo</a>
-	  <a href="Web_Photobooth/" class="button">Source Code</a>
+	  <a href="https://tawsiftorabi.github.io/Web_Photobooth" class="button"><i class="fa fa-external-link-square" aria-hidden="true"></i> Demo</a>
+	  <a href="https://github.com/TawsifTorabi/Web_Photobooth" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
+    </div>
+
+	<div class="col-sm-3 portfolio-elements">
+      <h3>RupokCMS</h3>
+      <p>A CMS for Online E-Book Magazine Publication</p>
+      <span class="image-portfolio"><img src="images/rupokCMS.png" class="img-responsive" style="width:100%" alt="Image"></br></span>
+	  <div class="used">
+		  <span class="cat js">Javascript</span>
+		  <span class="cat html">HTML</span>
+		  <span class="cat css">CSS</span>
+		  <span class="cat php">PHP</span>
+		  <span class="cat sql">MySQL</span>
+	  </div>
+	  <a href="https://github.com/TawsifTorabi/rupokCMS" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
     </div>
 	
-
-  </div>
-  
-  <hr>
-  
-  <div class="row">
-  
 	<div class="col-sm-3 portfolio-elements">
       <h3>WebsiteDownDetector</h3>
       <p>JSwing app to detect website status</p>
@@ -452,8 +513,8 @@
 		  <span class="cat java">Java</span>
 		  <span class="cat html">JavaSwing</span>
 	  </div>
-	  <a href="WebsiteDownDetectorJava/" class="button">Demo</a>
-	  <a href="WebsiteDownDetectorJava/" class="button">Source Code</a>
+	  <a href="https://github.com/TawsifTorabi/WebsiteDownDetectorJava/raw/main/WebsiteDownDetector.jar" class="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+	  <a href="https://github.com/TawsifTorabi/WebsiteDownDetectorJava/" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
     </div>
 	
 	<div class="col-sm-3 portfolio-elements">
@@ -464,13 +525,27 @@
 		  <span class="cat java">Java</span>
 		  <span class="cat html">JavaSwing</span>
 	  </div>
-	  <a href="ResistorColorBandCalculatorJava/" class="button">Demo</a>
-	  <a href="ResistorColorBandCalculatorJava/" class="button">Source Code</a>
+	  <a href="https://github.com/TawsifTorabi/ResistorColorBandCalculatorJava/raw/main/ResistorCalculator.jar" class="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+	  <a href="https://github.com/TawsifTorabi/ResistorColorBandCalculatorJava/" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
     </div>
-  </div>
-  <hr>
 
-</div>
+	<div class="col-sm-3 portfolio-elements">
+      <h3>CareMeFx</h3>
+      <p>JavaFX Healthcare Companion Application</p>
+      <span class="image-portfolio"><img src="images/CareMeFx.png" class="img-responsive" style="width:100%" alt="Image"></br></span>
+	  <div class="used">
+		  <span class="cat java">Java</span>
+		  <span class="cat css">JavaFX</span>
+	  </div>
+	  <a href="https://github.com/TawsifTorabi/CareMeFx" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
+    </div>
+
+	
+	
+  </div>
+ <hr>
+ </div>
+ 
 <a name="about"></a>
 <br>
 <br>

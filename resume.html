@@ -19,6 +19,25 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+<!-- loader script starts -->
+<script>
+function loaded() {
+  setTimeout(showPage, 3000);
+  setTimeout(function(){document.getElementById("loaderCont").style.display = "none"}, 4000);
+}
+function showPage() {
+  document.getElementById("loaderCont").classList.add("fadeout");
+  //document.getElementById("loaderCont").style.display = "none";
+}
+loaded();
+</script>
+<div id="loaderCont">
+	<div id="loader"></div>
+</div>
+<!-- loader script end -->
+
+
 <!-- Facebook Plugin -->
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="5EzOheSE"></script>
