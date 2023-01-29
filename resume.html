@@ -40,6 +40,29 @@ loaded();
 <!-- loader script end -->
 
 
+<script>
+	//Cinema CV
+	var CV1 = "https://docs.google.com/document/d/1d_VJ1107z7QlcHthnzo1nLBslmB7oQ8BqanONKAITNg/";
+	//Programmer CV
+	var CV2 = "https://docs.google.com/document/d/1bBtNO1V6_tGfmhnQscU4Mz8jHXbDIJjZD6Nn5wJbNFk/";
+
+	function loadCV(num){
+		let doc = document.getElementById('iframe1');
+		let link = document.getElementById('dlLink');
+		
+		if(num==1){
+			//VideoCV
+			doc.src = CV1 + "pub?embedded=true";
+			link.href = CV1 + "export?format=pdf";
+		}
+		if(num==2){
+			//WebCV
+			doc.src = CV2 + "pub?embedded=true";
+			link.href = CV2 + "export?format=pdf";
+		}
+	}
+</script>
+
 <!-- Facebook Plugin -->
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="5EzOheSE"></script>
@@ -151,23 +174,6 @@ loaded();
 		<button class="buttonX" onclick="loadCV(1)">Video Editor and Graphics CV</button>
 		<button class="buttonX" onclick="loadCV(2)">Web Application Developer CV</button>
 	</div>
-	<script>
-	function loadCV(num){
-		let doc = document.getElementById('iframe1');
-		let link = document.getElementById('dlLink');
-		
-		if(num==1){
-			//VideoCV
-			doc.src = "https://docs.google.com/document/d/e/2PACX-1vSqQO1pD7s6WZj-tLYKr7Tzok8T_kODcFZU5oWXP6nsvUg4ecKGmNwcA6xJOhkPyRNJY9K1lm2B7I0Q/pub?embedded=true";
-			link.href = "files/Tawsif Turabi Cinema CV.pdf";
-		}
-		if(num==2){
-			//WebCV
-			doc.src = "https://docs.google.com/document/d/e/2PACX-1vQXZ41q9eekCmfGF0S_HND218B0iSubmXSGqx62Oc3VSruhE2V-IFTZGYm_f0Gyklo7VblsmjDWFEGs/pub?embedded=true";
-			link.href = "files/Tawsif Turabi Programmer CV.pdf";
-		}
-	}
-	</script>
 
 <i onclick="topFunction()" id="BTT" title="Go to top" class="fa fa-chevron-circle-up" aria-hidden="true"></i>
 <script>
