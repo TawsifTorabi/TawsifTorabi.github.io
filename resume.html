@@ -35,33 +35,9 @@ loaded();
 </script>
 <div id="loaderCont">
 	<embed src="images/logo.svg" class="loaderSVG"/>
-	<!-- <div id="loader"></div> -->
 </div>
 <!-- loader script end -->
 
-
-<script>
-	//Cinema CV
-	var CV1 = "https://docs.google.com/document/d/1d_VJ1107z7QlcHthnzo1nLBslmB7oQ8BqanONKAITNg/";
-	//Programmer CV
-	var CV2 = "https://docs.google.com/document/d/1bBtNO1V6_tGfmhnQscU4Mz8jHXbDIJjZD6Nn5wJbNFk/";
-
-	function loadCV(num){
-		let doc = document.getElementById('iframe1');
-		let link = document.getElementById('dlLink');
-		
-		if(num==1){
-			//VideoCV
-			doc.src = CV1 + "pub?embedded=true";
-			link.href = CV1 + "export?format=pdf";
-		}
-		if(num==2){
-			//WebCV
-			doc.src = CV2 + "pub?embedded=true";
-			link.href = CV2 + "export?format=pdf";
-		}
-	}
-</script>
 
 <!-- Facebook Plugin -->
 <div id="fb-root"></div>
@@ -96,6 +72,10 @@ loaded();
 	<i class="fa fa-download" aria-hidden="true"></i> Download CV PDF
 </a>
 
+<div id="loaderCont2">
+	<embed src="images/logo.svg" class="loaderSVG"/>
+</div>
+
 <div class="text-center">
   <iframe id="iframe1"
 	style="
@@ -114,7 +94,47 @@ loaded();
 	  "
   src="https://docs.google.com/document/d/e/2PACX-1vSqQO1pD7s6WZj-tLYKr7Tzok8T_kODcFZU5oWXP6nsvUg4ecKGmNwcA6xJOhkPyRNJY9K1lm2B7I0Q/pub?embedded=true"></iframe>
 </div>
+ 
+<script>
+	//Cinema CV
+	const CV1 = "https://docs.google.com/document/d/1d_VJ1107z7QlcHthnzo1nLBslmB7oQ8BqanONKAITNg/";
+	//Programmer CV
+	const CV2 = "https://docs.google.com/document/d/1bBtNO1V6_tGfmhnQscU4Mz8jHXbDIJjZD6Nn5wJbNFk/";
+
+	const doc = document.getElementById('iframe1');
+	const link = document.getElementById('dlLink');
   
+    doc.addEventListener('load', function(){ 
+		unsetLoader();
+	});
+
+	function loadCV(num){
+		
+		if(num==1){
+			//VideoCV
+			doc.src = CV1 + "pub?embedded=true";
+			link.href = CV1 + "export?format=pdf";
+			resetLoader();
+		}
+		if(num==2){
+			//WebCV
+			doc.src = CV2 + "pub?embedded=true";
+			link.href = CV2 + "export?format=pdf";
+			resetLoader();
+		}
+	}
+	
+	function resetLoader(){
+		document.getElementById("loaderCont2").classList.remove("fadeout");
+		document.getElementById("loaderCont2").classList.add("fadein");
+		document.getElementById("loaderCont2").style.display = "inline";
+	}
+	function unsetLoader(){
+		document.getElementById("loaderCont2").classList.remove("fadein");
+		document.getElementById("loaderCont2").classList.add("fadeout");
+		setTimeout(function(){document.getElementById("loaderCont2").style.display = "none"}, 1000);
+	}
+</script> 
 
 	<style>
 		.downloadCV {
