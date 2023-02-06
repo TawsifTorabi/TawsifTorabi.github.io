@@ -19,7 +19,30 @@
 		/* filter: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><filter id='f'><feColorMatrix color-interpolation-filters='sRGB' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 1 0 0'/></filter></svg>#f"); */
 	}
 
+	.detail-project{
+		height: 74px;
+		overflow-y: scroll;
+	}
 
+	/* width */
+	::-webkit-scrollbar {
+	  width: 5px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+	  background: #f1f1f1; 
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #888; 
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	  background: #555; 
+	}
 
 
 /* loader css */
@@ -277,6 +300,10 @@
 			width: 23% !important;
 		}
 	}
+	.col-sm-3{
+		overflow: hidden;
+	}
+	
 	.profilephoto:hover {
 		border: 8px solid #d98eff;
 		transition: 0.7s;
