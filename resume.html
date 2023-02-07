@@ -23,15 +23,15 @@
 
 <!-- loader script starts -->
 <script>
-function loaded() {
-  setTimeout(showPage, 3000);
-  setTimeout(function(){document.getElementById("loaderCont").style.display = "none"}, 4000);
-}
-function showPage() {
-  document.getElementById("loaderCont").classList.add("fadeout");
-  //document.getElementById("loaderCont").style.display = "none";
-}
-loaded();
+	function loaded() {
+	  setTimeout(showPage, 3000);
+	  setTimeout(function(){document.getElementById("loaderCont").style.display = "none"}, 4000);
+	}
+	function showPage() {
+	  document.getElementById("loaderCont").classList.add("fadeout");
+	  //document.getElementById("loaderCont").style.display = "none";
+	}
+	loaded();
 </script>
 <div id="loaderCont">
 	<embed src="images/logo.svg" class="loaderSVG"/>
@@ -68,7 +68,7 @@ loaded();
   </div>
 </nav>
 
-<a id="dlLink" download href="files/Tawsif Turabi Cinema CV.pdf" class="downloadCV">
+<a id="dlLink" download href="" class="downloadCV">
 	<i class="fa fa-download" aria-hidden="true"></i> Download CV PDF
 </a>
 
@@ -107,6 +107,8 @@ loaded();
     doc.addEventListener('load', function(){ 
 		unsetLoader();
 	});
+	
+	loadCV(2);
 
 	function loadCV(num){
 		
