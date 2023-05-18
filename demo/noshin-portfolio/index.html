@@ -37,8 +37,43 @@
 	<!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
-    <![endif]-->
+	<![endif]-->
+	<style>
+		.circular_image {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.circular_image img{
+			width:100%;
+		}
+		.portfolio-elements {
 
+		}
+		
+		.image-portfolio {
+			height: 150px;
+			display: inherit;
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+		
+		.used{
+			display: inline-block;
+			margin-left: 5px;
+			vertical-align: middle;
+		}
+		.facultyName{
+			font-weight: bold;
+			font-size: 18px;
+			font-family: Trebuchet MS;
+		}	
+		.facultyType{
+			font-size: 15px;
+		}
+		.facultySchl{
+			font-size: 13px;
+		}
+	</style>
 </head>
 
 <body>
@@ -179,18 +214,19 @@
 						<div class="col-md-12 text-center">
 							</br>
 							</br>
-							<h3 style="font-size: 62px;" class="slide-sub-title animated2">
-								<small style='color: white;'>I'm</small></br>
-								TAWSIF TORABI
+								<img src="images/portrait.jpg" style="width: 221px;border-radius: 50%;border: 5px solid;"/>
+							<h3 style="font-size: 52px;" class="slide-sub-title animated2">
+								<!-- small style='color: white;'>I'm</small></br -->
+								Gazi Fabiha Noshin Meem</br>
 							</h3>
 							<h3 style="font-size: 22px;text-shadow: 0px 1px 14px black;" class="slide-title animated4">
-								I'm dumb, but I try get the job done
+								Educator | Researcher | Analyst 
 							</h3>
 							
-							<p>
+							<!--p>
 								<a href="workshops" class="slider btn btn-primary">Workshops</a>
 								<a href="exhibitions" class="slider btn btn-primary border">Exhibitions</a>
-							</p>
+							</p-->
 						</div>
 					</div>
 				</div>
@@ -203,7 +239,7 @@
 		</div>
 		<!--/ Carousel end -->
 
-		<section class="call-to-action-box no-padding">
+		<!--section class="call-to-action-box no-padding">
 			<div class="container">
 				<div class="action-style-box">
 					<div class="row">
@@ -214,24 +250,37 @@
 								</h3>
 							</div>
 						</div><!-- Col end -->
-						<div class="col-md-2">
+						<!--div class="col-md-2">
 							<div class="call-to-action-btn">
 								<a class="btn btn-dark" href="#" style="font-family: siyam rupali;">Front Notice Link Text</a>
 							</div>
 						</div><!-- col end -->
-					</div><!-- row end -->
-				</div><!-- Action style box -->
-			</div><!-- Container end -->
-		</section><!-- Action end -->
+					<!--/div--><!-- row end -->
+				<!--/div><!-- Action style box -->
+			<!--/div><!-- Container end -->
+		<!--/section--><!-- Action end -->
 
 		<section id="ts-features" class="ts-features">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
 						<div class="ts-intro">
-							<h2 class="into-title">Intro Title</h2>
-							<h3 class="into-sub-title">Intro Subtitle</h3>
-							<p>Intro Text</p>
+							<h2 class="into-title">ABOUT GAZI FABIHA NOSHIN MEEM</h2>
+							<h3 class="into-sub-title">BIOGRAPHY</h3>
+							<p style="text-align:justify;">
+								Gazi Fabiha Noshin Meem is a highly skilled researcher with a Bachelor's degree in <i>Education Research</i> from the prestigious <b>University of Dhaka</b>. </br>
+								With a passion for research and a deep commitment to advancing knowledge in her field, 
+								she has developed a wide range of skills that make her an asset to any research team.</br>
+								She is a natural collaborator and excels in team-based environments. </br>
+								Her ability to work effectively with colleagues from diverse backgrounds and disciplines is a key strength that allows her to bring together multiple perspectives and approaches to problem-solving. 
+								</br>
+								She is also adept at program evaluation, 
+								using a range of qualitative research techniques to analyze and interpret data to inform program development and improvement.
+								</br>
+								In addition to her research skills, She is an accomplished writer, with extensive experience in report writing, proposal writing, and grant applications. She is skilled in data analysis, with the ability to transform complex data sets into actionable insights that can inform policy and practice.
+								She is a dedicated professional with a proven track record of success. Her commitment to excellence and her passion for research make her a valuable asset to any team.
+
+							</p>
 						</div><!-- Intro box end -->
 
 						<div class="gap-20"></div>
@@ -241,10 +290,10 @@
 								<a href="organizers">
 									<div class="ts-service-box">
 										<span class="ts-service-icon">
-											<i class="fa fa-users"></i>
+											<i class="fa fa-book"></i>
 										</span>
 										<div class="ts-service-box-content">
-											<h3 class="service-box-title">Meet Our Team</h3>
+											<h3 class="service-box-title">My Experiences</h3>
 										</div>
 									</div>
 								</a><!-- Service 1 end -->
@@ -257,7 +306,7 @@
 											<i class="fa fa-sliders"></i>
 										</span>
 										<div class="ts-service-box-content">
-											<h3 class="service-box-title">We Build Partnerships</h3>
+											<h3 class="service-box-title">Courses</h3>
 										</div>
 									</div>
 								</a><!-- Service 2 end -->
@@ -272,7 +321,7 @@
 											<i class="fa fa-bullseye"></i>
 										</span>
 										<div class="ts-service-box-content">
-											<h3 class="service-box-title">See Our Goals</h3>
+											<h3 class="service-box-title">Skills</h3>
 									</div>
 								</a>
 								</div><!-- Service 1 end -->
@@ -285,7 +334,429 @@
 											<i class="fa fa fa-bank"></i>
 										</span>
 										<div class="ts-service-box-content">
-											<h3 class="service-box-title">Be a Campus Ambassador</h3>
+											<h3 class="service-box-title">Education</h3>
+										</div>
+									</div>
+								</a><!-- Service 2 end -->
+							</div><!-- col end -->
+						</div><!-- Content row 1 end -->
+					</div><!-- Col end -->
+
+
+
+
+					<div class="col-md-6 col-xs-12">
+						<h2 class="into-title">WHERE SHES BEEN WORKING</h2>
+						<h3 class="into-sub-title">CURRENTLY WORKING</h3>
+						<p>A little glimps of the projects that I'm working on,</p>
+						
+						<div class="panel-group" id="progressinc">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#progressinc" href="#collapseprogressinc">Progress Inc.</a>
+									</h4>
+								</div>
+								<div id="collapseprogressinc" class="panel-collapse collapse in">
+									<div class="panel-body">
+											<div class="col-sm-12 portfolio-elements">
+												<span class="circular_image"><img src="images/progressinc.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+												<span class="used">
+													<span class="facultyName">Senior Research Associate</span><br>
+													<span class="facultyType">Full Time</span><br>
+													<span class="facultySchl">Dhaka, Bangladesh</span><br>
+													<span class="facultySchl"><i>January 2023 - Present</i></span><br>
+												</span>
+												</br>
+												<!--h5><i class="fa fa-clock-o" aria-hidden="true"></i> Past Activity</h5>
+												<span class="used">
+													<span class="facultyType">Research Associate</span><br>
+													<span class="facultySchl"><i>January 2022 - January 2023</i></span><br>
+												</span-->
+											</div>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>
+						
+
+						<div class="panel-group" id="simavi">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#simavi" href="#collapsesimavi">Simavi</a>
+									</h4>
+								</div>
+								<div id="collapsesimavi" class="panel-collapse collapse in">
+									<div class="panel-body">
+											<div class="col-sm-12 portfolio-elements">
+												<span class="circular_image"><img src="images/simavi.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+												<span class="used">
+													<span class="facultyName">Consultant Researcher</span><br>
+													<span class="facultyType">Contract</span><br>
+													<span class="facultySchl">Dhaka, Bangladesh · Remote</span><br>
+													<span class="facultySchl"><i>April 2023 - Present</i></span><br>
+												</span>
+											</div>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>	
+						
+						
+						<!--/ Accordion end -->
+
+					</div><!-- Col end -->
+					
+				</div><!-- Row end -->
+			</div><!-- Container end -->
+		</section><!-- Feature are end -->
+
+
+
+
+
+
+		<section id="ts-features" class="ts-features">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<h2 class="into-title">WHERE SHES BEEN WORKING</h2>
+						<h3 class="into-sub-title">WORKING EXPERIENCES</h3>
+						<p>A little glimps of the projects that She've worked with,</p>			
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						
+						<div class="panel-group" id="progressinc2">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#progressinc2" href="#collapseprogressinc2">Progress Inc.</a>
+									</h4>
+								</div>
+								<div id="collapseprogressinc2" class="panel-collapse collapse in">
+									<div class="panel-body">
+											<div class="col-sm-12 portfolio-elements">
+												<span class="circular_image"><img src="images/progressinc.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+												<span class="used">
+													<span class="facultyName">Research Associate</span><br>
+													<span class="facultyType">Full Time</span><br>
+													<span class="facultySchl">Dhaka, Bangladesh</span><br>
+													<span class="facultySchl"><i>January 2022 - January 2023</i></span><br>
+												</span>
+											</div>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>
+						
+						<div class="panel-group" id="CFSC">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#CFSC" href="#collapseCFSC">Consortium For Street Children</a>
+									</h4>
+								</div>
+								<div id="collapseCFSC" class="panel-collapse collapse in">
+									<div class="panel-body">
+											<div class="col-sm-12 portfolio-elements">
+												<span class="circular_image"><img src="images/CFSC.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+												<span class="used">
+													<span class="facultyName">Freelance Translator</span><br>
+													<span class="facultyType">Part-time</span><br>
+													<span class="facultySchl">London, England, United Kingdom · Remote</span><br>
+													<span class="facultySchl"><i>Feb 2021 - Sep 2022</i></span><br>
+												</span>
+											</div>
+											</br>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>
+						
+						<div class="panel-group" id="bacbon">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#bacbon" href="#collapsebacbon">BacBon Limited</a>
+									</h4>
+								</div>
+								<div id="collapsebacbon" class="panel-collapse collapse in">
+									<div class="panel-body">
+											<div class="col-sm-12 portfolio-elements">
+												<span class="circular_image"><img src="images/bacbon.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+												<span class="used">
+													<span class="facultyName">Education Facilitator</span><br>
+													<span class="facultyType">Part-time</span><br>
+													<span class="facultySchl">Dhaka, Bangladesh</span><br>
+													<span class="facultySchl"><i>Mar 2020 - Feb 2021</i></span><br>
+												</span>
+											</div>
+											</br>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>	
+
+						<div class="panel-group" id="a2i">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#a2i" href="#collapsea2i">a2i - Office of Prime Minister</a>
+									</h4>
+								</div>
+								<div id="collapsea2i" class="panel-collapse collapse in">
+									<div class="panel-body">
+											<div class="col-sm-12 portfolio-elements">
+												<span class="circular_image"><img src="images/a2i.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+												<span class="used">
+													<span class="facultyName">Intern</span><br>
+													<span class="facultyType">Internship (5 months)</span><br>
+													<span class="facultySchl">Dhaka, Bangladesh</span><br>
+													<span class="facultySchl"><i>Feb 2019 - Jun 2019</i></span><br>
+												</span>
+											</div>
+											</br>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>	
+
+						<div class="panel-group" id="agranischool">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#agranischool" href="#collapseagranischool">a2i - Office of Prime Minister</a>
+									</h4>
+								</div>
+								<div id="collapseagranischool" class="panel-collapse collapse in">
+									<div class="panel-body">
+											<div class="col-sm-12 portfolio-elements">
+												<span class="circular_image"><img src="images/agranischool.jpg" class="img-responsive" style="width:100px" alt="Image"></span>
+												<span class="used">
+													<span class="facultyName">Teacher</span><br>
+													<span class="facultyType">Internship (6 months)</span><br>
+													<span class="facultySchl">Dhaka, Bangladesh</span><br>
+													<span class="facultySchl"><i>May 2017 - Oct 2017</i></span><br>
+												</span>
+											</div>
+											</br>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>	
+						
+						
+						<!--/ Accordion end -->
+
+					</div><!-- Col end -->
+					
+					
+					
+					<div class="col-md-6 col-xs-12">
+						<div class="panel-group" id="grambangla">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#grambangla" href="#collapsegrambangla">Grambangla Unnayan Committee</a>
+									</h4>
+								</div>
+								<div id="collapsegrambangla" class="panel-collapse collapse in">
+									<div class="panel-body">
+										<div class="col-sm-12 portfolio-elements">
+											<span class="circular_image"><img src="images/grambangla.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+											<span class="used">
+												<span class="facultyName">Program Manager</span><br>
+												<span class="facultyType">Full Time</span><br>
+												<span class="facultySchl">Dhaka, Bangladesh</span><br>
+												<span class="facultySchl"><i>Feb 2021 - Jan 2022</i></span><br>
+											</span>
+											</br>
+											<!--h5><i class="fa fa-clock-o" aria-hidden="true"></i> Past Activity</h5>
+											<span class="used">
+												<span class="facultyType">Research Associate</span><br>
+												<span class="facultySchl"><i>January 2022 - January 2023</i></span><br>
+											</span-->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>
+						
+
+						<div class="panel-group" id="buet">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#buet" href="#collapsebuet">BUET</a>
+									</h4>
+								</div>
+								<div id="collapsebuet" class="panel-collapse collapse in">
+									<div class="panel-body">
+										<div class="col-sm-12 portfolio-elements">
+											<span class="circular_image"><img src="images/buet.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+											<span class="used">
+												<span class="facultyName">Research Assistant</span><br>
+												<span class="facultyType">Freelance</span><br>
+												<span class="facultySchl">Dhaka, Bangladesh</span><br>
+												<span class="facultySchl"><i>Apr 2021 - May 2021</i></span><br>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>	
+
+						<div class="panel-group" id="brac">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#brac" href="#collapsebrac">BRAC Institute of Educational Development</a>
+									</h4>
+								</div>
+								<div id="collapsebrac" class="panel-collapse collapse in">
+									<div class="panel-body">
+										<div class="col-sm-12 portfolio-elements">
+											<span class="circular_image"><img src="images/bracied.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+											<span class="used">
+												<span class="facultyName">Research Assistant</span><br>
+												<span class="facultyType">Part-Time</span><br>
+												<span class="facultySchl">Dhaka, Bangladesh</span><br>
+												<span class="facultySchl"><i>Aug 2020 - Nov 2020</i></span><br>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>	
+
+						<div class="panel-group" id="killa">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#killa" href="#collapsekilla">Killa Consultancy</a>
+									</h4>
+								</div>
+								<div id="collapsekilla" class="panel-collapse collapse in">
+									<div class="panel-body">
+										<div class="col-sm-12 portfolio-elements">
+											<span class="circular_image"><img src="images/killa.jpg" style="width: 100px;" class="img-responsive" style="width:100%" alt="Image"></span>
+											<span class="used">
+												<span class="facultyName">Report Writer</span><br>
+												<span class="facultyType">Part-Time</span><br>
+												<span class="facultySchl">Dhaka, Bangladesh</span><br>
+												<span class="facultySchl"><i>Feb 2019 - Mar 2019</i></span><br>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>	
+						
+						
+						<!--/ Accordion end -->
+
+					</div><!-- Col end -->
+
+
+						
+				</div><!-- Row end -->
+			</div><!-- Container end -->
+		</section><!-- Feature are end -->
+		
+		
+		
+		<section id="ts-features" class="ts-features">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<div class="ts-intro">
+							<h2 class="into-title">ABOUT GAZI FABIHA NOSHIN MEEM</h2>
+							<h3 class="into-sub-title">BIOGRAPHY</h3>
+							<p style="text-align:justify;">
+								Gazi Fabiha Noshin Meem is a highly skilled researcher with a Bachelor's degree in <i>Education Research</i> from the prestigious <b>University of Dhaka</b>. </br>
+								With a passion for research and a deep commitment to advancing knowledge in her field, 
+								she has developed a wide range of skills that make her an asset to any research team.</br>
+								She is a natural collaborator and excels in team-based environments. </br>
+								Her ability to work effectively with colleagues from diverse backgrounds and disciplines is a key strength that allows her to bring together multiple perspectives and approaches to problem-solving. 
+								</br>
+								She is also adept at program evaluation, 
+								using a range of qualitative research techniques to analyze and interpret data to inform program development and improvement.
+								</br>
+								In addition to her research skills, She is an accomplished writer, with extensive experience in report writing, proposal writing, and grant applications. She is skilled in data analysis, with the ability to transform complex data sets into actionable insights that can inform policy and practice.
+								She is a dedicated professional with a proven track record of success. Her commitment to excellence and her passion for research make her a valuable asset to any team.
+
+							</p>
+						</div><!-- Intro box end -->
+
+						<div class="gap-20"></div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<a href="organizers">
+									<div class="ts-service-box">
+										<span class="ts-service-icon">
+											<i class="fa fa-book"></i>
+										</span>
+										<div class="ts-service-box-content">
+											<h3 class="service-box-title">My Experiences</h3>
+										</div>
+									</div>
+								</a><!-- Service 1 end -->
+							</div><!-- col end -->
+
+							<div class="col-md-6">
+								<a href="partners">
+									<div class="ts-service-box">
+										<span class="ts-service-icon">
+											<i class="fa fa-sliders"></i>
+										</span>
+										<div class="ts-service-box-content">
+											<h3 class="service-box-title">Courses</h3>
+										</div>
+									</div>
+								</a><!-- Service 2 end -->
+							</div><!-- col end -->
+						</div><!-- Content row 1 end -->
+
+						<div class="row">
+							<div class="col-md-6">
+								<a href="about">
+									<div class="ts-service-box">
+										<span class="ts-service-icon">
+											<i class="fa fa-bullseye"></i>
+										</span>
+										<div class="ts-service-box-content">
+											<h3 class="service-box-title">Skills</h3>
+									</div>
+								</a>
+								</div><!-- Service 1 end -->
+							</div><!-- col end -->
+
+							<div class="col-md-6">
+								<a href="campusambassador">
+									<div class="ts-service-box">
+										<span class="ts-service-icon">
+											<i class="fa fa fa-bank"></i>
+										</span>
+										<div class="ts-service-box-content">
+											<h3 class="service-box-title">Education</h3>
 										</div>
 									</div>
 								</a><!-- Service 2 end -->
@@ -294,31 +765,248 @@
 					</div><!-- Col end -->
 
 					<div class="col-md-6 col-xs-12">
-						<h3 class="into-sub-title">Intro 2 Sub</h3>
-						<p>Intro 2 Text</p>
+						<h3 class="into-sub-title">QUALIFICATION</h3>
+						<p>A little glimps of the projects that I've worked on,</p>
+						
 						<div class="panel-group" id="accordion">
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Tawsif Torabi</a>
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Masters</a>
 									</h4>
 								</div>
 								<div id="collapseOne" class="panel-collapse collapse in">
 									<div class="panel-body">
-										<p>Intro Rollon Text</p>
+											<div class="col-sm-12 portfolio-elements">
+												<span class="circular_image"><img src="images/du.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+												<span class="used">
+													<span class="facultyName">University of Dhaka</span><br>
+													<span class="facultyType">Master of Education - MEd, </br>Curriculum and Instruction</span><br>
+													<span class="facultySchl"><i>2018 - 2019</i></span><br>
+												</span>
+											</div>
 									</div>
 								</div>
 							</div>
 							<!--/ Panel 1 end-->
-
-
 						</div>
+						
+						
+						<div class="panel-group" id="diploma">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#diploma" href="#collapsediploma">Diploma</a>
+									</h4>
+								</div>
+								<div id="collapsediploma" class="panel-collapse collapse in">
+									<div class="panel-body">
+											<div class="col-sm-12 portfolio-elements">
+												<span class="circular_image"><img src="images/langu.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+												<span class="used">
+													<span class="facultyName">Institute of Modern Languages, </br>University of Dhaka</span><br>
+													<span class="facultyType">Diploma, Spanish (B-1)</span><br>
+													<span class="facultySchl"><i>2017 - 2020</i></span><br>
+												</span>
+											</div>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>
+						
+
+						
+						<div class="panel-group" id="bachelor">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#bachelor" href="#collapsebachelor">Bachelor</a>
+									</h4>
+								</div>
+								<div id="collapsebachelor" class="panel-collapse collapse in">
+									<div class="panel-body">
+											<div class="col-sm-12 portfolio-elements">
+												<span class="circular_image"><img src="images/du.jpg" class="img-responsive" style="width:100%" alt="Image"></span>
+												<span class="used">
+													<span class="facultyName">University of Dhaka</span><br>
+													<span class="facultyType">Bachelors, Education</span><br>
+													<span class="facultySchl"><i>2014 - 2018</i></span><br>
+												</span>
+											</div>
+									</div>
+								</div>
+							</div>
+							<!--/ Panel 1 end-->
+						</div>
+						
+						
+						
 						<!--/ Accordion end -->
 
 					</div><!-- Col end -->
+					
 				</div><!-- Row end -->
 			</div><!-- Container end -->
 		</section><!-- Feature are end -->
+
+
+
+		<section id="main-container" class="main-container">
+		  <div class="container">
+			 <div class="row">
+
+				<div class="col-lg-3 col-md-3 col-sm-12">
+				   <div class="sidebar sidebar-left">
+					  <div class="widget">
+						 <h3 class="widget-title">SELFMAPPING</h3>
+						 <ul class="nav nav-tabs nav-stacked service-menu">
+							<li><a href="service-single.html">Home Construction</a></li>
+							<li class="active"><a href="service-single.html">Building Remodels</a></li>
+							<li><a href="#">Interior Design</a></li>
+							<li><a href="#">Exterior Design</a></li>
+							<li><a href="#">Renovation</a></li>
+							<li><a href="#">Safety Management</a></li>
+						 </ul>
+					  </div><!-- Widget end -->
+
+					  <div class="widget">
+						 <div class="quote-item quote-border">
+							<div class="quote-text-border">
+							  Un soñador entré los locos
+							</div>
+
+							<div class="quote-item-footer">
+							   <!-- img class="testimonial-thumb" src="images/clients/testimonial1.png" alt="testimonial" -->
+							   <div class="quote-item-info">
+								  <h3 class="quote-author">FABIHA NOSHIN</h3>
+								  <!--span class="quote-subtext">CEO, First Choice Group</span -->
+							   </div>
+							</div>
+						</div><!-- Quote item end -->
+
+					  </div><!-- Widget end -->
+
+				   </div><!-- Sidebar end -->
+				</div><!-- Sidebar Col end -->
+
+				<div class="col-lg-8 col-md-8 col-sm-12">
+				   <div class="content-inner-page">
+
+					   <h2 class="column-title mrt-0">Building Remodels</h2>
+
+					  <div class="row">
+						 <div class="col-md-12">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque et non erat. Maecenas nibh dolor, malesuada et bibendum a, sagittis accumsan ipsum. Pellentesque ultrices ultrices sapien.</p>
+							<p>Nam scelerisque tristique dolor vitae tincidunt. Aenean quis massa uada mi elementum elementum. , nec tincidunt nunc posuere ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo iaculis ligula, ac dapibus quam ornare ut. Praesent ac hendrerit sem, et tempus sem</p>
+						 </div><!-- col end -->
+					  </div><!-- 1st row end-->
+
+					  <div class="gap-40"></div>
+
+					  <div id="page-slider" class="owl-carousel owl-theme page-slider page-slider-small">
+						 <div class="item">
+							<img src="images/personal/graduation/DU 51th convocation.jpg" alt="Gazi Fabiha Noshin DU 51th convocation" />
+						 </div>
+
+						 <div class="item">
+							<img src="images/personal/graduation/Class of 2017.jpg" alt="Gazi Fabiha Noshin Class of 2017" />
+						 </div>
+
+						 <div class="item">
+							<img src="images/personal/graduation/Graduation 2017.jpg" alt="Gazi Fabiha Noshin Graduation 2017" />
+						 </div>
+					  </div><!-- Page slider end -->
+
+					  <div class="gap-40"></div>
+
+					  <div class="row">
+						 <div class="col-md-6">
+							<h3 class="column-title-small">What Makes Us Different</h3>
+
+							<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque et non erat tincidunt nunc posuere.</p>
+							<ul class="list-arrow">
+							   <li>Partnership Strategy tristique eleifend.</li>
+							   <li>Opporutnity to work with amet elit a.</li>
+							   <li>Saving Time to Deal with commodo iaculis.</li>
+							   <li>Leadership skills to manage erat volutpat.</li>
+							   <li>Cut cost without sacrificing dolore magna.</li>
+							   <li>Automate your business elis tristique.</li>
+							</ul>
+						 </div>
+
+						 <div class="col-md-6">
+							<h3 class="column-title-small">You Should Know</h3>
+
+							<div class="panel-group panel-classic" id="accordion">
+							   <div class="panel panel-default">
+								   <div class="panel-heading">
+									  <h4 class="panel-title"> 
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Do You Support Collaborative Communication</a> 
+									  </h4>
+								   </div>
+								   <div id="collapseOne" class="panel-collapse collapse in">
+									 <div class="panel-body">
+										<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata</p>
+									 </div>
+								   </div>
+							   </div><!--/ Panel 1 end-->
+
+							   <div class="panel panel-default">
+								   <div class="panel-heading">
+									  <h4 class="panel-title">
+										<a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseTwo">What is the Budget &amp; Cost Development</a>
+									 </h4>
+								   </div>
+								   <div id="collapseTwo" class="panel-collapse collapse">
+									 <div class="panel-body">
+										<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata</p>
+									 </div>
+								   </div>
+							   </div><!--/ Panel 2 end-->
+
+
+							   <div class="panel panel-default">
+								   <div class="panel-heading">
+									  <h4 class="panel-title">
+										<a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseThree">What About Schedule Development</a>
+									 </h4>
+								   </div>
+								   <div id="collapseThree" class="panel-collapse collapse">
+									 <div class="panel-body">
+										<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata</p>
+									 </div>
+								   </div>
+							   </div><!--/ Panel 3 end-->
+
+							</div><!--/ Accordion end -->
+						 </div>
+					  </div><!--2nd row end -->
+
+					  <div class="gap-40"></div>
+
+					  <!--div class="call-to-action classic">
+						 <div class="row">
+							<div class="col-md-9">
+							   <div class="call-to-action-text">
+								  <h3 class="action-title">Interested with this service.</h3>
+							   </div>
+							</div><!-- Col end -->
+							<!--div class="col-md-3">
+							   <div class="call-to-action-btn">
+								  <a class="btn btn-primary" href="#">Get a Quote</a>
+							   </div>
+							</div><!-- col end -->
+						 <!-- /div><!-- row end -->
+					  <!-- /div--><!-- Action end -->
+
+				   </div><!-- Content inner end -->
+				</div><!-- Content Col end -->
+
+
+			 </div><!-- Main row end -->
+		  </div><!-- Conatiner end -->
+		</section><!-- Main container end -->
 
 
 		
@@ -388,21 +1076,21 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<h3 class="column-title">Reviews</h3>
+						<h3 class="column-title">TESTIMONIALS</h3>
 
 						<div id="testimonial-slide" class="owl-carousel owl-theme testimonial-slide">
 
 							<div class="item">
 								<div class="quote-item">
 									<span class="quote-text">
-										This is best fucking bokachoda!
+										Noshin is passionate about her work. And it was a good experience working with her.
 									</span>
 									<div class="quote-item-footer">
 										<img class="testimonial-thumb" src="images/partners/anonno.png" alt="testimonial">
 										<div class="quote-item-info">
-											<h3 class="quote-author">Anonno Afroz</h3>
-											<span class="quote-subtext">Student</span></br>
-											<span class="quote-subtext">UCSI University</span>
+											<h3 class="quote-author">Tawsif Torabi</h3>
+											<span class="quote-subtext">Owner</span></br>
+											<span class="quote-subtext">Torabi's Studio</span>
 										</div>
 									</div>
 								</div><!-- Quote item end -->
@@ -410,6 +1098,22 @@
 							<!--/ Item 1 end -->
 							
 
+							<div class="item">
+								<div class="quote-item">
+									<span class="quote-text">
+										Noshin is passionate about her work. And it was a good experience working with her.
+									</span>
+									<div class="quote-item-footer">
+										<img class="testimonial-thumb" src="images/partners/anonno.png" alt="testimonial">
+										<div class="quote-item-info">
+											<h3 class="quote-author">Tawsif Torabi</h3>
+											<span class="quote-subtext">Owner</span></br>
+											<span class="quote-subtext">Torabi's Studio</span>
+										</div>
+									</div>
+								</div><!-- Quote item end -->
+							</div>
+							<!--/ Item 1 end -->
 							
 
 						</div>
@@ -419,24 +1123,7 @@
 
 
 
-					<div class="col-md-6">
-
-						<a href="partners"><h3 class="column-title">PROJECT PARTNERS</h3></a>
-
-						<div class="row all-clients">
-
-							<div class="col-sm-4">
-								<figure class="clients-logo">
-									<a href="#"><img class="img-responsive" title="title1" src="images/partners/anonno.png" alt="" /></a>
-								</figure>
-							</div>
-						<!-- Client 1 end -->
-
-
-						</div>
-						<!-- Clients row end -->
-
-					</div><!-- Col end -->
+					
 
 				</div>
 				<!--/ Content row end -->
@@ -444,39 +1131,6 @@
 			<!--/ Container end -->
 		</section><!-- Content end -->
 
-		<section class="subscribe no-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 col-sm-12 col-xs-12">
-						<div class="subscribe-call-to-acton">
-							<h3>Can We Help?</h3>
-							<h4>(+9) 847-291-4353</h4>
-						</div>
-					</div><!-- Col end -->
-
-					<div class="col-md-8 col-sm-12 col-xs-12">
-						<div class="ts-newsletter">
-							<div class="newsletter-introtext">
-								<h4>Newsletter Sign-up</h4>
-								<p>Latest updates and news</p>
-							</div>
-
-							<div class="newsletter-form">
-								<form action="#" method="post">
-									<div class="form-group">
-										<input type="email" name="email" id="newsletter-form-email" class="form-control form-control-lg"
-											placeholder="Your Email Here" autocomplete="off">
-									</div>
-								</form>
-							</div>
-						</div><!-- Newsletter end -->
-					</div><!-- Col end -->
-
-				</div><!-- Content row end -->
-			</div>
-			<!--/ Container end -->
-		</section>
-		<!--/ News end -->
 
 		<section id="news" class="news">
 			<div class="container">
@@ -568,19 +1222,27 @@
 				<div class="container">
 					<div class="row">
 					
-					
-					
 						<div class="col-md-4 col-sm-12 footer-widget footer-about">
-							<h3 class="widget-title">Parent Organization</h3>
-							<img class="footer-logo" src="images/footer-logo.png" alt="" />
-							<p>PARENT PARENT</p>
-							<div class="footer-social">
-								<ul>
-									<li><a target="_blank" href="https://facebook.com/tawsif.torabi"><i class="fa fa-facebook"></i></a></li>
-									<li><a target="_blank" href="https://twitter.com/tawsiftorabi"><i class="fa fa-twitter"></i></a></li>
-									<li><a target="_blank" href="https://instagram.com/tawsiftorabi"><i class="fa fa-instagram"></i></a></li>
-								</ul>
-							</div><!-- Footer social end -->
+							<h3 class="widget-title">ABOUT ME</h3>
+							<div class="col-sm-12 portfolio-elements">
+								<span class="circular_image"><img src="images/portrait_face.jpg" class="img-responsive" alt="Fabiha Noshin Photo" style="width: 100px; border-radius: 50%; border: 4px solid white" alt="Image"></span>
+								<span class="used">
+									<span class="facultyName">GAZI FABIHA NOSHIN</span><br>
+									<span class="facultyType">Researcher & Analyst</span><br>
+									<span class="facultySchl">From Dhaka, Bangladesh</span><br>
+								</span>
+								</br>
+								<div class="footer-social">
+									<ul>
+										<li><a target="_blank" href="https://facebook.com/fabiha.noshin.9"><i class="fa fa-facebook"></i></a></li>
+										<li><a target="_blank" href="https://twitter.com/noshinfabiha1"><i class="fa fa-twitter"></i></a></li>
+										<li><a target="_blank" href="https://instagram.com/fabiha_noshin"><i class="fa fa-instagram"></i></a></li>
+										<li><a target="_blank" href="https://www.linkedin.com/in/gazi-fabiha-noshin-meem-a64017159/"><i class="fa fa-linkedin"></i></a></li>
+									</ul>
+								</div><!-- Footer social end -->
+							</div>
+							<p></p>
+
 						</div><!-- Col end -->
 
 
@@ -589,10 +1251,12 @@
 						<div class="col-md-4 col-sm-12 footer-widget">
 							<h3 class="widget-title">Working Hours</h3>
 							<div class="working-hours">
-								We are 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
-								Hotline and Email.
-								<br><br> Phone: <span class="text-right">+88 0155 3260 358</span>
-								<br> Email: <span class="text-right">tawsiftorabi.jr@gmail.com</span>
+								I'm working on every workday in Bangladesh Time. Which excludes Friday.
+								Contact Me via Email on any emergency or business queries.
+								<br><br> 
+								<!-- Phone: <span class="text-right">+88 0155 3260 358</span -->
+								<br> 
+								Email: <span class="text-right">noshinfabiha1@gmail.com</span>
 							</div>
 						</div><!-- Col end -->
 
@@ -602,11 +1266,11 @@
 						<div class="col-md-4 col-sm-12 footer-widget">
 							<h3 class="widget-title">Quick Links</h3>
 							<ul class="list-arrow">
-								<li><a href="blog">News & Blogs</a></li>
-								<li><a href="partners">Partners</a></li>
-								<li><a href="reviews">Reviews and Testimonials</a></li>
-								<li><a href="about">Our Team</a></li>
-								<li><a href="voulanteers">Our Voulanteers</a></li>
+								<li><a href="http://progressinccompany.com/">Progress Inc.</a></li>
+								<li><a href="https://a2i.gov.bd">a2i - Access to Information</a></li>
+								<li><a href="https://www.du.ac.bd">University of Dhaka</a></li>
+								<li><a href="https://bracied.com">BRAC IED</a></li>
+								<li><a href="https://www.buet.ac.bd/web">BUET</a></li>
 							</ul>
 						</div><!-- Col end -->
 
@@ -620,19 +1284,15 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-6">
 							<div class="copyright-info">
-								<span>Copyright © 2019 | Developed with <img style="transform: rotate(-22deg); vertical-align: middle; height: 13px;" alt="love" src="images/black-heart-shaped.svg"/> by <a target="_blank" href="https://facebook.com/torabistudio">Torabi's Studio</a></span>
+								<span>Copyright © 2023 | Developed with <img style="transform: rotate(-22deg); vertical-align: middle; height: 13px;" alt="love" src="images/black-heart-shaped.svg"/> by <a target="_blank" href="https://tawsiftorabi.github.io">Tawsif Torabi</a> | <a target="_blank" href="https://www.fiverr.com/s/W8Klq7">Build A Portfolio</a></span>
 							</div>
 						</div>
 
 						<div class="col-xs-12 col-sm-6">
 							<div class="footer-menu">
 								<ul class="nav unstyled">
-									<li><a href="about">About | </a></li>
-									<li><a href="organizers">Our Team |</a></li>
-									<li><a href="faq">Faq | </a></li>
-									<li><a href="blog">Blog | </a></li>
-									<li><a href="voulanteers">Voulanteers | </a></li>
-									<li><a href="registration/voulanteer.php">Be A Voulanteer</a></li>
+									<li><a href="about.html">About | </a></li>
+									<li><a href="faq.html">FAQ</a></li>
 								</ul>
 							</div>
 						</div>
