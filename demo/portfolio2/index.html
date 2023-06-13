@@ -26,6 +26,25 @@
   </head>
 
   <body>
+  	
+	<!-- loader script starts -->
+	<script>
+	function loaded() {
+	  setTimeout(showPage, 500);
+	  setTimeout(function(){document.getElementById("loaderCont").style.display = "none"}, 1500);
+	}
+	function showPage() {
+	  document.getElementById("loaderCont").classList.add("fadeout");
+	  //document.getElementById("loaderCont").style.display = "none";
+	}
+	window.onload = function(){loaded()};
+	</script>
+	<div id="loaderCont">
+		<center><div class="loaderSVG lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></center>
+	</div>
+	<!-- loader script end -->
+	
+	
     <div id="page-wraper">
       <!-- Sidebar Menu -->
       <div class="responsive-nav">
@@ -154,122 +173,136 @@
         checkSection();
       });
     </script>
-	    <script>
-      fetch('projects.xml')
-        .then(response => response.text())
-        .then(data => {
-          const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(data, 'application/xml');
-          const projects = xmlDoc.getElementsByTagName('project');
-          const container = document.getElementById('project-container');
-    
-          for (let i = 0; i < projects.length; i++) {
-            const project = projects[i];
-            const title = project.getElementsByTagName('title')[0].textContent;
-            const imageSrc = project.getElementsByTagName('imageSrc')[0].textContent;
-            const technologies = project.getElementsByTagName('technologies')[0].textContent;
-            const description = project.getElementsByTagName('description')[0].textContent;
-            const links = Array.from(project.getElementsByTagName('link')).map(link => link.textContent);
-    
-            const projectElement = document.createElement('div');
-            projectElement.className = 'isotope-item';
-    
-            const titleContainer = document.createElement('h3');
-            titleContainer.className = 'elementTitle';
-    
-            const titleText = document.createTextNode(title);
-            titleContainer.appendChild(titleText);
-    
-            const borderBottom = document.createElement('div');
-            borderBottom.id = 'borderBotttom';
-    
-            titleContainer.appendChild(borderBottom);
-    
-            const figureElement = document.createElement('figure');
-            figureElement.className = 'snip1321';
-    
-            const imageElement = document.createElement('img');
-            imageElement.src = imageSrc;
-            imageElement.alt = 'sq-sample26';
-    
-            const figcaptionElement = document.createElement('figcaption');
-    
-            const titleElement = document.createElement('h5');
-            titleElement.className = 'techs';
-            titleElement.textContent = title;
-    
-            const technologiesElement = document.createElement('b');
-            technologiesElement.className = 'techs';
-            technologiesElement.textContent = technologies;
-    
-            const descriptionElement = document.createElement('span');
-            descriptionElement.className = 'elementDescription';
-            descriptionElement.textContent = description;
-    
+	
+	
+	
+<script>
+  fetch('projects.xml')
+    .then(response => response.text())
+    .then(data => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(data, 'application/xml');
+      const projects = xmlDoc.getElementsByTagName('project');
+      const container = document.getElementById('project-container');
 
-    
-            figcaptionElement.appendChild(titleElement);
-            figcaptionElement.appendChild(technologiesElement);
-            figcaptionElement.appendChild(descriptionElement);
-            for (const link of links) {
-              const linkElement = document.createElement('a');
-              linkElement.href = link;
-              const linkIcon = getLinkIcon(link);
-              const linkIconElement = document.createElement('i');
-              linkIconElement.className = `fa ${linkIcon}`;
-              linkElement.appendChild(linkIconElement);
-              figcaptionElement.appendChild(linkElement);
-            }
+      const imagePromises = [];
 
-            
-            figureElement.appendChild(imageElement);
-            figureElement.appendChild(figcaptionElement);
-    
-            projectElement.appendChild(titleContainer);
-            projectElement.appendChild(figureElement);
-    
-            container.appendChild(projectElement);
-          }
-    
-          initializeIsotope(); // Call the Isotope initialization function after adding dynamic content
+      for (let i = 0; i < projects.length; i++) {
+        const project = projects[i];
+        const title = project.getElementsByTagName('title')[0].textContent;
+        const imageSrc = project.getElementsByTagName('imageSrc')[0].textContent;
+        const technologies = project.getElementsByTagName('technologies')[0].textContent;
+        const description = project.getElementsByTagName('description')[0].textContent;
+        const links = Array.from(project.getElementsByTagName('link')).map(link => link.textContent);
+
+        const imagePromise = new Promise((resolve, reject) => {
+          const imageElement = document.createElement('img');
+          imageElement.onload = resolve;
+          imageElement.onerror = reject;
+          imageElement.src = imageSrc;
         });
-    
-      function initializeIsotope() {
-        $(".isotope-wrapper").each(function () {
-          var $isotope = $(".isotope-box", this);
-          var $filterCheckboxes = $('input[type="radio"]', this);
-    
-          var filter = function () {
-            var type = $filterCheckboxes.filter(":checked").data("type") || "*";
-            if (type !== "*") {
-              type = '[data-type="' + type + '"]';
-            }
-            $isotope.isotope({ filter: type });
-          };
-    
-          $isotope.isotope({
-            itemSelector: ".isotope-item",
-            layoutMode: "masonry"
-          });
-    
-          $(this).on("change", filter);
-          filter();
-        });
-      }
-    
-      function getLinkIcon(link) {
-        if (link.includes('youtube.com')) {
-          return 'fa fa-youtube';
-        } else if (link.includes('github.com')) {
-          return 'fa fa-github';
-        } else if (link.includes('drive.google.com')) {
-          return 'fab fa-google-drive';
-        } else if (link.includes('site.google.com')) {
-          return 'fab fa-google';
-        } else {
-          return 'fa fa-link';
+
+        imagePromises.push(imagePromise);
+
+        const projectElement = document.createElement('div');
+        projectElement.className = 'isotope-item';
+
+        const titleContainer = document.createElement('h3');
+        titleContainer.className = 'elementTitle';
+
+        const titleText = document.createTextNode(title);
+        titleContainer.appendChild(titleText);
+
+        const borderBottom = document.createElement('div');
+        borderBottom.id = 'borderBotttom';
+
+        titleContainer.appendChild(borderBottom);
+
+        const figureElement = document.createElement('figure');
+        figureElement.className = 'snip1321';
+
+        const imageElement = document.createElement('img');
+        imageElement.src = imageSrc;
+        imageElement.alt = 'sq-sample26';
+
+        const figcaptionElement = document.createElement('figcaption');
+
+        const titleElement = document.createElement('h5');
+        titleElement.className = 'techs';
+        titleElement.textContent = title;
+
+        const technologiesElement = document.createElement('b');
+        technologiesElement.className = 'techs';
+        technologiesElement.textContent = technologies;
+
+        const descriptionElement = document.createElement('span');
+        descriptionElement.className = 'elementDescription';
+        descriptionElement.textContent = description;
+
+        for (const link of links) {
+          const linkElement = document.createElement('a');
+          linkElement.href = link;
+          const linkIcon = getLinkIcon(link);
+          const linkIconElement = document.createElement('i');
+          linkIconElement.className = `fa ${linkIcon}`;
+          linkElement.appendChild(linkIconElement);
+          figcaptionElement.appendChild(linkElement);
         }
+
+        figcaptionElement.appendChild(titleElement);
+        figcaptionElement.appendChild(technologiesElement);
+        figcaptionElement.appendChild(descriptionElement);
+
+        figureElement.appendChild(imageElement);
+        figureElement.appendChild(figcaptionElement);
+
+        projectElement.appendChild(titleContainer);
+        projectElement.appendChild(figureElement);
+
+        container.appendChild(projectElement);
       }
-    </script>
+
+      Promise.all(imagePromises)
+        .then(() => {
+          initializeIsotope(); // Call the Isotope initialization function after all images have loaded
+        })
+        .catch(error => {
+          console.error('Failed to load image:', error);
+        });
+    });
+
+  function initializeIsotope() {
+    $(".isotope-wrapper").each(function () {
+      var $isotope = $(".isotope-box", this);
+      var $filterCheckboxes = $('input[type="radio"]', this);
+
+      var filter = function () {
+        var type = $filterCheckboxes.filter(":checked").data("type") || "*";
+        if (type !== "*") {
+          type = '[data-type="' + type + '"]';
+        }
+        $isotope.isotope({ filter: type });
+      };
+
+      $isotope.isotope({
+        itemSelector: ".isotope-item",
+        layoutMode: "masonry"
+      });
+
+      $(this).on("change", filter);
+      filter();
+    });
+  }
+
+  function getLinkIcon(link) {
+    if (link.includes('youtube.com')) {
+      return 'fa fa-youtube';
+    } else if (link.includes('github.com')) {
+      return 'fa fa-github';
+    } else {
+      return 'fa fa-link';
+    }
+  }
+</script>
   </body>
 </html>
