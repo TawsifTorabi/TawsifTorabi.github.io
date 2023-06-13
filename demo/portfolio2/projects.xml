@@ -1,0 +1,43 @@
+<projects>
+
+  <project>
+    <title>Distributed Search Engine</title>
+    <imageSrc>assets/images/Project_Demo_Distributed_Search_Engine.gif</imageSrc>
+    <technologies>Java + MapReduce + AWS</technologies>
+    <description>Our team developed a server, fault-tolerant key value store, distributed analytics engine (mini Spark), and page ranker and web crawler on AWS EC2 instances to develop a highly-distributed web search engine</description>
+    <link>https://www.youtube.com/watch?v=MJOS7Vx24qk</link>
+  </project>
+  
+  <project>
+    <title>Automatic Differentiation Package</title>
+    <imageSrc>assets/images/AutomaticDifferentiation.png</imageSrc>
+    <technologies>Python</technologies>
+    <description>We developed a software library that enables users to implement the forward mode of automatic differentiation and efficiently and accurately calculate complex derivatives without the need for costly symbolic differentiation. We published this package on PyPi.</description>
+    <link>https://github.com/ADdictedtoCS/cs207-FinalProject</link>
+  </project>
+  
+  <project>
+    <title>Presidential Tweet &amp; Market Volatility Model</title>
+    <imageSrc>assets/images/Project3Thumbnail.png</imageSrc>
+    <technologies>Python</technologies>
+    <description>We designed and developed Decision Tree and Random Forest models to construct, train, and tune hyper-parameters, reduce runtimes, and increase the granularity of real-time predictions of market volatility based on Presidential tweets and the DJI.</description>
+    <link>https://sites.google.com/college.harvard.edu/cs109-group40/home?authuser=0</link>
+  </project>
+  
+  <project>
+    <title>Shortest Route Finder</title>
+    <imageSrc>assets/images/Animation4.gif</imageSrc>
+    <technologies>Angular + Java</technologies>
+    <description>I created a web-based application developed with the backend built in Java, and the front end designed with Angular. This application provides an interactive shortest route finder service to users using Dijkstra's and A-Star algorithms.</description>
+    <link>https://www.youtube.com/watch?v=DX2vy2BJ--I</link>
+  </project>
+  
+  <project>
+    <title>Dementia Diagnosis Deep Learning Model</title>
+    <imageSrc>assets/images/project4thumbnail.jpg</imageSrc>
+    <technologies>Python</technologies>
+    <description>Our team built and reported on a multilayer perceptron (MLP) deep learning model to classify dementia stages from MRI images and predict the 12-month risk of advanced dementia from baseline clinical, genomic, imaging, and biospecimen data of ADNI participants.</description>
+    <link>https://drive.google.com/file/d/1L2UY2FJgoWfhqXtX3jb2u2plSEww1O_W/view?usp=drive_link</link>
+  </project>
+  
+</projects>
