@@ -218,58 +218,59 @@
 	
 	.button-4 {
 		display: inline-block;
-		outline: 3px solid white;
+		border: 2px solid #337ab7;
 		cursor: pointer;
-		font-size: 14px;
+		font-size: 13px;
 		line-height: 1;
-		border-radius: 500px;
+		border-radius: 50px;
 		transition-property: background-color,border-color,color,box-shadow,filter;
 		transition-duration: .3s;
-		border: 1px solid transparent;
 		letter-spacing: 2px;
-		min-width: 160px;
+		min-width: 125px;
 		text-transform: uppercase;
 		white-space: normal;
-		font-weight: 700;
+		font-weight: bold;
 		text-align: center;
-		padding: 16px 14px 18px;
-		color: #fff;
-		height: 48px;
+		padding: 12px 10px 9px;
+		color: #337ab7;
+		height: auto;
 		margin-right: 10px;
 	}
 	
 	.button-4:hover {
 	    background-color: white;
-	    color: black;
-		outline: 3px solid white;
+	    color: #999999;
+	    border: 2px solid #999999;
+		border-radius: 30px;
 	}
+
+a.button-4 {}
 
 	.button-4-2 {
 		display: inline-block;
-		outline: 3px solid white;
 		cursor: pointer;
-		font-size: 14px;
+		font-size: 13px;
 		line-height: 1;
-		border-radius: 500px;
+		border-radius: 50px;
 		transition-property: background-color,border-color,color,box-shadow,filter;
 		transition-duration: .3s;
-		border: 1px solid transparent;
 		letter-spacing: 2px;
-		min-width: 160px;
+		min-width: 125px;
 		text-transform: uppercase;
 		white-space: normal;
-		font-weight: 700;
+		font-weight: bold;
 		text-align: center;
-		padding: 16px 14px 18px;
-		color: black;
-		height: 48px;
+		padding: 12px 10px 9px;
+		color: #ffffff;
+		height: auto;
 		margin-right: 5px;
-		background: white;
+		background: #337ab7;
+		border: 2px solid #337ab7;
 	}
 	.button-4-2:hover {
 	    background-color: white;
-	    color: black;
-		outline: 3px solid white;
+	    color: #999999;
+	    border: 2px solid #999999;
 	}
 	
 	
@@ -322,8 +323,8 @@
 	
 	.namehead {
 		letter-spacing: 3px;
-		font-family: nlight;
-		font-size: 60px;
+		font-family: nbold;
+		font-size: 34px;
 	}
 	.thishead {
 		letter-spacing: 3px;
