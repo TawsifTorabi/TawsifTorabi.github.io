@@ -61,13 +61,14 @@
 	  -webkit-animation: spin 2s linear infinite;
 	  animation: spin 2s linear infinite;
 	}
-	.loaderSVG{
+	.loaderSVG {
 		position: absolute;
-		left: 42%;
+		left: 23%;
 		top: 35%;
+		/* right: -3%; */
 		z-index: 1;
-		width: 200px;
-		height: 200px;
+		width: 18em;
+		height: auto;
 	}
 	.fadeout{
 		animation: fadeOut 1s linear forwards;
@@ -468,3 +469,7 @@ a.button-4 {}
 		border-bottom: 1px dotted rgb(125, 125, 125);
 	}
 	.smallfont{font-size: 22px;}
+	.scrolldiv{
+		height: 40em;
+		overflow-y: scroll;
+	}
