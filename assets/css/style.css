@@ -20,7 +20,7 @@
 	}
 
 	.detail-project{
-		height: 74px;
+		height: 5em;
 		overflow-y: scroll;
 	}
 
@@ -324,7 +324,7 @@ a.button-4 {}
 	.namehead {
 		letter-spacing: 3px;
 		font-family: nbold;
-		font-size: 34px;
+		font-size: 37px;
 	}
 	.thishead {
 		letter-spacing: 3px;
@@ -332,20 +332,6 @@ a.button-4 {}
 		font-size: 20px;
 	}
 	
-	
-	.jumbotron {
-		background-image: linear-gradient(to bottom, transparent, black), url(../images/cover2.jpg);
-		height: 100%;
-		background-position: center;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-size: cover;
-		color: white;
-	}
-	
-	.icon-bar {
-
-	}
 
 	.icon-bar a {
 	  display: inline;
@@ -386,7 +372,8 @@ a.button-4 {}
 	}
 
 	.content {
-	  margin-left: 75px;
+	  margin-left: 1em;
+	  max-width:90%;
 	}
 
 	.cat{
@@ -465,7 +452,6 @@ a.button-4 {}
 		background-repeat: no-repeat;
 		background-size: cover;
 		color: white;
-
 	}
 	.footersec a{
 		text-decoration: none;

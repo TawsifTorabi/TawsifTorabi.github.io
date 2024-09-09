@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tawsif Torabi</title>
-  <link rel="icon" type="image/x-icon" href="images/tawsif-torabi-white-icon-logo.png">
+  <title>Tawsif Torabi - Github</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/tawsif-torabi-white-icon-logo.png">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-63MVL3E6DH"></script>
 	<script>
@@ -17,9 +17,10 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="assets/vendor/aurna_lightbox/aurna_lightbox_1.0.4.css">
 </head>
 <body>
-
+<script src="assets/vendor/aurna_lightbox/aurna_lightbox_1.0.4.js"></script>
 <!-- loader script starts -->
 <script>
 function loaded() {
@@ -58,7 +59,6 @@ loaded();
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -74,17 +74,19 @@ loaded();
 		<div class="clearfix"></div>
 		<div class="clearfix"></div>
 		<div class="row">
-			<div class="col-sm-3 text-left"> 
-				<div style="display: inline-block;vertical-align: bottom;"><img class="profilephoto" alt="Tawsif Torabi" src="assets/images/tawsiftorabi.png"></div>
-				<div class="clearfix"></div>
-				<a style='text-decoration: none;'>
-					<span class="namehead">TAWSIF TORABI</span>
-				</a>
-				<br>
-				<a href="#projects" class="button-4">Projects</a>
-				<a href="resume" class="button-4-2">Resume</a>
+			<div class="col-sm-4 text-left">
+				<center>
+					<div style="display: inline-block;vertical-align: bottom;"><img class="profilephoto" alt="Tawsif Torabi" src="assets/images/tawsiftorabi.png"></div>
+					<div class="clearfix"></div>
+					<a style='text-decoration: none;'>
+						<span class="namehead">TAWSIF TORABI</span>
+					</a>
+					<br>
+					<a href="#projects" class="button-4">Projects</a>
+					<a href="resume" class="button-4-2">Resume</a>
+				</center> 
 			</div>
-			<div class="col-sm-9 text-left"> 
+			<div class="col-sm-8 text-left"> 
 				<div style="display: inline-block;text-align: left;">
 					<br>
 					<br>
@@ -96,26 +98,24 @@ loaded();
 						<a class="footsoc" href="https://github.com/tawsiftorabi"><i class="fa fa-github-square" aria-hidden="true"></i></a>
 						<a class="footsoc" href="https://www.linkedin.com/in/tawsiftorabi/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
 					</div>
-					<span class="thishead" style="font-weight: bold; text-transform: uppercase;">Robotics & Computer Science Enthusiast | IoT | Web | Research</span>
+					<span class="thishead" style="font-weight: bold; text-transform: uppercase;">
+						Robotics & Computer Science Enthusiast <br> 
+						<small>IoT || WebTechs || Research</small>
+					</span>
 					<p class="parentdetail">
-						I'm a CS student, and eventually a programmer.<br>
-						Though once I wrote codes so bad that one of my client said their own programmer is having trouble reading my code. 🙄</br>
+						I'm a Computer Science student on the path to becoming a programmer, though there was a time when my code was so confusing it left a client's developer scratching their head. 🙄 <br>
+						Right now, I’m pursuing my B.Sc in CSE at United International University, where I also work as a researcher on the Mars Rover Project at the Center for Artificial Intelligence and Robotics. <br>
+						Keeping my CGPA up has been... challenging, but I’m passionate about both my studies and research.
 						<br>
-						I'm currently studying B.Sc in CSE at United International University. And having a hard time holding my CGPA up.
+						Both my parents are teachers, and they’ve inspired me to share my knowledge online. So, I create videos on various topics that fascinate me - 						Design & Illustration, Technology, Electronics, Programming, Photography, and anything else that sparks my curiosity.
 						<br>
+						It’s funny how so many engineers seem to find their true passion in something completely unrelated to engineering.
 						<br>
-						My parents, both of them are teachers. And they are my inspiration to become an content creator online.
-						I make videos online. On multiple topics I might say. On Design &amp; Illustration, Technologies,
-						Electronics, Programming, Photography and other things that I'm interested in.
-						<br>
-						<b>I don't know, why every engineer finds passion in something that is definitely not engineering.</b>
-						<br>
-						<br>
-						And if I'm talking about myself, I'll just say that I'm a guy who loves his computer, loves to read thriller books 
-						and got someone as my better-half who really hates codes. 😪
+						As for me, I’m just a guy who loves his computer, devours thriller novels, and is lucky enough to have a better half who can’t stand code. 😪<br>
+						And yes, I make silly videos on youtube showing silly ideas to people 😋
 					</p>
 					</br>
-					
+					<button onclick="aurnaIframe('latest_video.html')" class="btn btn-danger"><i class="fa fa-youtube" aria-hidden="true"></i> Watch Latest Video</button>
 				</div>				
 			</div>
 		</div>
@@ -146,24 +146,73 @@ loaded();
 			<a style='text-decoration: none;' href='https://faltucoder.blogspot.com' target='_blank'><span class="namehead">Programming & Hardware Blogs</span></a>
 			<br>
 			<p class="parentdetail">
-				<b>Here is the latest Feed for <a href='https://faltucoder.blogspot.com' target='_blank'>FALTU CODER</a></b></br>
-				<div id="blogfeed"></div>
-				<script>
-				function getPosts(json) {
-					var list = [];
-					var data = json.feed.entry;
-					for (var i = 0; i < data.length; i++) {
-						list.push("<a class='bloglinks' href='" + data[i].link.pop().href + "'>"+ (i+1) + ". " + data[i].title.$t + "</a></br>");
+				<b>Here is the latest Feed for <a href='https://faltucoder.blogspot.com' target='_blank'>FALTU CODER</a></b><br/>
+				<style>
+					/* Optional: Add some basic styling */
+					.item {
+						margin-bottom: 20px;
+						border-bottom: 1px solid #ddd;
+						padding-bottom: 10px;
 					}
-					document.getElementById('blogfeed').innerHTML = list.join('');
+					.item img {
+						max-width: 100%;
+						height: auto;
+					}
+					.item h3 {
+						font-size: 18px;
+						margin-bottom: 5px;
+					}
+					.item p {
+						font-size: 14px;
+						color: #666;
+					}
+				</style>
+				<div id="blog-posts">
+					<!-- Top 3 blog posts will be displayed here -->
+				</div>
+				
+				<script type="text/javascript">
+					function recentPost(json) {
+						let output = '';
+						for (var i = 0; i < json.feed.entry.length; i++) {
+							let postUrl = '';
+							for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+								if (json.feed.entry[i].link[j].rel == 'alternate') {
+									postUrl = json.feed.entry[i].link[j].href;
+									break;
+								}
+							}
 
-				}
+							var postTitle = json.feed.entry[i].title.$t;
+							var postSummary = json.feed.entry[i].summary ? json.feed.entry[i].summary.$t.substring(0, 400) + '...' : 'No description available';
+
+							// Extract and modify the thumbnail if available
+							var postThumbnail = 'https://via.placeholder.com/320'; // Default placeholder (320px width)
+							if (json.feed.entry[i].media$thumbnail) {
+								postThumbnail = json.feed.entry[i].media$thumbnail.url.replace(/\=s[0-9]+(-w[0-9]+)?(-c)?(-h[0-9]+)?$/, '=s300'); // Modify to larger size (300px width)
+							} else if (json.feed.entry[i].content && json.feed.entry[i].content.$t.match(/<img.*?src="(.*?)"/)) {
+								postThumbnail = json.feed.entry[i].content.$t.match(/<img.*?src="(.*?)"/)[1].replace(/\/s[0-9]+(-w[0-9]+)?(-c)?(-h[0-9]+)?$/, '=s300');
+							}
+
+							output += `
+								<div class="row">
+									<div class="item">
+										<div class="col-sm-13">
+											<h3><b><a href="${postUrl}" target="_blank">${postTitle}</a></b></h3>
+											<p>${postSummary}</p>
+										</div>
+									</div>
+								</div>
+							`;
+						}
+
+						document.getElementById('blog-posts').innerHTML = output;
+					}
 				</script>
-				<script src="https://www.blogger.com/feeds/5452681278479740088/posts/default?alt=json&max-results=6&callback=getPosts"></script>
+				
+				<!-- Blogger feed script -->
+				<script src="https://www.blogger.com/feeds/5452681278479740088/posts/summary?max-results=5&alt=json-in-script&callback=recentPost"></script>
 			</p>
-			</br>
-			
-			<hr>
 		</div>
     </div>
 	
@@ -466,15 +515,15 @@ loaded();
 		<ul style="list-style: none; margin-left: -39px;">
 			<li>
 				<i class="fa fa-rss-square" aria-hidden="true"></i> 
-				<b><a href="https://faltucoder.blogspot.com">Faltu Coder</a></b>
+				<b><a target="_blank" href="https://faltucoder.blogspot.com">Faltu Coder</a></b>
 			</li>
 			<li>
 				<i class="fa fa-rss-square" aria-hidden="true"></i> 
-				<b><a href="https://amazingvangari.blogspot.com">Vangari Blog</a></b>
+				<b><a target="_blank" href="https://amazingvangari.blogspot.com">Vangari Blog</a></b>
 			</li>
 			<li>
 				<i class="fa fa-rss-square" aria-hidden="true"></i> 
-				<b><a href="https://tawsiftorabi.blogspot.com">Personal Blog</a></b>
+				<b><a target="_blank" href="https://tawsiftorabi.blogspot.com">Personal Blog</a></b>
 			</li>
     </div>
 	
