@@ -314,7 +314,8 @@ a.button-4 {}
 	.profilephoto {
 		border-radius: 50%;
 		border: 8px solid #fff;
-		height: 303px;
+		width: 100%;
+		max-width: 74%;
 		box-shadow: 0px 18px 37px -18px #00000033;
 		transition: 0.7s;
 		z-index: 999;
@@ -373,7 +374,7 @@ a.button-4 {}
 
 	.content {
 	  margin-left: 1em;
-	  max-width:90%;
+	  max-width: 100%;
 	}
 
 	.cat{
@@ -445,7 +446,7 @@ a.button-4 {}
 	}
 	
 	.footersec{
-		background-image: linear-gradient(to bottom, transparent, black), url(../images/cover2.jpg);
+		background-image: linear-gradient(to bottom, transparent, black), url(../assets/images/cover2.jpg);
 		height: 100%;
 		background-position: center;
 		background-attachment: fixed;
