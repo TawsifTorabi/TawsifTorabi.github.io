@@ -1,0 +1,109 @@
+[
+    {
+      "title": "RealtimeHTML",
+      "description": "Realtime HTML Editor for HTML beginners",
+      "image": "assets/images/realtimeHTML.png",
+      "technologies": ["JS", "HTML", "CSS"],
+      "demoLink": "https://tawsiftorabi.github.io/realtimeHTML",
+      "sourceLink": "https://github.com/TawsifTorabi/realtimeHTML"
+    },
+    {
+      "title": "UCAMextended",
+      "description": "A Web Plugin for UIU UCAM Users to add Exam Routine on UIU UCAM",
+      "image": "assets/images/ucamextended.png",
+      "technologies": ["JS"],
+      "demoLink": "https://tawsiftorabi.github.io/ucamextended",
+      "sourceLink": "https://github.com/TawsifTorabi/ucamextended"
+    },
+    {
+      "title": "AurnaLightbox",
+      "description": "A Lightbox for Websites to showcase Iframes and Images",
+      "image": "assets/images/AurnaLightbox.png",
+      "technologies": ["JS"],
+      "demoLink": "https://tawsiftorabi.github.io/AurnaLightbox",
+      "sourceLink": "https://github.com/TawsifTorabi/AurnaLightbox"
+    },
+    {
+      "title": "UIUcse",
+      "description": "A Simple JSON Search Engine for Recorded Course Contents",
+      "image": "assets/images/UIUcse.png",
+      "technologies": ["JS", "HTML", "CSS"],
+      "demoLink": "https://tawsiftorabi.github.io/UIUcse",
+      "sourceLink": "https://github.com/TawsifTorabi/UIUcse"
+    },
+    {
+      "title": "Responsive Tester",
+      "description": "Most Lite Javascript Tool for website responsive tests",
+      "image": "assets/images/ResponsiveTester.png",
+      "technologies": ["JS", "HTML", "CSS"],
+      "demoLink": "https://tawsiftorabi.github.io/ResponsiveTester/",
+      "sourceLink": "https://github.com/TawsifTorabi/ResponsiveTester"
+    },
+    {
+      "title": "MiniForum",
+      "description": "A Simple PHP Online Q&A Forum for Student Groups",
+      "image": "assets/images/MiniForum.png",
+      "technologies": ["JS", "HTML", "CSS", "PHP", "MySQL"],
+      "sourceLink": "https://github.com/TawsifTorabi/MiniForum/"
+    },
+    {
+      "title": "DocChamber",
+      "description": "Appointment System for Doctor Chamber",
+      "image": "assets/images/DocChamber.png",
+      "technologies": ["JS", "HTML", "CSS", "PHP", "MySQL"],
+      "sourceLink": "https://github.com/TawsifTorabi/DocChamber_Appointment_System"
+    },
+    {
+      "title": "ContentLinkage",
+      "description": "Simple Content Sharing System Concept for DBMS Project",
+      "image": "assets/images/ContentLinkage.png",
+      "technologies": ["JS", "HTML", "CSS", "PHP", "MySQL"],
+      "sourceLink": "https://github.com/TawsifTorabi/ContentLinkage"
+    },
+    {
+      "title": "WeeklySalesRegister",
+      "description": "Weekly Magazine Sales Tracking System in PHP and SQLite",
+      "image": "assets/images/WeeklySalesRegister.png",
+      "technologies": ["JS", "HTML", "CSS", "PHP", "SQLite"],
+      "sourceLink": "https://github.com/TawsifTorabi/WeeklySalesRegister"
+    },
+    {
+      "title": "Web Photobooth",
+      "description": "A Web App for Kiosk Booths allows users to capture photos",
+      "image": "assets/images/webphotobooth.png",
+      "technologies": ["JS", "HTML", "CSS", "PHP"],
+      "demoLink": "https://tawsiftorabi.github.io/Web_Photobooth",
+      "sourceLink": "https://github.com/TawsifTorabi/Web_Photobooth"
+    },
+    {
+      "title": "RupokCMS",
+      "description": "A CMS for Online E-Book Magazine Publication",
+      "image": "assets/images/rupokCMS.png",
+      "technologies": ["JS", "HTML", "CSS", "PHP", "MySQL"],
+      "sourceLink": "https://github.com/TawsifTorabi/rupokCMS"
+    },
+    {
+      "title": "WebsiteDownDetector",
+      "description": "JSwing app to detect website status",
+      "image": "assets/images/WebsiteDownDetector.png",
+      "technologies": ["Java", "JSwing"],
+      "downloadLink": "https://github.com/TawsifTorabi/WebsiteDownDetectorJava/raw/main/WebsiteDownDetector.jar",
+      "sourceLink": "https://github.com/TawsifTorabi/WebsiteDownDetectorJava/"
+    },
+    {
+      "title": "JavaResistorCalculator",
+      "description": "JSwing Application to Decode Resistor Color Band Codes",
+      "image": "assets/images/ResistorCalculatorJava.png",
+      "technologies": ["Java", "JSwing"],
+      "downloadLink": "https://github.com/TawsifTorabi/ResistorColorBandCalculatorJava/raw/main/ResistorCalculator.jar",
+      "sourceLink": "https://github.com/TawsifTorabi/ResistorColorBandCalculatorJava/"
+    },
+    {
+      "title": "CareMeFx",
+      "description": "JavaFX Healthcare Companion Application",
+      "image": "assets/images/CareMeFx.png",
+      "technologies": ["Java", "JavaFX", "MySQL"],
+      "sourceLink": "https://github.com/TawsifTorabi/CareMeFx"
+    }
+  ]
+  

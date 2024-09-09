@@ -12,8 +12,8 @@
 		scroll-behavior: smooth;
 	}
 	.parentdetail{
-		font-family: Trebuchet MS;
-		font-size: 14px;
+		font-family: nlight;
+		font-size: 16px;
 	}
 	.filterEmo{
 		/* filter: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><filter id='f'><feColorMatrix color-interpolation-filters='sRGB' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 1 0 0'/></filter></svg>#f"); */
