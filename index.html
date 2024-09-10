@@ -78,11 +78,20 @@ loaded();
 				<center>
 					<div style="display: inline-block;vertical-align: bottom;">
 						<img class="profilephoto" alt="Tawsif Torabi" src="assets/images/tawsiftorabi.png">
-						<img src="assets/images/leer.jpg" alt="" style="display: none;" class="leer">
+						<div class="leerbg">
+							<img src="assets/images/leer.png" alt="" class="leer">
+						</div>
 						<style>
 							.leer {
 								position: absolute;
 								z-index: 999;
+								width: 395px;
+								top: 45%;
+								right: -5%;
+							}
+							.leerbg {
+								position: absolute;
+								z-index: 998;
 								width: 395px;
 								top: 230px;
 								right: -448px;
