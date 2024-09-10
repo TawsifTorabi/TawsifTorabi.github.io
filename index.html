@@ -380,9 +380,9 @@ loaded();
 			<div class="used">
 			  ${project.technologies.map(tech => `<span class="cat ${tech.toLowerCase()}">${tech}</span>`).join('')}
 			</div>
-			${project.demoLink ? `<a href="${project.demoLink}" class="button"><i class="fa fa-external-link-square" aria-hidden="true"></i> Demo</a>` : ''}
-			${project.downloadLink ? `<a href="${project.downloadLink}" class="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a>` : ''}
-			<a href="${project.sourceLink}" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
+			${project.demoLink ? `<a target="_blank" href="${project.demoLink}" class="button"><i class="fa fa-external-link-square" aria-hidden="true"></i> Demo</a>` : ''}
+			${project.downloadLink ? `<a target="_blank" href="${project.downloadLink}" class="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a>` : ''}
+			<a target="_blank" href="${project.sourceLink}" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
 		  `;
   
 		  container.appendChild(projectElement); // Add the project to the container

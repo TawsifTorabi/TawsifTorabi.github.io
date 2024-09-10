@@ -60,9 +60,16 @@
     <div id="loaderCont2">
       <embed src="../assets/images/logo.svg" class="loaderSVG" />
     </div>
-
+    <style>
+    </style>
+    <script>
+        if(inIframe()){
+            document.getElementById('iframe1').classList.remove('iframe1');
+        }
+    </script>
     <div class="text-center">
       <iframe
+        class="iframe1"
         id="iframe1"
         style="
           display: inherit;
@@ -83,6 +90,13 @@
     </div>
 
     <script>
+        function inIframe () {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
       //Cinema CV
       const CV1 =
         "https://docs.google.com/document/d/1d_VJ1107z7QlcHthnzo1nLBslmB7oQ8BqanONKAITNg/";
