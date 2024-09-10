@@ -77,25 +77,95 @@ loaded();
 			<div class="col-sm-4 text-left">
 				<center>
 					<div style="display: inline-block;vertical-align: bottom;">
-						<img class="profilephoto" alt="Tawsif Torabi" src="assets/images/tawsiftorabi.png">
-						<div class="leerbg">
-							<img src="assets/images/leer.png" alt="" class="leer">
+						<img class="profilephoto" alt="Tawsif Torabi" onclick="toggleLeer()" src="assets/images/tawsiftorabi.png">
+						<img onclick="toggleLeer()" src="assets/images/leer.png" alt="" class="leerHide fire" id="leer">
+						<div onclick="toggleLeer()" class="leerbgHide" id="leerbg">
 						</div>
+						<script>
+							function toggleLeer() {
+								const leerElement = document.getElementById('leer');
+								const leerBgElement = document.getElementById('leerbg');
+
+								if (leerElement.classList.contains('leerHide')) {
+									// Show elements
+									// leerBgElement.style.display = 'inline';
+									leerElement.classList.remove('leerHide');
+									leerElement.classList.add('leer');
+									leerBgElement.classList.remove('leerbgHide');
+									leerBgElement.classList.add('leerbg');
+								} else {
+									// Hide elements
+									leerElement.classList.remove('leer');
+									leerElement.classList.add('leerHide');
+									leerBgElement.classList.remove('leerbg');
+									leerBgElement.classList.add('leerbgHide');
+									setTimeout(function() {
+										// leerBgElement.style.display = 'none';
+									}, 500);
+								}
+							}
+
+						</script>
 						<style>
+							.fire {
+								animation: animation 1s ease-in-out infinite alternate;	
+							}
+
+							.burn {
+								animation: animation .65s ease-in-out infinite alternate;
+							}
+
+							@keyframes animation
+							{
+								0% {
+									box-shadow: 0 0 20px #510056, 
+												10px -10px 30px #b067ff, 
+												-20px -20px 40px #590d80, 
+												20px -40px 50px #942ea1, 
+												-20px -60px 60px #140d16, 
+												0 -80px 70px #5c2074, 
+												10px -90px 80px #4a345a;
+								}
+								100% {
+									box-shadow: 0 0 20px #ff20f8, 
+												10px -10px 30px #783281, 
+												-20px -20px 40px #df5bb0, 
+												22px -42px 60px #7c0085, 
+												-22px -58px 50px #550081, 
+												0 -82px 80px #d145cd, 
+												10px -90px 80px #ff4100;
+								}
+							}
+							
 							.leer {
 								position: absolute;
-								z-index: 999;
-								width: 395px;
-								top: 45%;
-								right: -5%;
+								z-index: 99999;
+								width: 42em;
+								top: 23%;
+								right: -93%;
+								transition: 0.4s;
+								border-radius: 50%;
+							}
+							.leerHide {
+								position: absolute;
+								z-index: 99999;
+								width: 0px;
+								top: -215%;
+								right: 149%;
+								transition: 0.4s;
 							}
 							.leerbg {
-								position: absolute;
-								z-index: 998;
-								width: 395px;
-								top: 230px;
-								right: -448px;
+								position: fixed;
+								z-index: 9999;
+								width: 100%;
+								top: 0px;
+								right: 0px;
+								background: #840481;
+								height: 100vh;
+								transition: 0.4s;
+								opacity: 100%;
 							}
+							.leerbgHide{opacity: 0%; transition: 0.4s;}
 						</style>
 					</div>
 					<div class="clearfix"></div>
