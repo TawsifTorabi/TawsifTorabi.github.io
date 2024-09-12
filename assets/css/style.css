@@ -13,7 +13,7 @@
 	}
 	.parentdetail{
 		font-family: nlight;
-		font-size: 16px;
+		font-size: 19px;
 	}
 	.filterEmo{
 		/* filter: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><filter id='f'><feColorMatrix color-interpolation-filters='sRGB' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 1 0 0'/></filter></svg>#f"); */
@@ -331,7 +331,7 @@ a.button-4 {}
 	.thishead {
 		letter-spacing: 3px;
 		font-family: nlight;
-		font-size: 20px;
+		font-size: 27px;
 	}
 	
 
