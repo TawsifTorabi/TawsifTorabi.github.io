@@ -32,10 +32,12 @@ function showPage() {
   //document.getElementById("loaderCont").style.display = "none";
 }
 </script>
-<div id="loaderCont">
+
+<div id="loaderCont" style="display: none;">
 	<embed src="assets/images/logo.svg" class="loaderSVG"/>
 	<!-- <div id="loader"></div> -->
 </div>
+
 <!-- loader script end -->
 
 
@@ -187,7 +189,7 @@ function showPage() {
 						<ul style="list-style: none;color: #898989;">
 							<li><small style="font-size: 13px;display: inline-block;"><i class="fa fa-book" aria-hidden="true"></i> B.Sc in CSE at <b>United International University</b></small></li>
 							<li><small style="font-size: 13px;display: inline-block;"><i class="fa fa-microchip" aria-hidden="true"></i> R&D at <b>UIU Robotics</b></small></li>
-							<li><small style="font-size: 13px;display: inline-block;"><i class="fa fa-briefcase" aria-hidden="true"></i> Member at <b>UIU Mars Rover Team</b></small></li>
+							<li><small style="font-size: 13px;display: inline-block;"><i class="fa fa-briefcase" aria-hidden="true"></i> Co-Team Lead at <b>UIU Mars Rover Team</b></small></li>
 						</ul>
 					</div>						
 				</center> 
@@ -204,7 +206,7 @@ function showPage() {
 					<br>
 					<p class="parentdetail">
 						I'm a Computer Science student on the path to becoming a programmer, though there was a time when my code was so confusing it left a client's developer scratching their head. 🙄 <br>
-						Right now, I’m pursuing my B.Sc in CSE at United International University, where I also work as a team member on the Mars Rover Project at the Center for Artificial Intelligence and Robotics. <br>
+						Right now, I’m pursuing my B.Sc in CSE at United International University, where I also work as the Co-Team Leader on the Mars Rover Project at the Center for Artificial Intelligence and Robotics. <br>
 						Keeping my CGPA up has been... challenging, but I’m passionate about both my studies and research.
 						<br>
 						Both my parents are teachers, and they’ve inspired me to share my knowledge. So, I create videos on various topics that fascinate me - 			
@@ -377,11 +379,11 @@ function showPage() {
   
 		  // Create the HTML content
 		  projectElement.innerHTML = `
-			<h3>${project.title}</h3>
+			<h3 style="font-size: 17px;">${project.title}</h3>
 			<p class="detail-project">${project.description}</p>
 			<span class="image-portfolio"><img src="${project.image}" class="img-responsive" style="width:100%" alt="Image"></span>
 			<div class="used">
-			  ${project.technologies.map(tech => `<span class="cat ${tech.toLowerCase()}">${tech}</span>`).join('')}
+			  ${project.technologies.map(tech => `<span class="cat ${tech.toLowerCase().replace(/\s+/g, '-')}">${tech}</span>`).join('')}
 			</div>
 			${project.demoLink ? `<a target="_blank" href="${project.demoLink}" class="button"><i class="fa fa-external-link-square" aria-hidden="true"></i> Demo</a>` : ''}
 			${project.downloadLink ? `<a target="_blank" href="${project.downloadLink}" class="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a>` : ''}
@@ -427,7 +429,7 @@ function showPage() {
 			
 				<script>
 					const username = "tawsiftorabi";
-					const apiUrl = `https://api.github.com/users/${username}/repos?per_page=50`;
+					// const apiUrl = `https://api.github.com/users/${username}/repos?per_page=50`;
 			
 					// Fetch the repositories
 					fetch(apiUrl)

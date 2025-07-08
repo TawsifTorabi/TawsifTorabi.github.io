@@ -1,9 +1,39 @@
 [
-    {
+  {
+      "title": "AETHER UAV",
+      "description": "AETHER UAV is a UAS Platform prototype to deploy as a tactical or search-and-rescue assistance device",
+      "image": "assets/images/aetheruav.jpg",
+      "technologies": ["Embedded Systems", "Robotics", "UAV", "Aerial Systems", "CPP", "JavaScript", "Python"],
+      "sourceLink": "https://github.com/TawsifTorabi/AETHER_UAV"
+  },
+  {
+      "title": "UIU Mars Rover - AXIOS",
+      "description": "UIU 4th Gen Mars Rover. I worked as Co-Team Lead & Electrical System Sub-Team Lead.",
+      "image": "assets/images/axios.jpg",
+      "technologies": ["Embedded Systems", "Robotics", "CPP"],
+      "sourceLink": "https://uiumarsrover.org/projects/yggdrasil-details.html",
+      "demoLink": "https://uiumarsrover.org/video/video_play.html?id=xgVbjqFUdvA&title=UIU%20MARS%20ROVER%20TEAM%20%7C%20AXIOS%20%7C%20URC%20SAR%202025"
+  },
+  {
+      "title": "PrinterWebsocket Framework",
+      "description": "A Client-Server Framework to allow Web Apps to use POS Thermal Printers for Silent Printing",
+      "image": "assets/images/printerwebsocket.png",
+      "technologies": ["Python", "javaScript", "WebSocket"],
+      "sourceLink": "https://github.com/TawsifTorabi/PrinterWebsocket"
+  },
+  {
+        "title": "UIU Mars Rover - YGGDRASIL",
+        "description": "UIU 3rd Gen Mars Rover. I worked as Embedded System Engineer",
+        "image": "assets/images/yggdrasil.jpg",
+        "technologies": ["Embedded Systems", "Robotics", "CPP"],
+        "sourceLink": "https://uiumarsrover.org/projects/yggdrasil-details.html",
+        "demoLink": "https://uiumarsrover.org/video/video_play.html?id=uKANf94gSFs&title=UIU%20MARS%20ROVER%20TEAM%20%7C%20YGGDRASIL%20%7C%20URC%20SAR%202024"
+    },
+  {
         "title": "MiDI2Arduino",
-        "description": "Converts MIDI files to Arduino Code with some presets.",
+        "description": "Converts MIDI files to Arduino Code with some MIDI presets.",
         "image": "assets/images/midi2arduino.jpeg",
-        "technologies": ["JS", "HTML", "CSS"],
+        "technologies": ["JavaScript", "HTML", "CSS"],
         "demoLink": "https://tawsiftorabi.github.io/Midi2ArduinoTone",
         "sourceLink": "https://github.com/TawsifTorabi/Midi2ArduinoTone"
     },
@@ -11,7 +41,7 @@
       "title": "BDIXscannerWeb",
       "description": "A tool to scan for available BDIX FTP Servers",
       "image": "assets/images/bdix.jpeg",
-      "technologies": ["JS", "HTML", "CSS"],
+      "technologies": ["JavaScript", "HTML", "CSS"],
       "demoLink": "https://tawsiftorabi.github.io/BDIXscannerWeb",
       "sourceLink": "https://github.com/TawsifTorabi/BDIXscannerWeb"
     },
@@ -19,7 +49,7 @@
       "title": "RealtimeHTML",
       "description": "Realtime HTML Editor for HTML beginners",
       "image": "assets/images/realtimeHTML.png",
-      "technologies": ["JS", "HTML", "CSS"],
+      "technologies": ["JavaScript", "HTML", "CSS"],
       "demoLink": "https://tawsiftorabi.github.io/realtimeHTML",
       "sourceLink": "https://github.com/TawsifTorabi/realtimeHTML"
     },
@@ -27,7 +57,7 @@
       "title": "UCAMextended Extension",
       "description": "A Browser Plugin for UIU UCAM Users to add Exam Routine on UIU UCAM",
       "image": "assets/images/ucamextended.png",
-      "technologies": ["JS"],
+      "technologies": ["JavaScript"],
       "demoLink": "https://tawsiftorabi.github.io/ucamextended",
       "sourceLink": "https://github.com/TawsifTorabi/ucamextended"
     },
@@ -35,7 +65,7 @@
       "title": "Web Photobooth",
       "description": "A Web App for Kiosk Booths allows users to capture photos",
       "image": "assets/images/webphotobooth.png",
-      "technologies": ["JS", "HTML", "CSS", "PHP"],
+      "technologies": ["JavaScript", "HTML", "CSS", "PHP"],
       "demoLink": "https://tawsiftorabi.github.io/Web_Photobooth",
       "sourceLink": "https://github.com/TawsifTorabi/Web_Photobooth"
     },
@@ -43,7 +73,7 @@
       "title": "AurnaLightbox",
       "description": "A Lightbox for Websites to showcase Iframes and Images",
       "image": "assets/images/AurnaLightbox.png",
-      "technologies": ["JS"],
+      "technologies": ["JavaScript"],
       "demoLink": "https://tawsiftorabi.github.io/AurnaLightbox",
       "sourceLink": "https://github.com/TawsifTorabi/AurnaLightbox"
     },
@@ -51,14 +81,14 @@
       "title": "MiniForum",
       "description": "A Simple PHP Online Q&A Forum for Student Groups",
       "image": "assets/images/MiniForum.png",
-      "technologies": ["JS", "HTML", "CSS", "PHP", "MySQL"],
+      "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"],
       "sourceLink": "https://github.com/TawsifTorabi/MiniForum/"
     },
     {
       "title": "UIUcse",
       "description": "A Simple JSON Search Engine for Recorded Course Contents",
       "image": "assets/images/UIUcse.png",
-      "technologies": ["JS", "HTML", "CSS"],
+      "technologies": ["JavaScript", "HTML", "CSS"],
       "demoLink": "https://tawsiftorabi.github.io/UIUcse",
       "sourceLink": "https://github.com/TawsifTorabi/UIUcse"
     },
@@ -66,28 +96,28 @@
       "title": "DocChamber",
       "description": "Appointment System for Doctor Chamber",
       "image": "assets/images/DocChamber.png",
-      "technologies": ["JS", "HTML", "CSS", "PHP", "MySQL"],
+      "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"],
       "sourceLink": "https://github.com/TawsifTorabi/DocChamber_Appointment_System"
     },
     {
       "title": "ContentLinkage",
       "description": "Simple Content Sharing System Concept for DBMS Project",
       "image": "assets/images/ContentLinkage.png",
-      "technologies": ["JS", "HTML", "CSS", "PHP", "MySQL"],
+      "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"],
       "sourceLink": "https://github.com/TawsifTorabi/ContentLinkage"
     },
     {
       "title": "WeeklySalesRegister",
       "description": "Weekly Magazine Sales Tracking System in PHP and SQLite",
       "image": "assets/images/WeeklySalesRegister.png",
-      "technologies": ["JS", "HTML", "CSS", "PHP", "SQLite"],
+      "technologies": ["JavaScript", "HTML", "CSS", "PHP", "SQLite"],
       "sourceLink": "https://github.com/TawsifTorabi/WeeklySalesRegister"
     },
     {
       "title": "Responsive Tester",
       "description": "Most Lite Javascript Tool for website responsive tests",
       "image": "assets/images/ResponsiveTester.png",
-      "technologies": ["JS", "HTML", "CSS"],
+      "technologies": ["JavaScript", "HTML", "CSS"],
       "demoLink": "https://tawsiftorabi.github.io/ResponsiveTester/",
       "sourceLink": "https://github.com/TawsifTorabi/ResponsiveTester"
     },
@@ -95,7 +125,7 @@
       "title": "RupokCMS",
       "description": "A CMS for Online E-Book Magazine Publication",
       "image": "assets/images/rupokCMS.png",
-      "technologies": ["JS", "HTML", "CSS", "PHP", "MySQL"],
+      "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"],
       "sourceLink": "https://github.com/TawsifTorabi/rupokCMS"
     },
     {
