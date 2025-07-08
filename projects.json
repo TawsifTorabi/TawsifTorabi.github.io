@@ -1,7 +1,7 @@
 [
   {
       "title": "AETHER UAV",
-      "description": "AETHER UAV is a UAS Platform prototype to deploy as a tactical or search-and-rescue assistance device",
+      "description": "Advanced Electronic Tactical Hybrid Emergency Reconnaissance UAV is a UAS Platform prototype to deploy as a tactical or search-and-rescue assistance device",
       "image": "assets/images/aetheruav.jpg",
       "technologies": ["Embedded Systems", "Robotics", "UAV", "Aerial Systems", "CPP", "JavaScript", "Python"],
       "sourceLink": "https://github.com/TawsifTorabi/AETHER_UAV"

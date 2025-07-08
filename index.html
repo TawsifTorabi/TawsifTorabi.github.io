@@ -33,7 +33,7 @@ function showPage() {
 }
 </script>
 
-<div id="loaderCont" style="display: none;">
+<div id="loaderCont">
 	<embed src="assets/images/logo.svg" class="loaderSVG"/>
 	<!-- <div id="loader"></div> -->
 </div>
@@ -47,7 +47,7 @@ function showPage() {
 
 
 <a name="home"></a>
-<nav class="navbar navbar-inverse" style="position: fixed; width: 100%; z-index: 9999;">
+<nav class="navbar navbar-inverse" style="position: fixed; width: 100%; z-index: 200;">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -61,8 +61,11 @@ function showPage() {
       <ul class="nav navbar-nav">
         <li><a href="#home">Home</a></li>
         <li><a href="#blog">Blog</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#repositories">Repositories</a></li>
+        <li><a href="/resume">Resume</a></li>
+        <li><a target="_blank" href="https://github.com/TawsifTorabi">Github</a></li>
       </ul>
     </div>
   </div>
@@ -180,6 +183,7 @@ function showPage() {
 					
 					<div class="thishead">
 						<a class="footsoc" href="https://facebook.com/tawsif.torabi"><i class="fa fa-facebook-official smallfont" aria-hidden="true"></i></a>
+						<a class="footsoc" href="https://instagram.com/tawsiftorabi"><i class="fa fa-instagram smallfont" aria-hidden="true"></i></a>
 						<a class="footsoc" href="https://youtube.com/amazingvangari"><i class="fa fa-youtube-square smallfont" aria-hidden="true"></i></a>
 						<a class="footsoc" href="https://github.com/tawsiftorabi"><i class="fa fa-github-square smallfont" aria-hidden="true"></i></a>
 						<a class="footsoc" href="https://www.linkedin.com/in/tawsiftorabi/"><i class="fa fa-linkedin-square smallfont" aria-hidden="true"></i></a>
@@ -354,6 +358,35 @@ function showPage() {
 <!-- Blog Section Ends -->
 
 
+<!-- Gallery Section -->
+<a name="gallery"></a>
+<!-- Dynamic Gallery Section -->
+<!-- Dynamic Gallery Section -->
+
+<!-- Image Cloud Gallery Section -->
+<div class="container-fluid text-center" style="padding: 50px 30px;">
+	<h2><span class="namehead">Gallery</span></h2>
+</br>
+</br>
+  <div id="gallery-cloud" class="image-cloud">
+    <!-- Images will be injected here -->
+  </div>
+</div>
+
+<!-- Bootstrap Lightbox Modal -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" role="dialog" aria-labelledby="lightboxLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img id="lightboxImage" src="" class="img-responsive center-block" style="max-height: 75vh; margin: auto;">
+        <p id="lightboxCaption" class="caption" style="margin-top: 10px;"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Gallery Section Ends-->
+
+
 <!-- Project Section -->
 <a name="projects"></a>
 </br>
@@ -365,6 +398,38 @@ function showPage() {
   <br>
   <div class="row" id="portfolio-container"></div>
   <script>
+  async function loadGallery() {
+    try {
+      const response = await fetch('gallery.json');
+      const gallery = await response.json();
+      const container = document.getElementById('gallery-cloud');
+
+      gallery.forEach(item => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'image-cloud-item';
+        wrapper.innerHTML = `
+			<div class="img-overlay-container">
+				<img src="${item.src}" alt="${item.caption}" onclick="openLightbox('${item.src}', \`${item.caption}\`)">
+				<div class="img-caption-overlay">
+				<span>${item.caption}</span>
+				</div>
+			</div>
+			`;
+        container.appendChild(wrapper);
+      });
+    } catch (error) {
+      console.error("Error loading gallery:", error);
+    }
+  }
+
+  function openLightbox(src, caption) {
+    document.getElementById('lightboxImage').src = src;
+    document.getElementById('lightboxCaption').textContent = caption;
+    $('#lightboxModal').modal('show');
+  }
+
+  loadGallery();
+
 	// Function to load and display projects
 	async function loadProjects() {
 	  try {
@@ -429,7 +494,7 @@ function showPage() {
 			
 				<script>
 					const username = "tawsiftorabi";
-					// const apiUrl = `https://api.github.com/users/${username}/repos?per_page=50`;
+					const apiUrl = `https://api.github.com/users/${username}/repos?per_page=50`;
 			
 					// Fetch the repositories
 					fetch(apiUrl)

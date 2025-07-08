@@ -351,7 +351,7 @@ body {
   max-width: 74%;
   box-shadow: 0px 18px 37px -18px #00000033;
   transition: 0.7s;
-  z-index: 999;
+  z-index: 99;
   position: relative;
 }
 
@@ -500,6 +500,94 @@ body {
   height: 40em;
   overflow-y: scroll;
 }
+
+
+/*--------------- Image Gallery --------------------*/
+.image-cloud {
+  column-count: 5;
+  column-gap: 15px;
+}
+
+@media (max-width: 1200px) {
+  .image-cloud {
+    column-count: 4;
+  }
+}
+@media (max-width: 992px) {
+  .image-cloud {
+    column-count: 3;
+  }
+}
+@media (max-width: 768px) {
+  .image-cloud {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .image-cloud {
+    column-count: 1;
+  }
+}
+
+.image-cloud-item {
+  break-inside: avoid;
+  margin-bottom: 15px;
+}
+
+.image-cloud-item img {
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.image-cloud-item img:hover {
+  transform: scale(1.03);
+}
+
+.image-cloud-item p.caption {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 5px;
+  color: #666;
+}
+
+.img-overlay-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.img-overlay-container img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.img-overlay-container:hover img {
+  transform: scale(1.05);
+}
+
+.img-caption-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark translucent */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 13px;
+}
+
+.img-overlay-container:hover .img-caption-overlay {
+  opacity: 1;
+}
+
+
+/*---------------Project Tech Tags--------------*/
 
 .used {
   margin-bottom: 10px;
