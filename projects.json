@@ -8,7 +8,7 @@
   },
   {
       "title": "UIU Mars Rover - AXIOS",
-      "description": "UIU 4th Gen Mars Rover. I worked as Co-Team Lead & Electrical System Sub-Team Lead.",
+      "description": "UIU 4th Gen Mars Rover. I worked as Co-Team Lead & Electrical System Sub-System Lead.",
       "image": "assets/images/axios.jpg",
       "technologies": ["Embedded Systems", "Robotics", "CPP"],
       "sourceLink": "https://uiumarsrover.org/projects/yggdrasil-details.html",
@@ -16,14 +16,14 @@
   },
   {
       "title": "PrinterWebsocket Framework",
-      "description": "A Client-Server Framework to allow Web Apps to use POS Thermal Printers for Silent Printing",
+      "description": "A Client-Server Framework to allow Web Apps to use POS Thermal Printers for Silent Printing.",
       "image": "assets/images/printerwebsocket.png",
       "technologies": ["Python", "javaScript", "WebSocket"],
       "sourceLink": "https://github.com/TawsifTorabi/PrinterWebsocket"
   },
   {
         "title": "UIU Mars Rover - YGGDRASIL",
-        "description": "UIU 3rd Gen Mars Rover. I worked as Embedded System Engineer",
+        "description": "UIU 3rd Gen Mars Rover. I worked as Embedded System Engineer in the Electrical System Sub-Team.",
         "image": "assets/images/yggdrasil.jpg",
         "technologies": ["Embedded Systems", "Robotics", "CPP"],
         "sourceLink": "https://uiumarsrover.org/projects/yggdrasil-details.html",
@@ -39,15 +39,15 @@
     },
     {
       "title": "BDIXscannerWeb",
-      "description": "A tool to scan for available BDIX FTP Servers",
+      "description": "A Javascript tool to scan for available BDIX FTP Servers",
       "image": "assets/images/bdix.jpeg",
       "technologies": ["JavaScript", "HTML", "CSS"],
       "demoLink": "https://tawsiftorabi.github.io/BDIXscannerWeb",
       "sourceLink": "https://github.com/TawsifTorabi/BDIXscannerWeb"
     },
     {
-      "title": "RealtimeHTML",
-      "description": "Realtime HTML Editor for HTML beginners",
+      "title": "RealtimeHTML Editor",
+      "description": "Javascript Based Realtime HTML Editor for HTML beginners",
       "image": "assets/images/realtimeHTML.png",
       "technologies": ["JavaScript", "HTML", "CSS"],
       "demoLink": "https://tawsiftorabi.github.io/realtimeHTML",
@@ -63,15 +63,15 @@
     },
     {
       "title": "Web Photobooth",
-      "description": "A Web App for Kiosk Booths allows users to capture photos",
+      "description": "A Web App for Kiosk Booths allows users to capture photos using esp32 remote & Hand Gesture",
       "image": "assets/images/webphotobooth.png",
-      "technologies": ["JavaScript", "HTML", "CSS", "PHP"],
+      "technologies": ["JavaScript", "HTML", "CSS", "PHP", "Embedded Systems", "CPP", "WebSocket"],
       "demoLink": "https://tawsiftorabi.github.io/Web_Photobooth",
       "sourceLink": "https://github.com/TawsifTorabi/Web_Photobooth"
     },
     {
       "title": "AurnaLightbox",
-      "description": "A Lightbox for Websites to showcase Iframes and Images",
+      "description": "Lightweight Vanilla JS Lightbox for Websites to showcase Iframes and Images",
       "image": "assets/images/AurnaLightbox.png",
       "technologies": ["JavaScript"],
       "demoLink": "https://tawsiftorabi.github.io/AurnaLightbox",
@@ -79,14 +79,14 @@
     },
     {
       "title": "MiniForum",
-      "description": "A Simple PHP Online Q&A Forum for Student Groups",
+      "description": "A Simple Social Platform using PHP & MySQL",
       "image": "assets/images/MiniForum.png",
       "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"],
       "sourceLink": "https://github.com/TawsifTorabi/MiniForum/"
     },
     {
       "title": "UIUcse",
-      "description": "A Simple JSON Search Engine for Recorded Course Contents",
+      "description": "A Simple JSON Search Engine for Recorded Course Contents for ease of access in COVID19 Lockdown",
       "image": "assets/images/UIUcse.png",
       "technologies": ["JavaScript", "HTML", "CSS"],
       "demoLink": "https://tawsiftorabi.github.io/UIUcse",
@@ -94,55 +94,17 @@
     },
     {
       "title": "DocChamber",
-      "description": "Appointment System for Doctor Chamber",
+      "description": "Dynamic Appointment Management & Tokenization System for Hospitals & Medical Centers",
       "image": "assets/images/DocChamber.png",
       "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"],
       "sourceLink": "https://github.com/TawsifTorabi/DocChamber_Appointment_System"
     },
     {
-      "title": "ContentLinkage",
-      "description": "Simple Content Sharing System Concept for DBMS Project",
-      "image": "assets/images/ContentLinkage.png",
-      "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"],
-      "sourceLink": "https://github.com/TawsifTorabi/ContentLinkage"
-    },
-    {
       "title": "WeeklySalesRegister",
-      "description": "Weekly Magazine Sales Tracking System in PHP and SQLite",
+      "description": "Weekly Magazine Sales Tracking System with Report Generation in PHP and SQLite. I had quite the challange to generate the Bangla Font PDFs using PHP mPDF Library.",
       "image": "assets/images/WeeklySalesRegister.png",
       "technologies": ["JavaScript", "HTML", "CSS", "PHP", "SQLite"],
       "sourceLink": "https://github.com/TawsifTorabi/WeeklySalesRegister"
-    },
-    {
-      "title": "Responsive Tester",
-      "description": "Most Lite Javascript Tool for website responsive tests",
-      "image": "assets/images/ResponsiveTester.png",
-      "technologies": ["JavaScript", "HTML", "CSS"],
-      "demoLink": "https://tawsiftorabi.github.io/ResponsiveTester/",
-      "sourceLink": "https://github.com/TawsifTorabi/ResponsiveTester"
-    },
-    {
-      "title": "RupokCMS",
-      "description": "A CMS for Online E-Book Magazine Publication",
-      "image": "assets/images/rupokCMS.png",
-      "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"],
-      "sourceLink": "https://github.com/TawsifTorabi/rupokCMS"
-    },
-    {
-      "title": "WebsiteDownDetector",
-      "description": "JSwing app to detect website status",
-      "image": "assets/images/WebsiteDownDetector.png",
-      "technologies": ["Java", "JSwing"],
-      "downloadLink": "https://github.com/TawsifTorabi/WebsiteDownDetectorJava/raw/main/WebsiteDownDetector.jar",
-      "sourceLink": "https://github.com/TawsifTorabi/WebsiteDownDetectorJava/"
-    },
-    {
-      "title": "JavaResistorCalculator",
-      "description": "JSwing Application to Decode Resistor Color Band Codes",
-      "image": "assets/images/ResistorCalculatorJava.png",
-      "technologies": ["Java", "JSwing"],
-      "downloadLink": "https://github.com/TawsifTorabi/ResistorColorBandCalculatorJava/raw/main/ResistorCalculator.jar",
-      "sourceLink": "https://github.com/TawsifTorabi/ResistorColorBandCalculatorJava/"
     }
   ]
   

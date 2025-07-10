@@ -440,11 +440,11 @@ function showPage() {
 		// Loop through each project and generate the HTML content
 		projects.forEach(project => {
 		  const projectElement = document.createElement('div');
-		  projectElement.className = 'col-sm-3 portfolio-elements';
+		  projectElement.className = 'portfolio-elements';
   
 		  // Create the HTML content
 		  projectElement.innerHTML = `
-			<h3 style="font-size: 17px;">${project.title}</h3>
+			<h3>${project.title}</h3>
 			<p class="detail-project">${project.description}</p>
 			<span class="image-portfolio"><img src="${project.image}" class="img-responsive" style="width:100%" alt="Image"></span>
 			<div class="used">
@@ -467,6 +467,70 @@ function showPage() {
   </script>
  <hr>
 </div>
+
+
+
+
+
+<!-- Additional Sections After Projects -->
+<div class="container-fluid text-left" style="margin: 50px 50px;">
+  
+  <!-- First Row: Education & Work Experiences -->
+  <div class="row">
+    <!-- Education -->
+    <div class="col-sm-6">
+      <a name="education"></a>
+      <h2><span class="namehead">Education</span></h2>
+      <ul class="parentdetail">
+		<li><b>B.Sc in Computer Science & Engineering</b><br>United International University, 2020 - Present</li>
+		<li><b>Higher Secondary Certificate (HSC)</b><br>Shaheed Police Smrity College, Dhaka, 2018 - 2020</li>
+		<li><b>Secondary School Certificate (SSC)</b><br>Shaheed Police Smrity School & College, 2016 - 2018</li>
+      </ul>
+    </div>
+
+    <!-- Work Experiences -->
+    <div class="col-sm-6">
+      <a name="work"></a>
+      <h2><span class="namehead">Work Experiences</span></h2>
+      <ul class="parentdetail">
+        <li><b>Co-Team Lead</b> – UIU Mars Rover Team (2023 - Present)<br>Led development of Electrical Control System and Control Broker for Mars Rover AXIOS.</li>
+        <li><b>R&D Executive</b> – UIU Robotics (2023 - Present)<br>Worked on embedded systems, IoT prototypes, and custom robotic modules.</li>
+        <li><b>Freelance Web Developer</b> (2021 - Present)<br>Developed custom PHP/MySQL web apps and static portfolio websites.</li>
+        <li><b>Video Editor</b> (2020 - Present)<br>Worked in renowned production house in contract to edit several govt. documetaries.</li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Second Row: Publications & Achievements -->
+  <div class="row">
+    <!-- Publications -->
+    <div class="col-sm-6">
+      <a name="publications"></a>
+      <h2><span class="namehead">Publications</span></h2>
+      <ul class="parentdetail">
+        <li>No Publications are Public Yet.</li>
+      </ul>
+    </div>
+
+    <!-- Achievements -->
+    <div class="col-sm-6">
+      <a name="achievements"></a>
+      <h2><span class="namehead">Achievements</span></h2>
+      <ul class="parentdetail">
+		<li>6th Worldwide Rank with "Best Science Team" Award at University Rover Challenge 2025</li>
+		<li>Champion - Software Enginnering - UIU CSE Project Show Summer '24</li>
+        <li>3rd Runners-Up - Techathon - at IUBAT Technocrats v2.0 by IIEC - IUBAT Innovation and Entrepreneurship Center - 2024</li>
+        <li>5th Worldwide Rank at University Rover Challenge 2024</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
 
 
 <a name="repositories"></a>
