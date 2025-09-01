@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>কি নামে ডাকি তোমায়?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#ff6ea9;
+      --accent-2:#7c4dff;
+      --bg-1:#0f1020;
+      --bg-2:#1a0b2e;
+      --glass:rgba(255,255,255,0.12);
+      --text:#f9f7ff;
+      --muted:#cfc6ff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 10% 10%, #2b1146 0%, transparent 70%),
+                  radial-gradient(800px 800px at 90% 20%, #0e5672 0%, transparent 60%),
+                  radial-gradient(800px 800px at 30% 90%, #3e1253 0%, transparent 60%),
+                  linear-gradient(135deg, var(--bg-1), var(--bg-2));
+      overflow:hidden;
+    }
+    .stars{position:fixed;inset:0;pointer-events:none;z-index:0}
+    .container{
+      position:relative;z-index:1;min-height:100vh;display:grid;place-items:center;padding:24px;
+    }
+    .card{
+      width:min(720px, 92vw);
+      padding:28px 28px 32px;
+      border-radius:24px;
+      background:linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.18);
+      backdrop-filter: blur(12px);
+      border:1px solid rgba(255,255,255,0.18);
+    }
+    h1{
+      font-family:'Noto Serif Bengali', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height:1.25; margin:0 0 16px;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.3);
+    }
+    p.lead{margin:0 0 22px;color:var(--muted)}
+    .input-row{display:flex; gap:12px; align-items:center;}
+    .input-row input{
+      flex:1; font-size:18px; padding:14px 16px; border-radius:14px; border:1px solid rgba(255,255,255,0.25);
+      background: rgba(0,0,0,0.25); color:var(--text); outline:none;
+    }
+    .input-row input::placeholder{color:rgba(255,255,255,0.55)}
+    .btn{
+      white-space:nowrap; cursor:pointer; border:0; padding:14px 18px; border-radius:14px; font-weight:700;
+      background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:white;
+      box-shadow:0 10px 24px rgba(124,77,255,0.45);
+      transition: transform .06s ease, filter .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px); filter:brightness(1.05)}
+    .btn:active{transform:translateY(0)}
+
+    .error{color:#ffd1d1; margin-top:10px; min-height:1.4em}
+
+    .letter{display:none; margin-top:18px; font-family:'Noto Serif Bengali', serif; line-height:1.9; font-size:20px}
+    .letter.show{display:block; animation:typeIn 2.2s steps(60) 1 both}
+    .signature{margin-top:18px; font-style:italic; color:#ffd9f0}
+
+    @keyframes typeIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+    .footer-note{margin-top:16px;color:#cbb8ff;font-size:14px;opacity:.9}
+
+    /* Confetti canvas */
+    #confetti{position:fixed; inset:0; pointer-events:none; z-index:2}
+  </style>
+</head>
+<body>
+  <canvas class="stars"></canvas>
+  <canvas id="confetti"></canvas>
+  <div class="container">
+    <div class="card" id="gate">
+      <h1>কি নামে ডাকি তোমায়? 💌</h1>
+      <!-- p class="lead">সঠিক নামটা বলো—তারপরই খুলে যাবে আমার লেখা ভালোবাসার চিঠি।</p-->
+      <div class="input-row">
+        <input id="answer" type="text" placeholder="লিখো..." autocomplete="off" />
+        <button class="btn" id="submit">খুলি ✨</button>
+      </div>
+      <div class="error" id="error"></div>
+
+      <div class="letter" id="letter">
+        <!-- ✅ EDIT HERE: Replace the letter below with your own words. Keep the HTML structure. -->
+        <p>প্রিয় <strong>দেবী</strong>,</p>
+        <p>প্রতিদিনের যান্ত্রিক জীবনে তোমাকে ভাবলেই আমার পৃথিবী একটু থেমে যায়। তোমার ছবিতে তোমার হাসিটা যেন আমার ক্লান্ত দুপুরে বৃষ্টির গন্ধ—অদৃশ্য, অথচ সবটুকু ভিজিয়ে দেয়। ছোট ছোট মুহূর্তগুলো—তোমার “কই তুমি?” কিংবা একলাইনের মেসেজ—খুব শান্ত করে দেয় আমাকে।</p>
+        <p>আমার স্বপ্নগুলোকে সাজাতে গিয়ে দেখি, তোমার হাতটাই ধরতে চাই প্রথমে। আমি কোনোদিক দিয়েই নিখুঁত নই, কিন্তু তোমার জন্য একটা পারফেক্ট মানুষ হয়ে উঠতে চাই আমি। যদি তুমি সবসময় আমার পাশে থাকো, তবে ভাদ্রের কড়া রোদে পোড়া একটা দুপুরও আমার উৎসব হয়ে উঠবে, আমি জানি।</p>
+        <p>তুমি যদি চাও, আমাদের গল্পটা আমরা একসাথে লিখব—খুব ধীরে, যত্ন নিয়ে।</p>
+        <p class="signature">তোমারই,<br/>— তুরাবি</p>
+      </div>
+      <!-- div class="footer-note">ইঙ্গিত: সঠিক উত্তর হতে পারে <em>“debi”, “দেবি”, “দেবী”</em>।</div -->
+    </div>
+  </div>
+
+  <script>
+    // Twinkling star background
+    (function starfield(){
+      const c = document.querySelector('.stars');
+      const ctx = c.getContext('2d');
+      const DPR = Math.max(1, window.devicePixelRatio || 1);
+      function resize(){ c.width = innerWidth * DPR; c.height = innerHeight * DPR; draw(); }
+      window.addEventListener('resize', resize);
+      const stars = Array.from({length: 120}, () => ({
+        x: Math.random(), y: Math.random(), r: Math.random()*1.8+0.2, a: Math.random()
+      }));
+      function draw(){
+        ctx.clearRect(0,0,c.width,c.height);
+        for(const s of stars){
+          const x = s.x * c.width, y = s.y * c.height;
+          s.a += (Math.random()*0.05 - 0.025); s.a = Math.max(0.2, Math.min(1, s.a));
+          ctx.globalAlpha = s.a; ctx.beginPath(); ctx.arc(x,y,s.r*DPR,0,Math.PI*2);
+          ctx.fillStyle = '#ffffff'; ctx.fill();
+        }
+        requestAnimationFrame(draw);
+      }
+      resize();
+    })();
+
+    // Tiny confetti
+    function confettiBurst(durationMs=1600){
+      const canvas = document.getElementById('confetti');
+      const ctx = canvas.getContext('2d');
+      const DPR = Math.max(1, window.devicePixelRatio || 1);
+      function resize(){ canvas.width = innerWidth * DPR; canvas.height = innerHeight * DPR; }
+      resize();
+      const colors = ['#ff6ea9','#7c4dff','#00e5ff','#ffd166','#b2ff59'];
+      const pieces = Array.from({length: 140}, ()=>({
+        x: Math.random()*canvas.width,
+        y: -20, w: 6+Math.random()*6, h: 10+Math.random()*12,
+        vx: -1.2 + Math.random()*2.4, vy: 2+Math.random()*3,
+        rot: Math.random()*Math.PI, vr: -0.2 + Math.random()*0.4,
+        c: colors[Math.floor(Math.random()*colors.length)]
+      }));
+      const start = performance.now();
+      (function tick(t0){
+        const t = performance.now()-start;
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        for(const p of pieces){
+          p.x += p.vx; p.y += p.vy; p.rot += p.vr; p.vy += 0.03;
+          ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot);
+          ctx.fillStyle = p.c; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); ctx.restore();
+        }
+        if(t < durationMs) requestAnimationFrame(tick);
+        else ctx.clearRect(0,0,canvas.width,canvas.height);
+      })();
+    }
+
+    // Answer check
+    const form = {
+      input: document.getElementById('answer'),
+      btn: document.getElementById('submit'),
+      err: document.getElementById('error'),
+      letter: document.getElementById('letter'),
+      gate: document.getElementById('gate')
+    };
+
+    const valid = new Set(['debi','দেবি','দেবী']);
+
+    function check(){
+      const raw = form.input.value.trim();
+      const ans = raw.toLowerCase();
+      if(valid.has(ans) || valid.has(raw)){
+        form.err.textContent = '';
+        form.letter.classList.add('show');
+        form.input.disabled = true; form.btn.disabled = true;
+        confettiBurst();
+        // smooth scroll to letter
+        setTimeout(()=>{
+          form.letter.scrollIntoView({behavior:'smooth', block:'start'});
+        }, 250);
+      } else {
+        form.err.textContent = 'হুম… ঠিক হলো না। আবার ভাবো 😊';
+      }
+    }
+
+    form.btn.addEventListener('click', check);
+    form.input.addEventListener('keydown', e=>{ if(e.key==='Enter') { e.preventDefault(); check(); } });
+  </script>
+</body>
+</html>
