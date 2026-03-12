@@ -684,6 +684,117 @@ details[open] .timeline-body {
     margin-top: 5px;
     list-style-type: square;
 }
+
+
+/* --- Badge/Tag Base Styling --- */
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+}
+
+.badge i {
+    margin-right: 5px;
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Color Variants --- */
+
+/* International & Top Ranks (Gold/Royal Blue) */
+.badge-intl {
+    background: rgba(65, 105, 225, 0.15);
+    color: #4169E1;
+    border-color: rgba(65, 105, 225, 0.5);
+}
+
+.badge-world {
+    background: rgba(255, 215, 0, 0.1);
+    color: #b99c00;
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+/* National & Podium (Green/Silver) */
+.badge-natl {
+    background: rgba(52, 211, 153, 0.1);
+    color: #34d399;
+    border-color: rgba(52, 211, 153, 0.4);
+}
+
+.badge-place {
+    background: rgba(226, 232, 240, 0.1);
+    color: #e2e8f0;
+    border-color: rgba(226, 232, 240, 0.4);
+}
+
+/* Skills & Roles (Purple/Indigo) */
+.badge-skill {
+    background: rgba(167, 139, 250, 0.1);
+    color: #a78bfa;
+    border-color: rgba(167, 139, 250, 0.4);
+}
+
+/* --- Light Theme Badge Variations --- */
+
+/* 1. Emerald (Success/Completion) */
+.badge-emerald {
+    background: #ecfdf5;
+    color: #059669;
+    border: 1px solid #10b981;
+}
+
+/* 2. Rose (High Priority/Leadership) */
+.badge-rose {
+    background: #fff1f2;
+    color: #e11d48;
+    border: 1px solid #fb7185;
+}
+
+/* 3. Amber (Warning/In Progress) */
+.badge-amber {
+    background: #fffbeb;
+    color: #d97706;
+    border: 1px solid #fbbf24;
+}
+
+/* 4. Indigo (Technical/Engineering) */
+.badge-indigo {
+    background: #eef2ff;
+    color: #4f46e5;
+    border: 1px solid #818cf8;
+}
+
+/* 5. Slate (General/Documentation) */
+.badge-slate {
+    background: #f8fafc;
+    color: #475569;
+    border: 1px solid #94a3b8;
+}
+
+/* 6. Cyan (Research/R&D) */
+.badge-cyan {
+    background: #ecfeff;
+    color: #0891b2;
+    border: 1px solid #22d3ee;
+}
 </style>
 
 <div class="col-sm-6 experience-container">
@@ -765,6 +876,18 @@ details[open] .timeline-body {
                 	</ul>
             	</div>
 			</details>
+			<br>
+			<div class="badge-container">
+				<span class="badge badge-world"><i class="fa fa-globe"></i>6th in World Rank - URC 2025</span>
+				<span class="badge badge-world"><i class="fa fa-globe"></i>5th in World Rank -  URC 2024</span>
+				<span class="badge badge-world"><i class="fa fa-trophy"></i>3rd in World Rank -  ARC 2025</span>
+				<span class="badge badge-world"><i class="fa fa-star"></i>Science Mission 100/100 -  URC 2025</span>
+				<span class="badge badge-intl">International Competition</span>
+				<span class="badge badge-indigo">Leadership</span>
+				<span class="badge badge-cyan">Team Management</span>
+				<span class="badge badge-rose">Teamwork</span>
+				<span class="badge badge-amber">Mentoring</span>
+			</div>
 			<hr>
         </div>
 
@@ -780,7 +903,7 @@ details[open] .timeline-body {
 			
 			<details>		
 				<summary>
-                	<div class="role-title">Former Secretary of Research & Development <span class="date">Jan 2025 - Nov 2025</span></div>
+                	<div class="role-title">Former Secretary of R&D <span class="date">Jan 2025 - Nov 2025</span></div>
 				</summary>
 				<div class="timeline-body">
 					<ul class="contributions">
@@ -796,7 +919,7 @@ details[open] .timeline-body {
 
 			<details>		
 				<summary>
-					<div class="role-title">Former Secretary of Research and Development <span class="date">Mar 2024 - Aug 2025</span></div>
+					<div class="role-title">Former Secretary of R&D <span class="date">Mar 2024 - Aug 2025</span></div>
 				</summary>
 				<div class="timeline-body">
 					<ul class="contributions">
@@ -811,7 +934,7 @@ details[open] .timeline-body {
 
 			<details>		
 				<summary>
-					<div class="role-title">Former Executive of Research and Development <span class="date">Mar 2023 - Mar 2024</span></div>
+					<div class="role-title">Former Executive of Branding <span class="date">Mar 2023 - Mar 2024</span></div>
 				</summary>
 				<div class="timeline-body">
 					<ul class="contributions">
@@ -820,18 +943,28 @@ details[open] .timeline-body {
 					</ul>
 				</div>
 			</details>
+			<br>
+
+			<div class="badge-container">
+				<span class="badge badge-world"><i class="fa fa-star"></i> 3rd in Technocrats v2</span>
+				<span class="badge badge-intl">National Competition</span>
+				<span class="badge badge-indigo">Leadership</span>
+				<span class="badge badge-amber">Mentoring</span>
+				<span class="badge badge-rose">Teamwork</span>
+				<span class="badge badge-cyan">Event Management</span>
+			</div>
 			<hr>
         </div>
         
 		<div class="timeline-item">
-            <div class="timeline-header">
+			<div class="timeline-header">
                 <a href="https://www.facebook.com/profile.php?id=61566442053812" target="_blank" rel="noopener noreferrer"><img src="assets/images/uiutfc.png" alt="UIU Theatre & Film Club Logo" class="exp-logo">
-                <div class="header-text">
-                    <h3>UIU Theatre & Film Club</h3></a>
-                    <span class="subtext">Dhaka, Bangladesh (2021 - 2023)</span>
-                </div>
-            </div>
-
+					<div class="header-text">
+						<h3>UIU Theatre & Film Club</h3></a>
+						<span class="subtext">Dhaka, Bangladesh (2021 - 2023)</span>
+					</div>
+				</div>
+				
 			<details>		
 				<summary>
 					<div class="role-title">Former Head of Film <span class="date">Mar 2023 - Apr 2023</span></div>
@@ -847,13 +980,13 @@ details[open] .timeline-body {
 			
 			<details>
 				<summary>
-					<div class="role-title">Former Assistant Head of Film <span class="date">Mar 2022- Mar 2023</span></div>
+					<div class="role-title">Former Asst. Head of Film <span class="date">Mar 2022- Mar 2023</span></div>
 				</summary>
 				<div class="timeline-body">
 					<ul class="contributions">
 						<li>Arranged Filmmaking seminars.</li>
 						<li>Wrote and Produced one full length thriller short-film under UIU Theatre and Film Club.</li>
-                    <li>Organized and Participated in "Tokkor 11" Intra University Threatrical Competition</li>
+						<li>Organized and Participated in "Tokkor 11" Intra University Threatrical Competition</li>
                     <li>Co-ordinated Intra university Ad-making Competition "Jiboner Golpe Nagad"</li>
                 </ul>
             </div>
@@ -874,15 +1007,24 @@ details[open] .timeline-body {
 				</div>
 			</details>
 			<hr>
+			<br>
+			<div class="badge-container">
+				<span class="badge badge-world"><i class="fa fa-star"></i> 1st in Tokkor 11</span>
+				<span class="badge badge-intl">Intra University Competition</span>
+				<span class="badge badge-indigo">Leadership</span>
+				<span class="badge badge-rose">Teamwork</span>
+				<span class="badge badge-amber">Mentoring</span>
+				<span class="badge badge-cyan">Event Management</span>
+			</div>
         </div>
   
     </div>
 </div>
 
-	<hr>
+<hr>
 </div>
-	
-  <!-- Second Row: Publications & Achievements -->
+
+<!-- Second Row: Publications & Achievements -->
   <div class="row">
     <!-- Publications -->
     <div class="col-sm-6">
