@@ -24,7 +24,7 @@
 <!-- loader script starts -->
 <script>
 function loaded() {
-  setTimeout(showPage, 3000);
+  setTimeout(showPage, 200);
   setTimeout(function(){document.getElementById("loaderCont").style.display = "none"}, 4000);
 }
 function showPage() {
@@ -192,8 +192,7 @@ function showPage() {
 					<div>
 						<ul style="list-style: none;color: #898989;">
 							<li><small style="font-size: 13px;display: inline-block;"><i class="fa fa-book" aria-hidden="true"></i> B.Sc in CSE at <b>United International University</b></small></li>
-							<li><small style="font-size: 13px;display: inline-block;"><i class="fa fa-microchip" aria-hidden="true"></i> R&D at <b>UIU Robotics</b></small></li>
-							<li><small style="font-size: 13px;display: inline-block;"><i class="fa fa-briefcase" aria-hidden="true"></i> Co-Team Lead at <b>UIU Mars Rover Team</b></small></li>
+							<li><small style="font-size: 13px;display: inline-block;"><i class="fa fa-briefcase" aria-hidden="true"></i> Senior Software Engineer at <a href="https://xceptionist.com"><b>Xceptionist</b></a></small></li>
 						</ul>
 					</div>						
 				</center> 
@@ -489,19 +488,400 @@ function showPage() {
     </div>
 
     <!-- Work Experiences -->
-    <div class="col-sm-6">
-      <a name="work"></a>
-      <h2><span class="namehead">Work Experiences</span></h2>
-      <ul class="parentdetail">
-        <li><b>Co-Team Lead</b> – UIU Mars Rover Team (2023 - Present)<br>Led development of Electrical Control System and Control Broker for Mars Rover AXIOS.</li>
-        <li><b>R&D Executive</b> – UIU Robotics (2023 - Present)<br>Worked on embedded systems, IoT prototypes, and custom robotic modules.</li>
-        <li><b>Freelance Web Developer</b> (2021 - Present)<br>Developed custom PHP/MySQL web apps and static portfolio websites.</li>
-        <li><b>Video Editor</b> (2020 - Present)<br>Worked in renowned production house in contract to edit several govt. documetaries.</li>
-      </ul>
-    </div>
-  </div>
-  <hr>
+ <style>
+/* CSS Variables for easy color management */
+:root {
+    --royal-blue: #4169E1;
+    --royal-blue-glow: rgba(65, 105, 225, 0.4);
+    --royal-blue-light: rgba(65, 105, 225, 0.1);
+    --text-white: #ffffff;
+    --text-muted: #a0a0a0;
+}
 
+.experience-container {
+    padding-left: 20px;
+}
+
+/* Section Title Highlight */
+.section-title span {
+    color: var(--royal-blue);
+    text-shadow: 0 0 15px var(--royal-blue-glow);
+}
+
+/* Timeline Vertical Line */
+.timeline {
+    border-left: 2px solid rgba(65, 105, 225, 0.2);
+    padding-left: 35px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Timeline Nodes (The Dots) */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -42.5px; /* Centers dot on the line */
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    background: var(--royal-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--royal-blue);
+    z-index: 2;
+}
+
+/* Header & Logo Styling */
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.exp-logo {
+    height: 52px;
+    width: 52px;
+    object-fit: contain;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+    border: 2px solid var(--royal-blue);
+    border-radius: 50%;
+    padding: 2px;
+    background: #fff;
+}
+
+.header-text h3 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: black;
+}
+
+.subtext {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+}
+
+/* Role & Date Styling */
+.role-title {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.date {
+    font-size: 0.9rem; /* Normalized from 1.5rem for better hierarchy */
+    font-weight: 500;
+    background: var(--royal-blue-light);
+    color: var(--royal-blue);
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--royal-blue);
+    box-shadow: 0 2px 10px rgba(65, 105, 225, 0.15);
+	position: absolute;
+    right: 29px;
+}
+
+/* Description & Lists */
+.company {
+    font-size: 1rem;
+    color: var(--royal-blue);
+    margin: 4px 0 8px 0;
+    font-weight: 500;
+}
+
+.desc {
+    font-size: 0.95rem;
+    color: #bdbdbd;
+    line-height: 1.5;
+}
+
+.contributions {
+    margin-top: 15px;
+    padding-left: 20px;
+    color: #a5a5a5;
+    font-size: 1.25rem;
+}
+
+.contributions li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.contributions li::marker {
+    color: var(--royal-blue);
+}
+
+
+/* --- Hiding Card (Accordion) Logic --- */
+.timeline-item details {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.timeline-item summary {
+    list-style: none; /* Hide default browser arrow */
+    outline: none;
+    cursor: pointer;
+    display: block; /* Ensures the whole row is clickable */
+}
+
+.timeline-item summary::-webkit-details-marker {
+    display: none; /* Hide default arrow for Chrome/Safari */
+}
+
+/* Custom Rotating Arrow for Font Awesome 4.7.0 */
+.role-title::after {
+    content: '\f107'; /* FontAwesome 4.7 Angle Down */
+    font-family: 'FontAwesome'; /* Correct family name for 4.7.0 */
+    margin-left: 15px;
+    color: var(--royal-blue);
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+}
+
+/* Rotate arrow when open */
+details[open] .role-title::after {
+    transform: rotate(180deg);
+}
+
+/* Reveal Animation & Spacing */
+.timeline-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+details[open] .timeline-body {
+    max-height: 1200px; /* High enough for long lists */
+    padding: 15px 0;
+}
+
+/* Hover State */
+.timeline-item summary:hover .role-title {
+    color: var(--royal-blue) !important;
+}
+
+/* Ensure visibility on Dark Background */
+.header-text h3, 
+.role-title {
+    color: #272727 !important; 
+}
+
+/* Keep the bullet points clean */
+.contributions {
+    margin-top: 5px;
+    list-style-type: square;
+}
+</style>
+
+<div class="col-sm-6 experience-container">
+    <a name="work"></a>
+    <h2 class="section-title">Co-curricular <span>Activities</span></h2>
+    <br>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <a href="https://uiumarsrover.org" target="_blank" rel="noopener noreferrer">
+					<img src="assets/images/umrt.png" alt="UMRT Logo" class="exp-logo">
+                <div class="header-text">
+                    <h3>UIU Mars Rover Team</h3></a>
+                    <span class="subtext">Dhaka, Bangladesh (2023 - 2026)</span>
+                </div>
+            </div>
+
+
+			<details>
+                <summary>
+                    <div class="role-title">Former Co-Team Lead <span class="date">Mar 2025 - Jan 2026</span></div>
+                </summary>
+                <div class="timeline-body">
+                    <ul class="contributions">
+                        <li>Organized team meetings and coordinated project timelines.</li>
+                        <li>Managed Public Relations and Sponsorship Co-ordinations.</li>
+                        <li>Managed Competition Logistics (Packaging and Tracking)</li>
+                        <li>Led Electrical Sub-team of the Team</li>
+                        <li>Talent Management and Recruitment</li>
+                        <li>Led Media & PR Wing of the Team</li>
+                        <li>Co-ordinated SAR Phase of the Competition 2025 & 2026</li>
+                        <li>Started and Co-ordinated "2 Minutes Robotics" Project</li>
+                        <li>Participated in URC 2025 (USA) & ARC 2025 (Turkiye).</li>
+                    </ul>
+                </div>
+            </details>
+			<hr>
+			
+			<details>
+                <summary>
+                    <div class="role-title">Former Electrical Sub-Team Lead <span class="date">Dec 2024 - Sep 2025</span></div>
+                </summary>
+                <div class="timeline-body">
+                    <ul class="contributions">
+						<li>Designed Main Control Circuit.</li>
+						<li>Developed and Implemented Differential Drive System with Articulating Steering.</li>
+						<li>Designed and Developed Primary Command & Control System.</li>
+                    <li>Led development of Electrical Control & Communication System for Mars Rover <a href="https://uiumarsrover.org/projects/axios-details.html" target="_blank" rel="noopener noreferrer">AXIOS</a>.</li>
+                    <li>Contributed to Fail-safe Recovery System</li>
+                </ul>
+            </div>
+			</details>
+			<hr>
+
+			<details>
+                <summary>
+                    <div class="role-title">Former Electrical Sub-Team Member <span class="date">Jan 2024 - Dec 2024</span></div>
+                </summary>
+                <div class="timeline-body">
+                    <ul class="contributions">
+                        <li>Contributed to Development of all manipulator control circuit.</li>
+                        <li>Managed Competition Logistics (Packaging and Tracking)</li>
+                    <li>Assisted in the design and implementation of the Rover's communication system.</li>
+					<li>Contributed to the development of Mars Rover <a href="https://uiumarsrover.org/projects/yggdrasil-details.html" target="_blank">Yggdrasil</a>.</li>
+                </ul>
+            </div>
+			</details>
+			<hr>
+
+			<details>
+                <summary>
+                    <div class="role-title">Former Intern <span class="date">Sep 2023 - Jan 2024</span></div>
+                </summary>
+                <div class="timeline-body">
+                    <ul class="contributions">
+                        <li>Basic electronics and hardware programming.</li>
+                        <li>Designed and edited social media contents.</li>
+                    	<li>Shot and Edited video for System Acceptance Review submission for URC 2024.</li>
+                	</ul>
+            	</div>
+			</details>
+			<hr>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <a href="https://robotics.uiu.ac.bd/" target="_blank" rel="noopener noreferrer"><img src="assets/images/uiurc.png" alt="UIU Robotics Logo" class="exp-logo">
+                <div class="header-text">
+                    <h3>UIU Robotics</h3></a>
+                    <span class="subtext">Dhaka, Bangladesh (2023 - 2025)</span>
+                </div>
+            </div>
+			
+			
+			<details>		
+				<summary>
+                	<div class="role-title">Former Secretary of Research & Development <span class="date">Jan 2025 - Nov 2025</span></div>
+				</summary>
+				<div class="timeline-body">
+					<ul class="contributions">
+						<li>Mentoring several teams from UIU Robotics, guiding them to participate in national competitions.</li>
+						<li>Develop competitive robots and projects for national and international contests.</li>
+						<li>Designed an advanced Line Follower Robot using custom control algorithm and custom sensor array.</li>
+						<li>Developed a course for beginner robotics enthusiasts.</li>
+						<li>Developed an Automatic Lap-Tracking System for Automated Digital Scoreboard of LFR Competition.</li>
+					</ul>
+            	</div>
+			</details>
+			<hr>
+
+			<details>		
+				<summary>
+					<div class="role-title">Former Secretary of Research and Development <span class="date">Mar 2024 - Aug 2025</span></div>
+				</summary>
+				<div class="timeline-body">
+					<ul class="contributions">
+						<li>Develop competitive robots and projects for national and international contests.</li>
+						<li>Successfully competed in a national hackathon under UIU Robotics Banner.</li>
+						<li>Organized "UIU CSE Fest 2025" Co-Hosted by UIU Robotics</li>
+						<li>Co-ordinated Intra university Robotics Competition "Robo Rush"</li>
+					</ul>
+				</div>
+			</details>
+			<hr>
+
+			<details>		
+				<summary>
+					<div class="role-title">Former Executive of Research and Development <span class="date">Mar 2023 - Mar 2024</span></div>
+				</summary>
+				<div class="timeline-body">
+					<ul class="contributions">
+						<li>Design printables and web banners.</li>
+						<li>Create and edit videos for social media.</li>
+					</ul>
+				</div>
+			</details>
+			<hr>
+        </div>
+        
+		<div class="timeline-item">
+            <div class="timeline-header">
+                <a href="https://www.facebook.com/profile.php?id=61566442053812" target="_blank" rel="noopener noreferrer"><img src="assets/images/uiutfc.png" alt="UIU Theatre & Film Club Logo" class="exp-logo">
+                <div class="header-text">
+                    <h3>UIU Theatre & Film Club</h3></a>
+                    <span class="subtext">Dhaka, Bangladesh (2021 - 2023)</span>
+                </div>
+            </div>
+
+			<details>		
+				<summary>
+					<div class="role-title">Former Head of Film <span class="date">Mar 2023 - Apr 2023</span></div>
+				</summary>
+				<div class="timeline-body">
+					<ul class="contributions">
+						<li>Mentoring several teams filmmaking and writing.</li>
+						<li>Arranged Filmmaking seminars.</li>
+					</ul>
+				</div>
+			</details>
+			<hr>
+			
+			<details>
+				<summary>
+					<div class="role-title">Former Assistant Head of Film <span class="date">Mar 2022- Mar 2023</span></div>
+				</summary>
+				<div class="timeline-body">
+					<ul class="contributions">
+						<li>Arranged Filmmaking seminars.</li>
+						<li>Wrote and Produced one full length thriller short-film under UIU Theatre and Film Club.</li>
+                    <li>Organized and Participated in "Tokkor 11" Intra University Threatrical Competition</li>
+                    <li>Co-ordinated Intra university Ad-making Competition "Jiboner Golpe Nagad"</li>
+                </ul>
+            </div>
+			</details>
+			<hr>
+
+			<details>
+				<summary>
+					<div class="role-title">Former Executive of Film <span class="date">Nov 2021 - Mar 2022</span></div>
+				</summary>
+				<div class="timeline-body">
+					<ul class="contributions">
+						<li>Create and edit videos for social media.</li>
+						<li>Produced Short Films for Club.</li>
+						<li>Design printables and web banners.</li>
+						<li>Participated in Theatrical Perfomances.</li>
+					</ul>
+				</div>
+			</details>
+			<hr>
+        </div>
+  
+    </div>
+</div>
+
+	<hr>
+</div>
+	
   <!-- Second Row: Publications & Achievements -->
   <div class="row">
     <!-- Publications -->
