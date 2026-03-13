@@ -470,583 +470,302 @@ function showPage() {
 
 
 
+<div class="container-fluid text-left" style="margin: 50px auto; padding: 0 50px;">
 
-<!-- Additional Sections After Projects -->
-<div class="container-fluid text-left" style="margin: 50px 50px;">
-  
-  <!-- First Row: Education & Work Experiences -->
-  <div class="row">
-    <!-- Education -->
-    <div class="col-sm-6">
-      <a name="education"></a>
-      <h2><span class="namehead">Education</span></h2>
-      <ul class="parentdetail">
-		<li><b>B.Sc in Computer Science & Engineering</b><br>United International University, 2020 - Present</li>
-		<li><b>Higher Secondary Certificate (HSC)</b><br>Shaheed Police Smrity College, Dhaka, 2018 - 2020</li>
-		<li><b>Secondary School Certificate (SSC)</b><br>Shaheed Police Smrity School & College, 2016 - 2018</li>
-      </ul>
-    </div>
-
-    <!-- Work Experiences -->
- <style>
-/* CSS Variables for easy color management */
-:root {
-    --royal-blue: #4169E1;
-    --royal-blue-glow: rgba(65, 105, 225, 0.4);
-    --royal-blue-light: rgba(65, 105, 225, 0.1);
-    --text-white: #ffffff;
-    --text-muted: #a0a0a0;
-}
-
-.experience-container {
-    padding-left: 20px;
-}
-
-/* Section Title Highlight */
-.section-title span {
-    color: var(--royal-blue);
-    text-shadow: 0 0 15px var(--royal-blue-glow);
-}
-
-/* Timeline Vertical Line */
-.timeline {
-    border-left: 2px solid rgba(65, 105, 225, 0.2);
-    padding-left: 35px;
-    margin-left: 20px;
-    position: relative;
-}
-
-.timeline-item {
-    margin-bottom: 50px;
-    position: relative;
-}
-
-/* Timeline Nodes (The Dots) */
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -42.5px; /* Centers dot on the line */
-    top: 20px;
-    width: 14px;
-    height: 14px;
-    background: var(--royal-blue);
-    border-radius: 50%;
-    box-shadow: 0 0 12px var(--royal-blue);
-    z-index: 2;
-}
-
-/* Header & Logo Styling */
-.timeline-header {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 12px;
-}
-
-.exp-logo {
-    height: 52px;
-    width: 52px;
-    object-fit: contain;
-    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
-    border: 2px solid var(--royal-blue);
-    border-radius: 50%;
-    padding: 2px;
-    background: #fff;
-}
-
-.header-text h3 {
-    margin: 0;
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: black;
-}
-
-.subtext {
-    font-size: 1.3rem;
-    color: var(--text-muted);
-}
-
-/* Role & Date Styling */
-.role-title {
-    font-weight: 600;
-    font-size: 1.4rem;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.date {
-    font-size: 0.9rem; /* Normalized from 1.5rem for better hierarchy */
-    font-weight: 500;
-    background: var(--royal-blue-light);
-    color: var(--royal-blue);
-    padding: 4px 14px;
-    border-radius: 20px;
-    border: 1px solid var(--royal-blue);
-    box-shadow: 0 2px 10px rgba(65, 105, 225, 0.15);
-	position: absolute;
-    right: 29px;
-}
-
-/* Description & Lists */
-.company {
-    font-size: 1rem;
-    color: var(--royal-blue);
-    margin: 4px 0 8px 0;
-    font-weight: 500;
-}
-
-.desc {
-    font-size: 0.95rem;
-    color: #bdbdbd;
-    line-height: 1.5;
-}
-
-.contributions {
-    margin-top: 15px;
-    padding-left: 20px;
-    color: #a5a5a5;
-    font-size: 1.25rem;
-}
-
-.contributions li {
-    margin-bottom: 8px;
-    position: relative;
-}
-
-.contributions li::marker {
-    color: var(--royal-blue);
-}
-
-
-/* --- Hiding Card (Accordion) Logic --- */
-.timeline-item details {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.timeline-item summary {
-    list-style: none; /* Hide default browser arrow */
-    outline: none;
-    cursor: pointer;
-    display: block; /* Ensures the whole row is clickable */
-}
-
-.timeline-item summary::-webkit-details-marker {
-    display: none; /* Hide default arrow for Chrome/Safari */
-}
-
-/* Custom Rotating Arrow for Font Awesome 4.7.0 */
-.role-title::after {
-    content: '\f107'; /* FontAwesome 4.7 Angle Down */
-    font-family: 'FontAwesome'; /* Correct family name for 4.7.0 */
-    margin-left: 15px;
-    color: var(--royal-blue);
-    font-size: 1.2rem;
-    display: inline-block;
-    transition: transform 0.3s ease;
-    vertical-align: middle;
-}
-
-/* Rotate arrow when open */
-details[open] .role-title::after {
-    transform: rotate(180deg);
-}
-
-/* Reveal Animation & Spacing */
-.timeline-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-in-out;
-}
-
-details[open] .timeline-body {
-    max-height: 1200px; /* High enough for long lists */
-    padding: 15px 0;
-}
-
-/* Hover State */
-.timeline-item summary:hover .role-title {
-    color: var(--royal-blue) !important;
-}
-
-/* Ensure visibility on Dark Background */
-.header-text h3, 
-.role-title {
-    color: #272727 !important; 
-}
-
-/* Keep the bullet points clean */
-.contributions {
-    margin-top: 5px;
-    list-style-type: square;
-}
-
-
-/* --- Badge/Tag Base Styling --- */
-.badge-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 10px 0;
-}
-
-.badge {
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-    cursor: default;
-    display: inline-flex;
-    align-items: center;
-}
-
-.badge i {
-    margin-right: 5px;
-}
-
-.badge:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* --- Color Variants --- */
-
-/* International & Top Ranks (Gold/Royal Blue) */
-.badge-intl {
-    background: rgba(65, 105, 225, 0.15);
-    color: #4169E1;
-    border-color: rgba(65, 105, 225, 0.5);
-}
-
-.badge-world {
-    background: rgba(255, 215, 0, 0.1);
-    color: #b99c00;
-    border-color: rgba(255, 215, 0, 0.4);
-}
-
-/* National & Podium (Green/Silver) */
-.badge-natl {
-    background: rgba(52, 211, 153, 0.1);
-    color: #34d399;
-    border-color: rgba(52, 211, 153, 0.4);
-}
-
-.badge-place {
-    background: rgba(226, 232, 240, 0.1);
-    color: #e2e8f0;
-    border-color: rgba(226, 232, 240, 0.4);
-}
-
-/* Skills & Roles (Purple/Indigo) */
-.badge-skill {
-    background: rgba(167, 139, 250, 0.1);
-    color: #a78bfa;
-    border-color: rgba(167, 139, 250, 0.4);
-}
-
-/* --- Light Theme Badge Variations --- */
-
-/* 1. Emerald (Success/Completion) */
-.badge-emerald {
-    background: #ecfdf5;
-    color: #059669;
-    border: 1px solid #10b981;
-}
-
-/* 2. Rose (High Priority/Leadership) */
-.badge-rose {
-    background: #fff1f2;
-    color: #e11d48;
-    border: 1px solid #fb7185;
-}
-
-/* 3. Amber (Warning/In Progress) */
-.badge-amber {
-    background: #fffbeb;
-    color: #d97706;
-    border: 1px solid #fbbf24;
-}
-
-/* 4. Indigo (Technical/Engineering) */
-.badge-indigo {
-    background: #eef2ff;
-    color: #4f46e5;
-    border: 1px solid #818cf8;
-}
-
-/* 5. Slate (General/Documentation) */
-.badge-slate {
-    background: #f8fafc;
-    color: #475569;
-    border: 1px solid #94a3b8;
-}
-
-/* 6. Cyan (Research/R&D) */
-.badge-cyan {
-    background: #ecfeff;
-    color: #0891b2;
-    border: 1px solid #22d3ee;
-}
-</style>
-
-<div class="col-sm-6 experience-container">
-    <a name="work"></a>
-    <h2 class="section-title">Co-curricular <span>Activities</span></h2>
-    <br>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-header">
-                <a href="https://uiumarsrover.org" target="_blank" rel="noopener noreferrer">
-					<img src="assets/images/umrt.png" alt="UMRT Logo" class="exp-logo">
-                <div class="header-text">
-                    <h3>UIU Mars Rover Team</h3></a>
-                    <span class="subtext">Dhaka, Bangladesh (2023 - 2026)</span>
-                </div>
-            </div>
-
-
-			<details>
-                <summary>
-                    <div class="role-title">Former Co-Team Lead <span class="date">Mar 2025 - Jan 2026</span></div>
-                </summary>
-                <div class="timeline-body">
-                    <ul class="contributions">
-                        <li>Organized team meetings and coordinated project timelines.</li>
-                        <li>Managed Public Relations and Sponsorship Co-ordinations.</li>
-                        <li>Managed Competition Logistics (Packaging and Tracking)</li>
-                        <li>Led Electrical Sub-team of the Team</li>
-                        <li>Talent Management and Recruitment</li>
-                        <li>Led Media & PR Wing of the Team</li>
-                        <li>Co-ordinated SAR Phase of the Competition 2025 & 2026</li>
-                        <li>Started and Co-ordinated "2 Minutes Robotics" Project</li>
-                        <li>Participated in URC 2025 (USA) & ARC 2025 (Turkiye).</li>
-                    </ul>
-                </div>
-            </details>
-			<hr>
-			
-			<details>
-                <summary>
-                    <div class="role-title">Former Electrical Sub-Team Lead <span class="date">Dec 2024 - Sep 2025</span></div>
-                </summary>
-                <div class="timeline-body">
-                    <ul class="contributions">
-						<li>Designed Main Control Circuit.</li>
-						<li>Developed and Implemented Differential Drive System with Articulating Steering.</li>
-						<li>Designed and Developed Primary Command & Control System.</li>
-                    <li>Led development of Electrical Control & Communication System for Mars Rover <a href="https://uiumarsrover.org/projects/axios-details.html" target="_blank" rel="noopener noreferrer">AXIOS</a>.</li>
-                    <li>Contributed to Fail-safe Recovery System</li>
-                </ul>
-            </div>
-			</details>
-			<hr>
-
-			<details>
-                <summary>
-                    <div class="role-title">Former Electrical Sub-Team Member <span class="date">Jan 2024 - Dec 2024</span></div>
-                </summary>
-                <div class="timeline-body">
-                    <ul class="contributions">
-                        <li>Contributed to Development of all manipulator control circuit.</li>
-                        <li>Managed Competition Logistics (Packaging and Tracking)</li>
-                    <li>Assisted in the design and implementation of the Rover's communication system.</li>
-					<li>Contributed to the development of Mars Rover <a href="https://uiumarsrover.org/projects/yggdrasil-details.html" target="_blank">Yggdrasil</a>.</li>
-                </ul>
-            </div>
-			</details>
-			<hr>
-
-			<details>
-                <summary>
-                    <div class="role-title">Former Intern <span class="date">Sep 2023 - Jan 2024</span></div>
-                </summary>
-                <div class="timeline-body">
-                    <ul class="contributions">
-                        <li>Basic electronics and hardware programming.</li>
-                        <li>Designed and edited social media contents.</li>
-                    	<li>Shot and Edited video for System Acceptance Review submission for URC 2024.</li>
-                	</ul>
-            	</div>
-			</details>
-			<br>
-			<div class="badge-container">
-				<span class="badge badge-world"><i class="fa fa-globe"></i>6th in World Rank - URC 2025</span>
-				<span class="badge badge-world"><i class="fa fa-globe"></i>5th in World Rank -  URC 2024</span>
-				<span class="badge badge-world"><i class="fa fa-trophy"></i>3rd in World Rank -  ARC 2025</span>
-				<span class="badge badge-world"><i class="fa fa-star"></i>Science Mission 100/100 -  URC 2025</span>
-				<span class="badge badge-intl">International Competition</span>
-				<span class="badge badge-indigo">Leadership</span>
-				<span class="badge badge-cyan">Team Management</span>
-				<span class="badge badge-rose">Teamwork</span>
-				<span class="badge badge-amber">Mentoring</span>
-			</div>
-			<hr>
+    <div class="row">
+        <div class="col-sm-6">
+            <a name="education"></a>
+            <h2><span class="namehead">Education</span></h2>
+            <ul class="parentdetail">
+                <li><b>B.Sc in Computer Science & Engineering</b><br>United International University, 2020 - Present</li>
+                <li><b>Higher Secondary Certificate (HSC)</b><br>Shaheed Police Smrity College, Dhaka, 2018 - 2020</li>
+                <li><b>Secondary School Certificate (SSC)</b><br>Shaheed Police Smrity School & College, 2016 - 2018</li>
+            </ul>
         </div>
 
-        <div class="timeline-item">
-            <div class="timeline-header">
-                <a href="https://robotics.uiu.ac.bd/" target="_blank" rel="noopener noreferrer"><img src="assets/images/uiurc.png" alt="UIU Robotics Logo" class="exp-logo">
-                <div class="header-text">
-                    <h3>UIU Robotics</h3></a>
-                    <span class="subtext">Dhaka, Bangladesh (2023 - 2025)</span>
+        <div class="col-sm-6 experience-container">
+            <a name="work"></a>
+            <h2 class="section-title">Co-curricular <span>Activities</span></h2>
+            <br>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <a href="https://uiumarsrover.org" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
+                            <img src="assets/images/umrt.png" alt="UMRT Logo" class="exp-logo">
+                            <div class="header-text">
+                                <h3>UIU Mars Rover Team</h3>
+                                <span class="subtext">Dhaka, Bangladesh (2023 - 2026)</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <details>
+                        <summary>
+                            <div class="role-title">Former Co-Team Lead <span class="date">Mar 2025 - Jan 2026</span></div>
+                        </summary>
+                        <div class="timeline-body">
+                            <ul class="contributions">
+                                <li>Organized team meetings and coordinated project timelines.</li>
+                                <li>Managed Public Relations and Sponsorship Co-ordinations.</li>
+                                <li>Managed Competition Logistics (Packaging and Tracking)</li>
+                                <li>Led Electrical Sub-team of the Team</li>
+                                <li>Talent Management and Recruitment</li>
+                                <li>Led Media & PR Wing of the Team</li>
+                                <li>Co-ordinated SAR Phase of the Competition 2025 & 2026</li>
+                                <li>Started and Co-ordinated "2 Minutes Robotics" Project</li>
+                                <li>Participated in URC 2025 (USA) & ARC 2025 (Turkiye).</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <hr>
+
+                    <details>
+                        <summary>
+                            <div class="role-title">Former Electrical Sub-Team Lead <span class="date">Dec 2024 - Sep 2025</span></div>
+                        </summary>
+                        <div class="timeline-body">
+                            <ul class="contributions">
+                                <li>Designed Main Control Circuit.</li>
+                                <li>Developed and Implemented Differential Drive System with Articulating Steering.</li>
+                                <li>Designed and Developed Primary Command & Control System.</li>
+                                <li>Led development of Electrical Control & Communication System for Mars Rover <a href="https://uiumarsrover.org/projects/axios-details.html" target="_blank" rel="noopener noreferrer">AXIOS</a>.</li>
+                                <li>Contributed to Fail-safe Recovery System</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <hr>
+
+                    <details>
+                        <summary>
+                            <div class="role-title">Former Electrical Sub-Team Member <span class="date">Jan 2024 - Dec 2024</span></div>
+                        </summary>
+                        <div class="timeline-body">
+                            <ul class="contributions">
+                                <li>Contributed to Development of all manipulator control circuit.</li>
+                                <li>Managed Competition Logistics (Packaging and Tracking)</li>
+                                <li>Assisted in the design and implementation of the Rover's communication system.</li>
+                                <li>Contributed to the development of Mars Rover <a href="https://uiumarsrover.org/projects/yggdrasil-details.html" target="_blank">Yggdrasil</a>.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <hr>
+
+                    <details>
+                        <summary>
+                            <div class="role-title">Former Intern <span class="date">Sep 2023 - Jan 2024</span></div>
+                        </summary>
+                        <div class="timeline-body">
+                            <ul class="contributions">
+                                <li>Basic electronics and hardware programming.</li>
+                                <li>Designed and edited social media contents.</li>
+                                <li>Shot and Edited video for System Acceptance Review submission for URC 2024.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <br>
+                    <div class="badge-container">
+                        <span class="badge badge-world"><i class="fa fa-globe"></i> 6th in World Rank - URC 2025</span>
+                        <span class="badge badge-world"><i class="fa fa-globe"></i> 5th in World Rank - URC 2024</span>
+                        <span class="badge badge-world"><i class="fa fa-trophy"></i> 3rd in World Rank - ARC 2025</span>
+                        <span class="badge badge-world"><i class="fa fa-star"></i> Science Mission 100/100 - URC 2025</span>
+                        <span class="badge badge-intl">International Competition</span>
+                        <span class="badge badge-indigo">Leadership</span>
+                        <span class="badge badge-cyan">Team Management</span>
+                        <span class="badge badge-rose">Teamwork</span>
+                        <span class="badge badge-amber">Mentoring</span>
+                    </div>
                 </div>
-            </div>
-			
-			
-			<details>		
-				<summary>
-                	<div class="role-title">Former Secretary of R&D <span class="date">Jan 2025 - Nov 2025</span></div>
-				</summary>
-				<div class="timeline-body">
-					<ul class="contributions">
-						<li>Mentoring several teams from UIU Robotics, guiding them to participate in national competitions.</li>
-						<li>Develop competitive robots and projects for national and international contests.</li>
-						<li>Designed an advanced Line Follower Robot using custom control algorithm and custom sensor array.</li>
-						<li>Developed a course for beginner robotics enthusiasts.</li>
-						<li>Developed an Automatic Lap-Tracking System for Automated Digital Scoreboard of LFR Competition.</li>
-					</ul>
-            	</div>
-			</details>
-			<hr>
 
-			<details>		
-				<summary>
-					<div class="role-title">Former Secretary of R&D <span class="date">Mar 2024 - Aug 2025</span></div>
-				</summary>
-				<div class="timeline-body">
-					<ul class="contributions">
-						<li>Develop competitive robots and projects for national and international contests.</li>
-						<li>Successfully competed in a national hackathon under UIU Robotics Banner.</li>
-						<li>Organized "UIU CSE Fest 2025" Co-Hosted by UIU Robotics</li>
-						<li>Co-ordinated Intra university Robotics Competition "Robo Rush"</li>
-					</ul>
-				</div>
-			</details>
-			<hr>
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <a href="https://robotics.uiu.ac.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
+                            <img src="assets/images/uiurc.png" alt="UIU Robotics Logo" class="exp-logo">
+                            <div class="header-text">
+                                <h3>UIU Robotics</h3>
+                                <span class="subtext">Dhaka, Bangladesh (2023 - 2025)</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <details>       
+                        <summary>
+                            <div class="role-title">Former Secretary of R&D <span class="date">Jan 2025 - Nov 2025</span></div>
+                        </summary>
+                        <div class="timeline-body">
+                            <ul class="contributions">
+                                <li>Mentoring several teams from UIU Robotics, guiding them to participate in national competitions.</li>
+                                <li>Develop competitive robots and projects for national and international contests.</li>
+                                <li>Designed an advanced Line Follower Robot using custom control algorithm and custom sensor array.</li>
+                                <li>Developed a course for beginner robotics enthusiasts.</li>
+                                <li>Developed an Automatic Lap-Tracking System for Automated Digital Scoreboard of LFR Competition.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <hr>
 
-			<details>		
-				<summary>
-					<div class="role-title">Former Executive of Branding <span class="date">Mar 2023 - Mar 2024</span></div>
-				</summary>
-				<div class="timeline-body">
-					<ul class="contributions">
-						<li>Design printables and web banners.</li>
-						<li>Create and edit videos for social media.</li>
-					</ul>
-				</div>
-			</details>
-			<br>
+                    <details>       
+                        <summary>
+                            <div class="role-title">Former Secretary of R&D <span class="date">Mar 2024 - Aug 2025</span></div>
+                        </summary>
+                        <div class="timeline-body">
+                            <ul class="contributions">
+                                <li>Develop competitive robots and projects for national and international contests.</li>
+                                <li>Successfully competed in a national hackathon under UIU Robotics Banner.</li>
+                                <li>Organized "UIU CSE Fest 2025" Co-Hosted by UIU Robotics</li>
+                                <li>Co-ordinated Intra university Robotics Competition "Robo Rush"</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <hr>
 
-			<div class="badge-container">
-				<span class="badge badge-world"><i class="fa fa-star"></i> 3rd in Technocrats v2</span>
-				<span class="badge badge-intl">National Competition</span>
-				<span class="badge badge-indigo">Leadership</span>
-				<span class="badge badge-amber">Mentoring</span>
-				<span class="badge badge-rose">Teamwork</span>
-				<span class="badge badge-cyan">Event Management</span>
-			</div>
-			<hr>
+                    <details>       
+                        <summary>
+                            <div class="role-title">Former Executive of Branding <span class="date">Mar 2023 - Mar 2024</span></div>
+                        </summary>
+                        <div class="timeline-body">
+                            <ul class="contributions">
+                                <li>Design printables and web banners.</li>
+                                <li>Create and edit videos for social media.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <br>
+
+                    <div class="badge-container">
+                        <span class="badge badge-world"><i class="fa fa-star"></i> 3rd in Technocrats v2</span>
+                        <span class="badge badge-intl">National Competition</span>
+                        <span class="badge badge-indigo">Leadership</span>
+                        <span class="badge badge-amber">Mentoring</span>
+                        <span class="badge badge-rose">Teamwork</span>
+                        <span class="badge badge-cyan">Event Management</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <a href="https://www.facebook.com/profile.php?id=61566442053812" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
+                            <img src="assets/images/uiutfc.png" alt="UIU Theatre & Film Club Logo" class="exp-logo">
+                            <div class="header-text">
+                                <h3>UIU Theatre & Film Club</h3>
+                                <span class="subtext">Dhaka, Bangladesh (2021 - 2023)</span>
+                            </div>
+                        </a>
+                    </div>
+                        
+                    <details>       
+                        <summary>
+                            <div class="role-title">Former Head of Film <span class="date">Mar 2023 - Apr 2023</span></div>
+                        </summary>
+                        <div class="timeline-body">
+                            <ul class="contributions">
+                                <li>Mentoring several teams filmmaking and writing.</li>
+                                <li>Arranged Filmmaking seminars.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <hr>
+                    
+                    <details>
+                        <summary>
+                            <div class="role-title">Former Asst. Head of Film <span class="date">Mar 2022- Mar 2023</span></div>
+                        </summary>
+                        <div class="timeline-body">
+                            <ul class="contributions">
+                                <li>Arranged Filmmaking seminars.</li>
+                                <li>Wrote and Produced one full length thriller short-film under UIU Theatre and Film Club.</li>
+                                <li>Organized and Participated in "Tokkor 11" Intra University Threatrical Competition</li>
+                                <li>Co-ordinated Intra university Ad-making Competition "Jiboner Golpe Nagad"</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <hr>
+
+                    <details>
+                        <summary>
+                            <div class="role-title">Former Executive of Film <span class="date">Nov 2021 - Mar 2022</span></div>
+                        </summary>
+                        <div class="timeline-body">
+                            <ul class="contributions">
+                                <li>Create and edit videos for social media.</li>
+                                <li>Produced Short Films for Club.</li>
+                                <li>Design printables and web banners.</li>
+                                <li>Participated in Theatrical Perfomances.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <br>
+                    <div class="badge-container">
+                        <span class="badge badge-world"><i class="fa fa-star"></i> 1st in Tokkor 11</span>
+                        <span class="badge badge-intl">Intra University Competition</span>
+                        <span class="badge badge-indigo">Leadership</span>
+                        <span class="badge badge-rose">Teamwork</span>
+                        <span class="badge badge-amber">Mentoring</span>
+                        <span class="badge badge-cyan">Event Management</span>
+                    </div>
+                </div>
+            </div> </div> </div> <hr>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <a name="publications"></a>
+            <h2><span class="namehead">Publications</span></h2>
+            <ul class="parentdetail">
+                <li>No Publications are Public Yet.</li>
+            </ul>
         </div>
-        
-		<div class="timeline-item">
-			<div class="timeline-header">
-                <a href="https://www.facebook.com/profile.php?id=61566442053812" target="_blank" rel="noopener noreferrer"><img src="assets/images/uiutfc.png" alt="UIU Theatre & Film Club Logo" class="exp-logo">
-					<div class="header-text">
-						<h3>UIU Theatre & Film Club</h3></a>
-						<span class="subtext">Dhaka, Bangladesh (2021 - 2023)</span>
-					</div>
-				</div>
+
+
+		<div class="col-sm-6">
+			<a name="achievements"></a>
+			<h2 class="section-title"> <span>Achievements</span></h2>
+			
+			<ul class="achievement-list">
 				
-			<details>		
-				<summary>
-					<div class="role-title">Former Head of Film <span class="date">Mar 2023 - Apr 2023</span></div>
-				</summary>
-				<div class="timeline-body">
-					<ul class="contributions">
-						<li>Mentoring several teams filmmaking and writing.</li>
-						<li>Arranged Filmmaking seminars.</li>
-					</ul>
-				</div>
-			</details>
-			<hr>
-			
-			<details>
-				<summary>
-					<div class="role-title">Former Asst. Head of Film <span class="date">Mar 2022- Mar 2023</span></div>
-				</summary>
-				<div class="timeline-body">
-					<ul class="contributions">
-						<li>Arranged Filmmaking seminars.</li>
-						<li>Wrote and Produced one full length thriller short-film under UIU Theatre and Film Club.</li>
-						<li>Organized and Participated in "Tokkor 11" Intra University Threatrical Competition</li>
-                    <li>Co-ordinated Intra university Ad-making Competition "Jiboner Golpe Nagad"</li>
-                </ul>
-            </div>
-			</details>
-			<hr>
+				<li class="achievement-item">
+					<i class="fa fa-trophy"></i>
+					<div class="achievement-text">
+						<b>6th Worldwide Rank & Best Science Team Award</b>
+						<span>University Rover Challenge (URC) 2025, Utah, USA</span>
+					</div>
+				</li>
 
-			<details>
-				<summary>
-					<div class="role-title">Former Executive of Film <span class="date">Nov 2021 - Mar 2022</span></div>
-				</summary>
-				<div class="timeline-body">
-					<ul class="contributions">
-						<li>Create and edit videos for social media.</li>
-						<li>Produced Short Films for Club.</li>
-						<li>Design printables and web banners.</li>
-						<li>Participated in Theatrical Perfomances.</li>
-					</ul>
-				</div>
-			</details>
-			<hr>
-			<br>
-			<div class="badge-container">
-				<span class="badge badge-world"><i class="fa fa-star"></i> 1st in Tokkor 11</span>
-				<span class="badge badge-intl">Intra University Competition</span>
-				<span class="badge badge-indigo">Leadership</span>
-				<span class="badge badge-rose">Teamwork</span>
-				<span class="badge badge-amber">Mentoring</span>
-				<span class="badge badge-cyan">Event Management</span>
-			</div>
-        </div>
-  
+				<li class="achievement-item">
+					<i class="fa fa-star"></i>
+					<div class="achievement-text">
+						<b>Champion - Software Engineering Track</b>
+						<span>UIU CSE Project Show Summer '24</span>
+					</div>
+				</li>
+
+				<li class="achievement-item">
+					<i class="fa fa-rocket"></i>
+					<div class="achievement-text">
+						<b>5th Worldwide Rank</b>
+						<span>University Rover Challenge (URC) 2024</span>
+					</div>
+				</li>
+
+				<li class="achievement-item">
+					<i class="fa fa-medal"></i>
+					<div class="achievement-text">
+						<b>3rd Runners-Up - Techathon</b>
+						<span>IUBAT Technocrats v2.0 by IIEC Innovation Center, 2024</span>
+					</div>
+				</li>
+
+				<li class="achievement-item">
+					<i class="fa fa-certificate"></i>
+					<div class="achievement-text">
+						<b>1st Place - Tokkor 11</b>
+						<span>Intra-University Theatrical Competition</span>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+		
     </div>
-</div>
-
-<hr>
-</div>
-
-<!-- Second Row: Publications & Achievements -->
-  <div class="row">
-    <!-- Publications -->
-    <div class="col-sm-6">
-      <a name="publications"></a>
-      <h2><span class="namehead">Publications</span></h2>
-      <ul class="parentdetail">
-        <li>No Publications are Public Yet.</li>
-      </ul>
-    </div>
-
-    <!-- Achievements -->
-    <div class="col-sm-6">
-      <a name="achievements"></a>
-      <h2><span class="namehead">Achievements</span></h2>
-      <ul class="parentdetail">
-		<li>6th Worldwide Rank with "Best Science Team" Award at University Rover Challenge 2025</li>
-		<li>Champion - Software Enginnering - UIU CSE Project Show Summer '24</li>
-        <li>3rd Runners-Up - Techathon - at IUBAT Technocrats v2.0 by IIEC - IUBAT Innovation and Entrepreneurship Center - 2024</li>
-        <li>5th Worldwide Rank at University Rover Challenge 2024</li>
-      </ul>
-    </div>
-  </div>
 
 </div>
 
