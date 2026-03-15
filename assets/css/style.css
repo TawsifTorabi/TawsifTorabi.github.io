@@ -909,16 +909,14 @@ body {
 }
 
 .date {
-    font-size: 0.9rem; /* Normalized from 1.5rem for better hierarchy */
+    font-size: 0.9rem;
     font-weight: 500;
     background: var(--royal-blue-light);
     color: var(--royal-blue);
-    padding: 4px 14px;
+    padding: 1px 8px;
     border-radius: 20px;
     border: 1px solid var(--royal-blue);
     box-shadow: 0 2px 10px rgba(65, 105, 225, 0.15);
-	position: absolute;
-    right: 29px;
 }
 
 /* Description & Lists */
