@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="bn" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিশ্ব চিঠি দিবস 💌 — প্রিয়তমা</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        bangla: ['"Tiro Bangla"', 'serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        paper: '#fcf8f2',
+                        aged: '#f3e9d2',
+                        ink: '#2b2621',
+                        postalRed: '#9e2a2b',
+                        postalBlue: '#1d3557',
+                        envelopeBg: '#2d3748',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #242220;
+            background-image: radial-gradient(circle, #332f2c 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .paper-card {
+            background: linear-gradient(135deg, #fffdf9 0%, #f7f0e4 100%);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4), 
+                        0 0 15px rgba(0, 0, 0, 0.05) inset;
+        }
+        .envelope-container {
+            background: #f7f0e4;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .postmark {
+            border: 2px dashed #9e2a2b;
+            border-radius: 50%;
+            width: 85px;
+            height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-12deg);
+            opacity: 0.85;
+        }
+        .envelope-flap {
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: top;
+        }
+        .open-flap {
+            transform: rotateX(180deg);
+            z-index: 10;
+        }
+        .letter-slide {
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.03);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4c5a9;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="h-full flex items-center justify-center p-4 sm:p-6 md:p-8 font-bangla text-ink selection:bg-postalRed/20 overflow-x-hidden">
+
+    <!-- Wrapper to handle Envelope vs Letter State -->
+    <div class="w-full max-w-3xl relative">
+
+        <!-- ================= ENVELOPE LOCK SCREEN ================= -->
+        <div id="envelopeScreen" class="envelope-container rounded-2xl p-6 sm:p-10 md:p-12 relative overflow-hidden border border-amber-200/50 transition-all duration-700">
+            
+            <!-- Envelope Flap -->
+            <div id="envelopeFlap" class="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-[#eadeca] to-[#f0e4d0] clip-path-flap border-b border-amber-300/40 shadow-sm flex items-center justify-center z-20 envelope-flap">
+                <!-- Wax Seal Lock -->
+                <div class="absolute -bottom-6 w-14 h-14 bg-postalRed rounded-full flex items-center justify-center shadow-lg border-2 border-red-900 cursor-pointer hover:scale-105 transition-transform" onclick="openEnvelope()">
+                    <span class="text-white text-xl font-serif">💌</span>
+                </div>
+            </div>
+
+            <!-- Envelope Header/Details -->
+            <div class="flex justify-between items-start pt-16 pb-6 border-b border-aged mb-6">
+                <div class="flex items-center space-x-3">
+                    <div class="postmark p-1 text-center select-none">
+                        <div class="text-[9px] font-serif font-bold uppercase tracking-wider text-postalRed leading-tight">
+                            ঢাকা জিপিও<br>
+                            <span class="text-[8px]">১ সেপ্টেম্বর ২০২৬</span><br>
+                            ★ GPO ★
+                        </div>
+                    </div>
+                </div>
+                <div class="stamp-frame p-2 bg-white transform rotate-3 shadow-sm border border-zinc-300">
+                    <div class="w-14 h-18 bg-gradient-to-br from-amber-100 to-rose-100 flex flex-col items-center justify-center p-1 text-center">
+                        <span class="text-xl">🕊️</span>
+                        <span class="text-[9px] font-serif font-bold text-postalRed mt-1">১০৳</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Envelope Lock & Hint Box -->
+            <div class="text-center py-8 sm:py-12 space-y-6">
+                <div class="space-y-2">
+                    <span class="inline-block px-3 py-1 bg-amber-100 text-postalRed text-xs rounded-full font-semibold">৫ বছরের বিশেষ চিঠি</span>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-zinc-800">তোমার জন্য একটি চিঠি রয়েছে</h2>
+                    <p class="text-sm text-zinc-600 max-w-md mx-auto">
+                        চিঠিটি খুলতে হিন্ট পূরণ করো:<br>
+                        <span class="italic font-medium text-postalRed">"আমাদের একসাথে পথ চলার কত বছর হলো?"</span>
+                    </p>
+                </div>
+
+                <!-- Input & Unlock Button -->
+                <div class="max-w-sm mx-auto flex flex-col sm:flex-row gap-2">
+                    <input type="text" id="hintInput" placeholder="এখানে লিখুন (যেমন: ৫)" 
+                        class="flex-1 px-4 py-2.5 rounded-xl border border-amber-300 bg-white/80 focus:outline-none focus:ring-2 focus:ring-postalRed text-sm">
+                    <button onclick="openEnvelope()" 
+                        class="px-5 py-2.5 bg-postalRed text-white rounded-xl hover:bg-red-800 transition-colors shadow-md font-sans text-sm cursor-pointer whitespace-nowrap">
+                        খুলুন 🔓
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center text-xs text-zinc-500 pt-4 border-t border-aged">
+                প্রাপক: আমার হৃদয়ের খুব কাছের মানুষটি ❤️
+            </div>
+        </div>
+
+        <!-- ================= LETTER SCREEN (Hidden initially) ================= -->
+        <div id="letterScreen" class="paper-card rounded-2xl p-6 sm:p-10 md:p-12 relative overflow-hidden hidden opacity-0 transform translate-y-10 letter-slide shadow-2xl">
+            
+            <!-- Top Postal Header -->
+            <header class="flex justify-between items-start border-b border-aged pb-6 mb-6">
+                <div class="flex items-center space-x-3">
+                    <div class="postmark p-1 text-center select-none">
+                        <div class="text-[9px] font-serif font-bold uppercase tracking-wider text-postalRed leading-tight">
+                            ঢাকা জিপিও<br>
+                            <span class="text-[8px]">১ সেপ্টেম্বর ২০২৬</span><br>
+                            ★ GPO ★
+                        </div>
+                    </div>
+                    <div class="hidden sm:block">
+                        <p class="text-xs font-serif tracking-widest text-zinc-500 uppercase">World Letter Day</p>
+                        <p class="text-sm font-semibold text-zinc-700">বাংলাদেশ ডাক বিভাগ</p>
+                    </div>
+                </div>
+
+                <div class="stamp-frame p-2 bg-white transform rotate-3">
+                    <div class="w-16 h-20 sm:w-20 sm:h-24 bg-gradient-to-br from-amber-100 to-rose-100 flex flex-col items-center justify-center border border-dashed border-zinc-400 p-1 text-center">
+                        <span class="text-2xl">🕊️</span>
+                        <span class="text-[10px] font-serif font-bold text-postalRed mt-1">১০৳</span>
+                        <span class="text-[8px] text-zinc-600 font-serif">BANGLADESH</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Letter Body Content -->
+            <section class="space-y-6 max-h-[60vh] sm:max-h-[65vh] overflow-y-auto pr-2 sm:pr-4">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-xl sm:text-2xl font-bold text-postalRed tracking-tight font-serif">
+                        প্রিয় দেবী 💌
+                    </h1>
+                    <span class="text-xs text-zinc-500 font-serif">১ সেপ্টেম্বর, ২০২৬</span>
+                </div>
+
+                <div class="space-y-4 text-base sm:text-lg leading-relaxed text-zinc-800">
+                    <p>দেখতে দেখতে আমাদের একসাথে পথ চলার প্রায় পাঁচটা বছর কেটে গেল।</p>
+                    
+                    <p>গত বছরের এই দিনটার কথা ভাবলে মনে হয়, সময় কত দ্রুতই না বদলে যায়! কিন্তু তোমার প্রতি আমার মুগ্ধতা আর ভালোবাসাটা একবিন্দুও বদলায়নি, বরং সময়ের সাথে আরও যেনো অতলান্তের গভীরতার মতো অতল হয়ে যাচ্ছে।</p>
+                    
+                    <p>আমার থেকে কেউ মনে হয় এতটা খুশি হয়নাই, যখন শুনলাম মাস্টার্সে তোমার হয়ে গেছে, এটা শোনার পর থেকে আমার বুকটা অদ্ভুত এক শান্তিতে আর গর্বে ভরে আছে।</p>
+                    
+                    <p>সত্যি বলতে, তোমার এই এক অদম্য স্পৃহা আর এগিয়ে যাওয়া দেখে আমার মাঝে মাঝে খুব মিষ্টি একটা ঈর্ষা হয়। মনে হয়, আমার সখের মানুষটা কত দারুণ! কত চ্যালেঞ্জ নিয়েও তুমি কখনও থামো নাই।</p>
+                    
+                    <p>তুমি এত সুন্দর করে নিজের স্বপ্নগুলোর দিকে হেঁটে যাচ্ছ, সেটা আমাকেও ভীষণ ইন্সপায়ার করে। সত্যি বলতে, আমি আজকে যা, তার পেছনে তোমার হাত আছে অনেক! এতো যত্ন করে আমাকে যে "আমি" বানাইতে হেল্প করছে, তারে ছেড়ে আমি আর কোথায় যাবো বলো?</p>
+                    
+                    <p>গত বছর তোমাকে লেখা চিঠিতে আমার কত আক্ষেপ ছিল, কত অসহায়ত্ব ছিল। বারবার মনে হচ্ছিল, "যদি আমার একটা ব্যবসা হয়ে যেত, যদি একটা চাকরি হয়ে যেত?"</p>
+                    
+                    <p>আজকেও হয়তো একই আফসোসটাই থাকতো। কিন্তু তুমি আছো দেখেই সাহস করে একটার পর একটা ডিসিশন নিয়ে আগাতে পারি, আজ যখন দিনরাত এক করে কাজ করি মাঝে মাঝে, তখন বুঝতে পারি তোমার ওই নিঃস্বার্থ সাপোর্ট না থাকলে এই সাহসটা আমি হয়তো পেতামই না। তুমি পাশে ছিলে বলেই গত বছরের সেই ভয়টা আজকে আর আমার মাঝে নাই।</p>
+                    
+                    <p>গত পাঁচটা বছর তুমি যেভাবে আমার সব পাগলামি, সব হতাশার মাঝে ছায়ার মতো পাশে ছিলে, তার জন্য কোনো কিছুই তোমাকে দিলে যথেষ্ট নয়।</p>
+                    
+                    <p>তুমি আরও অনেক দূর এগিয়ে যাও, আর আমি তোমার সেই সাফল্যের সবচেয়ে বড় দর্শক হয়ে হাততালি দিই। মনে আছে? তোমার পিএইচডির শখের কথা? বাস্তব হয়ে যায় যেনো!</p>
+                    
+                    <p class="italic text-postalRed font-medium pt-2">
+                        অনেক ভালোবাসা নিও।<br>
+                        "তোমার জন্য আমার লেখা, আমার নতুন গান"
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-aged/60 flex justify-between items-end">
+                    <div class="text-xs text-zinc-500 italic">
+                        * পিনকোড: ১২০৭, ঢাকা, বাংলাদেশ
+                    </div>
+                    <div class="text-right">
+                        <p class="text-sm text-zinc-600">তোমারই,</p>
+                        <p class="text-xl font-bold font-serif text-postalRed">তুরাবি</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Action -->
+            <footer class="mt-6 pt-4 border-t border-aged flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-2">
+                <!--p>বিশ্ব চিঠি দিবসের বিশেষ ডিজিটাল পোস্টকার্ড ডিজাইন</p-->
+                <button onclick="window.print()" class="px-4 py-2 bg-postalRed text-white rounded-lg hover:bg-red-800 transition-colors shadow-sm font-sans flex items-center gap-1.5 cursor-pointer">
+                    <span>🖨️</span> প্রিন্ট বা সংরক্ষণ করুন
+                </button>
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Natural Envelope Opening Effect -->
+    <script>
+        function openEnvelope() {
+            const envelopeScreen = document.getElementById('envelopeScreen');
+            const envelopeFlap = document.getElementById('envelopeFlap');
+            const letterScreen = document.getElementById('letterScreen');
+
+            // Add open-flap class to animate the top envelope triangle folding back
+            envelopeFlap.classList.add('open-flap');
+
+            // After flap opens, fade out envelope and roll out letter smoothly
+            setTimeout(() => {
+                envelopeScreen.style.opacity = '0';
+                envelopeScreen.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    envelopeScreen.classList.add('hidden');
+                    letterScreen.classList.remove('hidden');
+                    setTimeout(() => {
+                        letterScreen.classList.remove('opacity-0', 'translate-y-10');
+                    }, 50);
+                }, 400);
+            }, 600);
+        }
+    </script>
+</body>
+</html>
