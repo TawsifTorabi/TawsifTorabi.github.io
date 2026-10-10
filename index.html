@@ -1,1330 +1,3689 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tawsif Torabi - Github</title>
-  <link rel="icon" type="image/x-icon" href="assets/images/tawsif-torabi-white-icon-logo.png">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-63MVL3E6DH"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'G-63MVL3E6DH');
-	</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tawsif Torabi | Robotics &amp; Computer Science Enthusiast</title>
+  <meta name="description" content="Portfolio, Research Publications, Projects, and Experience of Gazi Tawsif Turabi (Tawsif Torabi) - Robotics, AIoT, WebTechs &amp; Software Engineering.">
+  <link rel="icon" type="image/x-icon" href="assets/images/tawsif-torabi-white-icon-logo.png">
+
+  <!-- Immediate Theme Initialization -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
+  <!-- Google Fonts & Font Awesome loaded directly for instant rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..600;1,14..32,300..600&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+
+  <!-- Bootstrap 3.4.1 for modal & compatibility -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- External Stylesheet with cache-busting version parameter -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2.4">
+  
+  <!-- Aurna Lightbox -->
+  <link rel="stylesheet" href="assets/vendor/aurna_lightbox/aurna_lightbox_1.0.4.css">
+
+  <!-- Embedded Critical & Full Stylesheet -->
+  <style id="site-primary-styles">
+/* ==========================================================================
+   Tawsif Torabi - Portfolio & Academic Profile
+   Modern Minimal & Reader-Friendly Design System
+   ========================================================================== */
+
+/* --- Design Tokens & Color Palettes --- */
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Light Theme (Reader-friendly, crisp & minimal) */
+  --bg-body: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-subtle: #f1f5f9;
+  --bg-surface-hover: #f8fafc;
+  
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --border-focus: #3b82f6;
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+
+  --accent-primary: #2563eb;
+  --accent-primary-hover: #1d4ed8;
+  --accent-primary-subtle: #eff6ff;
+  --accent-primary-glow: rgba(37, 99, 235, 0.25);
+
+  --accent-secondary: #0d9488;
+  --accent-secondary-subtle: #f0fdfa;
+  --accent-amber: #d97706;
+  --accent-amber-subtle: #fffbeb;
+  --accent-rose: #e11d48;
+  --accent-rose-subtle: #fff1f2;
+  --accent-purple: #7c3aed;
+  --accent-purple-subtle: #faf5ff;
+
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
+  --shadow-hover: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --nav-height: 68px;
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark Theme (Deep Obsidian Slate) */
+[data-theme="dark"] {
+  --bg-body: #0b0f19;
+  --bg-surface: #111827;
+  --bg-surface-elevated: #1f2937;
+  --bg-surface-subtle: #1e293b;
+  --bg-surface-hover: #1e293b;
+
+  --border-subtle: #1e293b;
+  --border-strong: #334155;
+  --border-focus: #60a5fa;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+
+  --accent-primary: #3b82f6;
+  --accent-primary-hover: #60a5fa;
+  --accent-primary-subtle: rgba(59, 130, 246, 0.12);
+  --accent-primary-glow: rgba(59, 130, 246, 0.35);
+
+  --accent-secondary: #14b8a6;
+  --accent-secondary-subtle: rgba(20, 184, 166, 0.12);
+  --accent-amber: #f59e0b;
+  --accent-amber-subtle: rgba(245, 158, 11, 0.12);
+  --accent-rose: #f43f5e;
+  --accent-rose-subtle: rgba(244, 63, 94, 0.12);
+  --accent-purple: #a855f7;
+  --accent-purple-subtle: rgba(168, 85, 247, 0.12);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+}
+
+/* --- Base & Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  zoom: 1.25;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 20px);
+}
+@media (max-width: 768px) {
+  html {
+    zoom: 1.15;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    zoom: 1.05;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-body);
+  color: var(--text-secondary);
+  line-height: 1.74;
+  font-size: 15.5px;
+  font-weight: 380;
+  letter-spacing: 0.012em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-body);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+a:hover {
+  color: var(--accent-primary-hover);
+  text-decoration: none;
+}
+
+/* --- Top Scroll Indicator --- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  z-index: 10000;
+  transition: width 0.1s linear;
+}
+
+/* --- Page Preloader & Animated Logo --- */
+#loaderCont,
+#loaderCont2 {
+  background: var(--bg-body);
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  user-select: none;
+}
+
+#loaderCont.fadeout,
+#loaderCont2.fadeout {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loaderSVG {
+  width: 170px;
+  max-width: 75vw;
+  height: 170px;
+  display: block;
+  border: none;
+  background: transparent;
+  pointer-events: none;
+  transition: filter var(--transition-fast);
+}
+
+/* Adaptive Theme Filter: Pure Black on Light Theme, Pure White on Dark Theme */
+[data-theme="light"] .loaderSVG,
+:root:not([data-theme="dark"]) .loaderSVG {
+  filter: brightness(0);
+}
+
+[data-theme="dark"] .loaderSVG {
+  filter: brightness(0) invert(1);
+}
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+/* --- Navigation Bar --- */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background: rgba(248, 250, 252, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+  z-index: 1000;
+  transition: all var(--transition-fast);
+}
+[data-theme="dark"] .site-nav {
+  background: rgba(11, 15, 25, 0.85);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.site-nav.scrolled {
+  box-shadow: var(--shadow-sm);
+}
+.nav-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.nav-brand-img {
+  height: 38px;
+  width: auto;
+  filter: brightness(0); /* Black on light theme */
+  transition: filter var(--transition-fast), transform var(--transition-fast);
+}
+[data-theme="dark"] .nav-brand-img {
+  filter: brightness(0) invert(1); /* Pure white on dark theme */
+}
+.nav-brand:hover .nav-brand-img {
+  transform: scale(1.04);
+}
+.nav-brand-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+.nav-brand-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  background: var(--accent-primary-subtle);
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary-glow);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-link-item a {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 8px 13px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+.nav-link-item a:hover,
+.nav-link-item a.active {
+  color: var(--accent-primary);
+  background: var(--accent-primary-subtle);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.theme-toggle-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 1rem;
+}
+.theme-toggle-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  transform: rotate(15deg);
+}
+
+.nav-mobile-toggle {
+  display: none;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+  .nav-mobile-toggle {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-subtle);
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 8px;
+    box-shadow: var(--shadow-lg);
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-link-item {
+    width: 100%;
+  }
+  .nav-link-item a {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+  }
+}
+
+/* --- Container Utility --- */
+.container-main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section-wrapper {
+  padding: 80px 0;
+  position: relative;
+}
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-subtle) 20%, var(--border-subtle) 80%, transparent);
+  border: none;
+  margin: 0;
+}
+
+/* --- Section Headers --- */
+.section-head-wrap {
+  margin-bottom: 44px;
+}
+.section-pretitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-primary);
+  background: var(--accent-primary-subtle);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+  border: 1px solid var(--accent-primary-glow);
+}
+.section-title-main {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.section-title-main span {
+  color: var(--accent-primary);
+  position: relative;
+}
+.section-subtitle-main {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Hero / Bio Section
+   ========================================================================== */
+.hero-section {
+  padding-top: calc(var(--nav-height) + 48px);
+  padding-bottom: 72px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* Hero Left Profile Card */
+.profile-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.profile-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.profile-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-surface);
+  box-shadow: 0 0 0 3px var(--border-subtle), var(--shadow-md);
+  cursor: pointer;
+  transition: all 0.35s ease;
+  position: relative;
+  z-index: 2;
+}
+.profile-avatar:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 0 4px var(--accent-primary), var(--shadow-lg);
+}
+.profile-avatar.caricature-active {
+  box-shadow: 0 0 0 4px var(--accent-primary), 0 0 25px var(--accent-primary-glow);
+  transform: scale(1.03);
+}
+
+.caricature-btn-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: var(--accent-primary-subtle);
+  border: 1px solid var(--accent-primary-glow);
+  border-radius: var(--radius-full);
+  padding: 4px 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.caricature-btn-badge:hover {
+  background: var(--accent-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--accent-primary-glow);
+}
+
+/* Easter Egg Leer */
+.leerHide {
+  display: none;
+}
+.leer {
+  position: fixed;
+  z-index: 99999;
+  width: min(80vw, 480px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(132, 4, 129, 0.8);
+  animation: leerPulse 1.2s infinite alternate ease-in-out;
+}
+.leerbg {
+  position: fixed;
+  inset: 0;
+  background: rgba(132, 4, 129, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 99998;
+  cursor: pointer;
+}
+.leerbgHide {
+  display: none;
+}
+@keyframes leerPulse {
+  0% { transform: translate(-50%, -50%) scale(0.95); }
+  100% { transform: translate(-50%, -50%) scale(1.05); }
+}
+
+.profile-name {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.profile-tagline {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.profile-affiliations {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 14px 0;
+}
+.profile-affiliations li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+.profile-affiliations li:last-child {
+  margin-bottom: 0;
+}
+.profile-affiliations li i {
+  color: var(--accent-primary);
+  margin-top: 3px;
+  font-size: 0.95rem;
+}
+.profile-affiliations strong {
+  color: var(--text-primary);
+}
+
+.social-links-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.social-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  transition: all var(--transition-fast);
+}
+.social-icon-btn:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+.social-icon-btn.fb:hover { background: #1877f2; border-color: #1877f2; }
+.social-icon-btn.insta:hover { background: #e4405f; border-color: #e4405f; }
+.social-icon-btn.yt:hover { background: #ff0000; border-color: #ff0000; }
+.social-icon-btn.gh:hover { background: #24292e; border-color: #24292e; }
+.social-icon-btn.in:hover { background: #0a66c2; border-color: #0a66c2; }
+.social-icon-btn.scholar:hover { background: #4285f4; border-color: #4285f4; }
+
+/* Quick Profile CTA Buttons */
+.profile-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.btn-cta-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+.btn-cta-card.primary {
+  background: var(--accent-primary);
+  color: #fff;
+}
+.btn-cta-card.primary:hover {
+  background: var(--accent-primary-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--accent-primary-glow);
+}
+.btn-cta-card.outline {
+  background: var(--bg-surface);
+  border-color: var(--border-strong);
+  color: var(--text-secondary);
+}
+.btn-cta-card.outline:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: var(--accent-primary-subtle);
+  transform: translateY(-2px);
+}
+
+/* Hero Right Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+.hero-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.hero-subtag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+.hero-subtag:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.hero-subtag.pill-amber {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+[data-theme="dark"] .hero-subtag.pill-amber {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fcd34d;
+  border-color: rgba(245, 158, 11, 0.4);
+}
+.hero-subtag.pill-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+[data-theme="dark"] .hero-subtag.pill-emerald {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+  border-color: rgba(16, 185, 129, 0.4);
+}
+.hero-subtag.pill-blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+[data-theme="dark"] .hero-subtag.pill-blue {
+  background: rgba(59, 130, 246, 0.18);
+  color: #93c5fd;
+  border-color: rgba(59, 130, 246, 0.4);
+}
+.hero-subtag.pill-purple {
+  background: rgba(168, 85, 247, 0.12);
+  color: #6d28d9;
+  border-color: rgba(168, 85, 247, 0.3);
+}
+[data-theme="dark"] .hero-subtag.pill-purple {
+  background: rgba(168, 85, 247, 0.18);
+  color: #d8b4fe;
+  border-color: rgba(168, 85, 247, 0.4);
+}
+.hero-subtag.pill-teal {
+  background: rgba(20, 184, 166, 0.12);
+  color: #0f766e;
+  border-color: rgba(20, 184, 166, 0.3);
+}
+[data-theme="dark"] .hero-subtag.pill-teal {
+  background: rgba(20, 184, 166, 0.18);
+  color: #5eead4;
+  border-color: rgba(20, 184, 166, 0.4);
+}
+.hero-subtag.pill-rose {
+  background: rgba(244, 63, 94, 0.12);
+  color: #be123c;
+  border-color: rgba(244, 63, 94, 0.3);
+}
+[data-theme="dark"] .hero-subtag.pill-teal {
+  background: rgba(20, 184, 166, 0.12);
+  color: #0f766e;
+  border-color: rgba(20, 184, 166, 0.3);
+}
+[data-theme="dark"] .hero-subtag.pill-teal {
+  background: rgba(20, 184, 166, 0.18);
+  color: #5eead4;
+  border-color: rgba(20, 184, 166, 0.4);
+}
+.hero-subtag.pill-rose {
+  background: rgba(244, 63, 94, 0.18);
+  color: #fda4af;
+  border-color: rgba(244, 63, 94, 0.4);
+}
+
+.hero-heading {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  line-height: 1.18;
+  margin-bottom: 20px;
+}
+.hero-bio-lead {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+.hero-bio-lead p {
+  margin-bottom: 14px;
+}
+.hero-bio-lead p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 10px;
+}
+.btn-primary-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: var(--accent-primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px var(--accent-primary-glow);
+  transition: all var(--transition-fast);
+}
+.btn-primary-action:hover {
+  background: var(--accent-primary-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--accent-primary-glow);
+}
+.btn-secondary-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.btn-secondary-action:hover {
+  background: var(--bg-surface-subtle);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+.btn-yt-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(255, 0, 0, 0.25);
+  transition: all var(--transition-fast);
+}
+.btn-yt-action:hover {
+  background: #cc0000;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.35);
+}
+
+/* ==========================================================================
+   Publications Section (Academic & Research Focus)
+   ========================================================================== */
+.publications-section {
+  background: var(--bg-surface-subtle);
+}
+.scholar-stat-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+}
+.scholar-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.scholar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent-primary-subtle);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+.scholar-text h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.scholar-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.publication-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 26px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  position: relative;
+  border-left: 4px solid var(--accent-primary);
+}
+.publication-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--accent-primary-hover);
+}
+.pub-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.pub-badge-year {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  background: var(--accent-primary-subtle);
+  color: var(--accent-primary);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+.pub-badge-type {
+  font-size: 0.76rem;
+  font-weight: 600;
+  background: var(--bg-surface-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+.pub-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+.pub-title a {
+  color: var(--text-primary);
+}
+.pub-title a:hover {
+  color: var(--accent-primary);
+}
+.pub-authors {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+.pub-authors strong {
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+.pub-abstract {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.pub-tag {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  background: var(--bg-surface-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+.pub-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 14px;
+}
+.pub-link-btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-primary);
+}
+.pub-link-btn:hover {
+  color: var(--accent-primary-hover);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Notable Projects Section (Filterable & Refined)
+   ========================================================================== */
+.projects-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.filter-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.filter-btn:hover {
+  background: var(--bg-surface-subtle);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+.filter-btn.active {
+  background: var(--accent-primary);
+  color: #fff;
+  border-color: var(--accent-primary);
+  box-shadow: 0 4px 12px var(--accent-primary-glow);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-strong);
+}
+
+.project-img-wrap {
+  width: 100%;
+  height: 200px;
+  background: var(--bg-surface-subtle);
+  overflow: hidden;
+  position: relative;
+}
+.project-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.project-card:hover .project-img-wrap img {
+  transform: scale(1.05);
+}
+
+.project-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.project-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+.project-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.project-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 18px;
+}
+.tech-pill {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.project-links-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 14px;
+}
+.btn-proj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-subtle);
+  color: var(--text-secondary);
+}
+.btn-proj-link:hover {
+  background: var(--accent-primary-subtle);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+.btn-proj-link.primary {
+  background: var(--accent-primary);
+  color: #fff;
+  border-color: var(--accent-primary);
+}
+.btn-proj-link.primary:hover {
+  background: var(--accent-primary-hover);
+  color: #fff;
+}
+
+/* ==========================================================================
+   Experience, Activities & Achievements Timeline Section
+   ========================================================================== */
+.timeline-section {
+  background: var(--bg-surface-subtle);
+}
+.timeline-columns-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+@media (max-width: 900px) {
+  .timeline-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.timeline-col-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.timeline-col-head i {
+  color: var(--accent-primary);
+  font-size: 1.3rem;
+}
+.timeline-col-head h3 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.modern-timeline {
+  position: relative;
+  padding-left: 32px;
+  border-left: 2px solid var(--border-strong);
+}
+.modern-timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+.modern-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline Dot / Node */
+.timeline-node-dot {
+  position: absolute;
+  left: -40px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 3px solid var(--accent-primary);
+  box-shadow: 0 0 0 4px var(--accent-primary-glow);
+  transition: all var(--transition-fast);
+}
+.modern-timeline-item:hover .timeline-node-dot {
+  background: var(--accent-primary);
+  transform: scale(1.2);
+}
+
+.timeline-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+.modern-timeline-item:hover .timeline-card {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.timeline-header-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.timeline-logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--border-subtle);
+  padding: 2px;
+  flex-shrink: 0;
+}
+.timeline-org-info h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+}
+.timeline-org-info a {
+  color: var(--text-primary);
+}
+.timeline-org-info a:hover {
+  color: var(--accent-primary);
+}
+.timeline-org-location {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Details Accordion */
+.timeline-role-accordion {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 10px;
+  margin-top: 8px;
+}
+.timeline-role-accordion summary {
+  list-style: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+.timeline-role-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.role-title-text {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.role-date-badge {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  background: var(--accent-primary-subtle);
+  color: var(--accent-primary);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+.accordion-arrow {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: transform var(--transition-fast);
+}
+.timeline-role-accordion[open] .accordion-arrow {
+  transform: rotate(180deg);
+  color: var(--accent-primary);
+}
+
+.timeline-role-content {
+  padding: 10px 0 6px 0;
+}
+.timeline-bullets {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+.timeline-bullets li {
+  margin-bottom: 6px;
+}
+.timeline-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+/* Badges Container */
+.badge-row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.skill-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.badge-blue { background: var(--accent-primary-subtle); color: var(--accent-primary); border: 1px solid var(--accent-primary-glow); }
+.badge-teal { background: var(--accent-secondary-subtle); color: var(--accent-secondary); border: 1px solid rgba(13, 148, 136, 0.25); }
+.badge-amber { background: var(--accent-amber-subtle); color: var(--accent-amber); border: 1px solid rgba(217, 119, 6, 0.25); }
+.badge-rose { background: var(--accent-rose-subtle); color: var(--accent-rose); border: 1px solid rgba(225, 29, 72, 0.25); }
+.badge-purple { background: var(--accent-purple-subtle); color: var(--accent-purple); border: 1px solid rgba(124, 58, 237, 0.25); }
+.badge-world { background: rgba(234, 179, 8, 0.12); color: #b45309; border: 1px solid rgba(234, 179, 8, 0.3); font-weight: 700; }
+
+/* Achievements List */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.achievement-card-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+.achievement-card-item:hover {
+  transform: translateX(4px);
+  border-color: var(--accent-amber);
+  box-shadow: var(--shadow-md);
+}
+.achievement-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-amber-subtle);
+  color: var(--accent-amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.achievement-details b {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.achievement-details span {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Image Cloud Gallery Section (Cloud-like Masonry)
+   ========================================================================== */
+.gallery-cloud-grid {
+  column-count: 4;
+  column-gap: 16px;
+}
+@media (max-width: 1024px) {
+  .gallery-cloud-grid { column-count: 3; }
+}
+@media (max-width: 768px) {
+  .gallery-cloud-grid { column-count: 2; }
+}
+@media (max-width: 480px) {
+  .gallery-cloud-grid { column-count: 1; }
+}
+
+.gallery-cloud-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.gallery-cloud-item:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-strong);
+}
+.gallery-cloud-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.gallery-cloud-item:hover img {
+  transform: scale(1.04);
+}
+.gallery-caption-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 24px 14px 12px 14px;
+  background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.88) 80%);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all var(--transition-fast);
+}
+.gallery-cloud-item:hover .gallery-caption-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lightbox Modal */
+.modal-backdrop.in {
+  opacity: 0.85;
+  background-color: #0b0f19;
+}
+.lightbox-modal-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+}
+.lightbox-modal-body {
+  padding: 16px;
+  position: relative;
+  text-align: center;
+}
+.lightbox-modal-body img {
+  max-height: 78vh;
+  max-width: 100%;
+  border-radius: var(--radius-sm);
+  margin: 0 auto;
+}
+.lightbox-caption-text {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.lightbox-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  z-index: 10;
+  transition: background var(--transition-fast);
+}
+.lightbox-close-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* ==========================================================================
+   Recent Blogs Section
+   ========================================================================== */
+.blogs-section {
+  background: var(--bg-surface-subtle);
+}
+.blogs-grid-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 36px;
+}
+@media (max-width: 900px) {
+  .blogs-grid-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-post-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+.blog-post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+.blog-post-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.blog-post-title a {
+  color: var(--text-primary);
+}
+.blog-post-title a:hover {
+  color: var(--accent-primary);
+}
+.blog-post-summary {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+/* Sidebar Card */
+.sidebar-panel-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: calc(var(--nav-height) + 20px);
+}
+.sidebar-banner-img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  margin-bottom: 14px;
+}
+.sidebar-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+.sidebar-subhead {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 18px 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+}
+.sidebar-subhead i {
+  color: var(--accent-primary);
+}
+.side-feed-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side-feed-links li {
+  margin-bottom: 8px;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  border-bottom: 1px dashed var(--border-subtle);
+  padding-bottom: 6px;
+}
+.side-feed-links li a {
+  color: var(--text-secondary);
+}
+.side-feed-links li a:hover {
+  color: var(--accent-primary);
+}
+
+/* ==========================================================================
+   Repositories Section
+   ========================================================================== */
+.repo-search-wrap {
+  position: relative;
+  max-width: 480px;
+  margin-bottom: 24px;
+}
+.repo-search-input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+.repo-search-input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-primary-glow);
+}
+.repo-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.repos-container-scroll {
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+.repos-grid-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .repos-grid-list {
+    grid-template-columns: 1fr;
+  }
+}
+.repo-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+.repo-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.repo-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.repo-card-name {
+  font-size: 1.02rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.repo-card-name a {
+  color: var(--accent-primary);
+}
+.repo-card-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+.repo-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-subtle);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background: #0b0f19;
+  color: #94a3b8;
+  padding: 64px 0 32px 0;
+  border-top: 1px solid #1e293b;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.footer-col h4 {
+  color: #f8fafc;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.footer-col p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links-list li {
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+}
+.footer-links-list li a {
+  color: #94a3b8;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-links-list li a:hover {
+  color: #60a5fa;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  padding-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+}
+
+/* Floating Back To Top Button */
+#BTT {
+  display: none;
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--accent-primary);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 14px var(--accent-primary-glow);
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+#BTT:hover {
+  background: var(--accent-primary-hover);
+  transform: translateY(-4px);
+}
+
+/* --- Resume & CV Utilities --- */
+.downloadCV {
+  text-decoration: none;
+  background: var(--accent-primary);
+  color: #ffffff !important;
+  position: fixed;
+  top: 14px;
+  right: 24px;
+  z-index: 10001;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  padding: 8px 18px;
+  border: none;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.downloadCV:hover {
+  background: var(--accent-primary-hover);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+#loaderCont2 {
+  background: var(--bg-body);
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-cont {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  z-index: 9999;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.buttonX {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  background: var(--accent-primary);
+  color: #fff;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  min-width: 170px;
+  transition: all var(--transition-fast);
+}
+.buttonX:hover {
+  background: var(--accent-primary-hover);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Redesigned Resume & CV Page Styles
+   ========================================================================== */
+.resume-main-layout {
+  padding-top: calc(var(--nav-height) + 36px);
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.resume-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.resume-switcher-group {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 5px;
+  gap: 6px;
+  box-shadow: var(--shadow-sm);
+}
+
+.resume-tab-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.resume-tab-btn:hover {
+  color: var(--text-primary);
+}
+.resume-tab-btn.active {
+  background: var(--accent-primary);
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px var(--accent-primary-glow);
+}
+
+.resume-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resume-document-center-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.resume-viewer-card {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+.resume-viewer-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-hover);
+}
+
+.resume-viewer-top-bar {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.doc-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+  animation: pulseGreen 2s infinite;
+}
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.doc-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+.doc-tool-btn:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  background: var(--accent-primary-subtle);
+}
+
+.resume-iframe-container {
+  width: 100%;
+  height: 980px;
+  background: var(--bg-surface-subtle);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.resume-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  background: #ffffff;
+}
+
+.resume-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 940px;
+  margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .resume-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .resume-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resume-summary-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+.resume-summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+.resume-summary-icon {
+  font-size: 1.3rem;
+  color: var(--accent-primary);
+  margin-bottom: 10px;
+}
+.resume-summary-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+.resume-summary-card p {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-63MVL3E6DH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-63MVL3E6DH');
+  </script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="assets/vendor/aurna_lightbox/aurna_lightbox_1.0.4.css">
 </head>
 <body>
+<!-- Aurna Lightbox Core Script -->
 <script src="assets/vendor/aurna_lightbox/aurna_lightbox_1.0.4.js"></script>
-<!-- loader script starts -->
-<script>
-function loaded() {
-  setTimeout(showPage, 200);
-  setTimeout(function(){document.getElementById("loaderCont").style.display = "none"}, 4000);
-}
-function showPage() {
-  document.getElementById("loaderCont").classList.add("fadeout");
-  //document.getElementById("loaderCont").style.display = "none";
-}
-</script>
 
-<div id="loaderCont">
-	<embed src="assets/images/logo.svg" class="loaderSVG"/>
-	<!-- <div id="loader"></div> -->
+<!-- Top Scroll Progress Bar -->
+<div id="scroll-progress"></div>
+
+<!-- Page Preloader with Animated Logo -->
+<div id="loaderCont" onclick="dismissLoader()" title="Click to skip">
+  <embed src="assets/images/logo.svg" class="loaderSVG" type="image/svg+xml">
 </div>
 
-<!-- loader script end -->
+<script>
+  function dismissLoader() {
+    var loader = document.getElementById("loaderCont");
+    if (loader && !loader.classList.contains("fadeout")) {
+      loader.classList.add("fadeout");
+      setTimeout(function() {
+        loader.style.display = "none";
+      }, 500);
+    }
+  }
+  // Play the ~2.6s artistic logo morph animation on load
+  window.addEventListener('load', function() {
+    setTimeout(dismissLoader, 2200);
+  });
+  // Fallback safety dismissal
+  setTimeout(dismissLoader, 3500);
+</script>
 
-
-<!-- Facebook Plugin -->
+<!-- Facebook SDK -->
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="5EzOheSE"></script>
 
+<!-- ==========================================================================
+     Navigation Bar
+     ========================================================================== -->
+<a id="home"></a>
+<nav class="site-nav" id="mainNav">
+  <div class="nav-container">
+    <a class="nav-brand" href="#home">
+      <img src="assets/images/tawsif-torabi-white-icon-logo.png" class="nav-brand-img" alt="Logo">
+      <span class="nav-brand-text">Tawsif Torabi</span>
+      <span class="nav-brand-badge">Portfolio &amp; Research</span>
+    </a>
 
-<a name="home"></a>
-<nav class="navbar navbar-inverse" style="position: fixed; width: 100%; z-index: 200;">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+    <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-link-item"><a href="#home">Home</a></li>
+      <li class="nav-link-item"><a href="#bio">Bio</a></li>
+      <li class="nav-link-item"><a href="#publications">Publications</a></li>
+      <li class="nav-link-item"><a href="#projects">Projects</a></li>
+      <li class="nav-link-item"><a href="#experience">Experience</a></li>
+      <li class="nav-link-item"><a href="#gallery">Gallery</a></li>
+      <li class="nav-link-item"><a href="#blog">Blog</a></li>
+      <li class="nav-link-item"><a href="#repositories">Repositories</a></li>
+      <li class="nav-link-item"><a href="resume">Resume</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle-btn" id="themeToggle" title="Toggle Light / Dark Mode" aria-label="Toggle theme">
+        <i class="fa fa-moon-o" id="themeIcon"></i>
       </button>
-      <a class="navbar-brand" href="#"><img src="assets/images/tawsif-torabi-white-logo.png" style="height: 78px; margin-top: -29px;"/></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#repositories">Repositories</a></li>
-        <li><a href="/resume">Resume</a></li>
-        <li><a target="_blank" href="https://github.com/TawsifTorabi">Github</a></li>
-      </ul>
+      <a href="https://github.com/TawsifTorabi" target="_blank" class="theme-toggle-btn" title="GitHub Profile">
+        <i class="fa fa-github"></i>
+      </a>
     </div>
   </div>
 </nav>
 
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-13 text-left"> 
-		<div class="clearfix"></div>
-		<div class="clearfix"></div>
-		<div class="clearfix"></div>
-		<div class="row">
-			<div class="col-sm-4 text-left">
-				<center>
-					<div style="display: inline-block;vertical-align: bottom;">
-						<img class="profilephoto" alt="Tawsif Torabi" onclick="toggleLeer()" src="https://blogger.googleusercontent.com/img/a/AVvXsEh3dKfSpSPGCfkHyiD0Ea7XgdtzdVz5LYj6Vd6ni5KPpfm7j3M0X14AFhqW_rNvxeZcPhVBVNTjqwFOFsrT3gPvRx6ma1yVPqfIXBs47iwEanyz6WRlh_Crivt2MevoQ3k5ri2mGYxe6eb7DbxpCTBbjqepyZ5bHc8Y3RevPBAJ5pwd3X8Vq2WAS6TMRf4V">
-						<img onclick="toggleLeer()" src="assets/images/leer.png" alt="" class="leerHide fire" id="leer">
-						<div onclick="toggleLeer()" class="leerbgHide" id="leerbg">
-						</div>
-						<script>
-							function toggleLeer() {
-								const leerElement = document.getElementById('leer');
-								const leerBgElement = document.getElementById('leerbg');
+<!-- ==========================================================================
+     Hero & Bio Section
+     ========================================================================== -->
+<section class="section-wrapper hero-section" id="bio">
+  <div class="container-main">
+    <div class="hero-grid">
+      
+      <!-- Profile Card (Left) -->
+      <div class="profile-card">
+        <div class="avatar-wrapper">
+          <img class="profile-avatar" 
+               id="profileAvatar"
+               alt="Tawsif Torabi" 
+               onclick="playCaricatureAnimation()" 
+               src="assets/images/funCaricature_1.jpg"
+               title="Click to play caricature animation!">
+          
+          <!-- Easter Egg Leer -->
+          <img onclick="toggleLeer()" src="assets/images/leer.png" alt="" class="leerHide" id="leer">
+          <div onclick="toggleLeer()" class="leerbgHide" id="leerbg"></div>
+        </div>
 
-								if (leerElement.classList.contains('leerHide')) {
-									// Show elements
-									// leerBgElement.style.display = 'inline';
-									leerElement.classList.remove('leerHide');
-									leerElement.classList.add('leer');
-									leerBgElement.classList.remove('leerbgHide');
-									leerBgElement.classList.add('leerbg');
-								} else {
-									// Hide elements
-									leerElement.classList.remove('leer');
-									leerElement.classList.add('leerHide');
-									leerBgElement.classList.remove('leerbg');
-									leerBgElement.classList.add('leerbgHide');
-									setTimeout(function() {
-										// leerBgElement.style.display = 'none';
-									}, 500);
-								}
-							}
+        <h1 class="profile-name">Tawsif Torabi</h1>
+        <div class="profile-tagline">Gazi Tawsif Turabi</div>
 
-						</script>
-						<style>
-							.fire {
-								animation: animation 1s ease-in-out infinite alternate;	
-							}
+        <ul class="profile-affiliations">
+          <li>
+            <i class="fa fa-graduation-cap"></i>
+            <div>B.Sc in CSE at <strong>United International University</strong></div>
+          </li>
+          <li>
+            <i class="fa fa-briefcase"></i>
+            <div>Senior Software Engineer at <a href="https://xceptionist.com" target="_blank"><strong>Xceptionist</strong></a></div>
+          </li>
+          <li>
+            <i class="fa fa-space-shuttle"></i>
+            <div>Former Co-Team Lead on Mars Rover at <strong>CAIR, UIU</strong></div>
+          </li>
+        </ul>
 
-							.burn {
-								animation: animation .65s ease-in-out infinite alternate;
-							}
+        <!-- Social Media Links -->
+        <div class="social-links-row">
+          <a class="social-icon-btn fb" href="https://facebook.com/tawsif.torabi" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+          <a class="social-icon-btn insta" href="https://instagram.com/tawsiftorabi" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+          <a class="social-icon-btn yt" href="https://youtube.com/amazingvangari" target="_blank" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+          <a class="social-icon-btn gh" href="https://github.com/tawsiftorabi" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+          <a class="social-icon-btn in" href="https://www.linkedin.com/in/tawsiftorabi/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a class="social-icon-btn scholar" href="https://scholar.google.com/citations?user=WMEc9UgAAAAJ&hl=en&authuser=1" target="_blank" title="Google Scholar"><i class="fa fa-graduation-cap"></i></a>
+        </div>
 
-							@keyframes animation
-							{
-								0% {
-									box-shadow: 0 0 20px #510056, 
-												10px -10px 30px #b067ff, 
-												-20px -20px 40px #590d80, 
-												20px -40px 50px #942ea1, 
-												-20px -60px 60px #140d16, 
-												0 -80px 70px #5c2074, 
-												10px -90px 80px #4a345a;
-								}
-								100% {
-									box-shadow: 0 0 20px #ff20f8, 
-												10px -10px 30px #783281, 
-												-20px -20px 40px #df5bb0, 
-												22px -42px 60px #7c0085, 
-												-22px -58px 50px #550081, 
-												0 -82px 80px #d145cd, 
-												10px -90px 80px #ff4100;
-								}
-							}
-							
-							.leer {
-								position: absolute;
-								z-index: 99999;
-								width: 42em;
-								top: 23%;
-								right: -93%;
-								transition: 0.4s;
-								border-radius: 50%;
-							}
-							.leerHide {
-								position: absolute;
-								z-index: 99999;
-								width: 0px;
-								top: -215%;
-								right: 149%;
-								transition: 0.4s;
-							}
-							.leerbg {
-								position: fixed;
-								z-index: 9999;
-								width: 100%;
-								top: 0px;
-								right: 0px;
-								background: #840481;
-								height: 100vh;
-								transition: 0.4s;
-								opacity: 100%;
-							}
-							.leerbgHide{opacity: 0%; transition: 0.4s;}
-						</style>
-					</div>
-					<div class="clearfix"></div>
-					<a style='text-decoration: none;'>
-						<span class="namehead">TAWSIF TORABI</span>
-					</a>
-					<br>
-					<a href="#projects" class="button-4">Projects</a>
-					<a href="resume" class="button-4-2">Resume</a>
-					<br>
-					
-					<div class="thishead">
-						<a class="footsoc" href="https://facebook.com/tawsif.torabi"><i class="fa fa-facebook-official smallfont" aria-hidden="true"></i></a>
-						<a class="footsoc" href="https://instagram.com/tawsiftorabi"><i class="fa fa-instagram smallfont" aria-hidden="true"></i></a>
-						<a class="footsoc" href="https://youtube.com/amazingvangari"><i class="fa fa-youtube-square smallfont" aria-hidden="true"></i></a>
-						<a class="footsoc" href="https://github.com/tawsiftorabi"><i class="fa fa-github-square smallfont" aria-hidden="true"></i></a>
-						<a class="footsoc" href="https://www.linkedin.com/in/tawsiftorabi/"><i class="fa fa-linkedin-square smallfont" aria-hidden="true"></i></a>
-						<br>
-					</div>
-					<div>
-						<ul style="list-style: none;color: #898989;">
-							<li><small style="font-size: 13px;display: inline-block;"><i class="fa fa-book" aria-hidden="true"></i> B.Sc in CSE at <b>United International University</b></small></li>
-							<li><small style="font-size: 13px;display: inline-block;"><i class="fa fa-briefcase" aria-hidden="true"></i> Senior Software Engineer at <a href="https://xceptionist.com"><b>Xceptionist</b></a></small></li>
-						</ul>
-					</div>						
-				</center> 
-			</div>
-			<div class="col-sm-6 text-left"> 
-				<div style="display: inline-block;text-align: left;">
-					<br>
-					<br>
-					<span class="thishead" style="font-weight: bold; text-transform: uppercase;">
-						Robotics &amp; Computer Science Enthusiast <br> 
-						<small style="font-size: 75%;">Robotics | IoT | WebTechs | Research</small>
-					</span>
-					<br>
-					<br>
-					<p class="parentdetail">
-						I'm a Computer Science student on the path to becoming a programmer, though there was a time when my code was so confusing it left a client's developer scratching their head. 🙄 <br>
-						Right now, I’m pursuing my B.Sc in CSE at United International University, where I also work as the Co-Team Leader on the Mars Rover Project at the Center for Artificial Intelligence and Robotics. <br>
-						Keeping my CGPA up has been... challenging, but I’m passionate about both my studies and research.
-						<br>
-						Both my parents are teachers, and they’ve inspired me to share my knowledge. So, I create videos on various topics that fascinate me - 			
-						Technology, Electronics, Programming and anything else that sparks my curiosity.
-						<br>
-						As for me, I’m just a guy who loves his computer, devours thriller novels, watches old sitcoms, and is lucky enough to have a better half who can’t stand code. 😪<br>
-						And yes, I make silly videos on youtube to give silly ideas to people 😋
-					</p>
-					</br>
-					<button onclick="aurnaIframe('latest_video.html')" class="btn btn-danger"><i class="fa fa-youtube" aria-hidden="true"></i> Watch Latest Video</button>
-					<button onclick="aurnaIframe('resume/cv.html')" class="btn btn-primary"><i class="fa fa-file-text" aria-hidden="true"></i> View CV</button>
-				</div>				
-			</div>
-			<div class="col-sm-2"></div>
-		</div>
-		<hr>
+        <!-- Quick CTA Grid -->
+        <div class="profile-cta-grid">
+          <button onclick="aurnaIframe('resume/cv.html')" class="btn-cta-card primary"><i class="fa fa-file-text-o"></i> View CV</button>
+          <a href="resume" class="btn-cta-card outline"><i class="fa fa-id-card-o"></i> Resume</a>
+          <a href="#projects" class="btn-cta-card outline"><i class="fa fa-code"></i> Projects</a>
+          <a href="#publications" class="btn-cta-card outline"><i class="fa fa-book"></i> Papers</a>
+        </div>
+      </div>
+
+      <!-- Hero Lead Text (Right) -->
+      <div class="hero-content">
+        <div class="hero-badges-row">
+          <span class="hero-subtag pill-blue"><i class="fa fa-cogs"></i> Robotics</span>
+          <span class="hero-subtag pill-purple"><i class="fa fa-wifi"></i> AIoT</span>
+          <span class="hero-subtag pill-emerald"><i class="fa fa-leaf"></i> Green Computing</span>
+          <span class="hero-subtag pill-rose"><i class="fa fa-universal-access"></i> HCI</span>
+          <span class="hero-subtag pill-amber"><i class="fa fa-code-fork"></i> Hardware-Software Integration</span>
+          <span class="hero-subtag pill-teal"><i class="fa fa-microchip"></i> Embedded Systems</span>
+        </div>
+
+        <h2 class="hero-heading">
+          Engineering Smart Systems, Autonomous Rovers &amp; Human-Centric Software.
+        </h2>
+
+        <div class="hero-bio-lead">
+          <p>
+            I'm a Computer Science student on the journey of turning ideas into functional hardware and software. Though there was once a time when my code was so delightfully confusing it left a client's lead developer scratching their head! 🙄
+          </p>
+          <p>
+            Currently, I'm pursuing my <strong>B.Sc in Computer Science &amp; Engineering</strong> at <strong>United International University (UIU)</strong>, where I served as the <strong>Co-Team Leader &amp; Electrical System Sub-Team Lead</strong> on the Mars Rover Project at the Center for Artificial Intelligence and Robotics (CAIR).
+          </p>
+          <p>
+            Both of my parents are educators, and their lifelong passion inspired me to communicate knowledge openly. Beyond software development and rover engineering, I produce videos demystifying robotics, embedded hardware, and software concepts.
+          </p>
+          <p>
+            When away from terminals and soldering irons, I devour thriller novels, rewatch classic sitcoms, and spend time with my better half—who happily can't stand code! 😋
+          </p>
+        </div>
+
+        <div class="hero-actions-row">
+          <button onclick="aurnaIframe('latest_video.html')" class="btn-yt-action">
+            <i class="fa fa-youtube-play"></i> Watch Latest Video
+          </button>
+          <a href="https://scholar.google.com/citations?user=WMEc9UgAAAAJ&hl=en&authuser=1" target="_blank" class="btn-secondary-action">
+            <i class="fa fa-graduation-cap"></i> Google Scholar Profile
+          </a>
+          <button onclick="aurnaIframe('resume/cv.html')" class="btn-primary-action">
+            <i class="fa fa-download"></i> View &amp; Download CV
+          </button>
+        </div>
+      </div>
 
     </div>
   </div>
-</div>
+</section>
 
+<hr class="section-divider">
 
-
-
-<!-- Blog Section -->
-<a name="blog"></a>
-</br>
-</br>
-</br>
-</br>
-<div class="container-fluid">    
-  <div class="row content">
-    <div class="col-sm-9 text-left"> 
-		<div style="display: inline-block;text-align: left;margin-left: 32px;">
-			<div class='clearfix'></div>
-			<span class="thishead">BLOG</span>
-			<br>
-			<a style='text-decoration: none;' href='https://faltucoder.blogspot.com' target='_blank'><span class="namehead">Programming & Hardware Blogs</span></a>
-			<br>
-			<p class="parentdetail">
-				<b>Here is the latest Feed for <a href='https://faltucoder.blogspot.com' target='_blank'>FALTU CODER</a></b><br/>
-				<style>
-					/* Optional: Add some basic styling */
-					.item {
-						margin-bottom: 20px;
-						border-bottom: 1px solid #ddd;
-						padding-bottom: 10px;
-					}
-					.item img {
-						max-width: 100%;
-						height: auto;
-					}
-					.item h3 {
-						font-size: 18px;
-						margin-bottom: 5px;
-					}
-					.item p {
-						font-size: 14px;
-						color: #666;
-					}
-				</style>
-				<div id="blog-posts">
-					<!-- Top 3 blog posts will be displayed here -->
-				</div>
-				
-				<script type="text/javascript">
-					function recentPost(json) {
-						let output = '';
-						for (var i = 0; i < json.feed.entry.length; i++) {
-							let postUrl = '';
-							for (var j = 0; j < json.feed.entry[i].link.length; j++) {
-								if (json.feed.entry[i].link[j].rel == 'alternate') {
-									postUrl = json.feed.entry[i].link[j].href;
-									break;
-								}
-							}
-
-							var postTitle = json.feed.entry[i].title.$t;
-							var postSummary = json.feed.entry[i].summary ? json.feed.entry[i].summary.$t.substring(0, 400) + '...' : 'No description available';
-
-							// Extract and modify the thumbnail if available
-							var postThumbnail = 'https://via.placeholder.com/320'; // Default placeholder (320px width)
-							if (json.feed.entry[i].media$thumbnail) {
-								postThumbnail = json.feed.entry[i].media$thumbnail.url.replace(/\=s[0-9]+(-w[0-9]+)?(-c)?(-h[0-9]+)?$/, '=s300'); // Modify to larger size (300px width)
-							} else if (json.feed.entry[i].content && json.feed.entry[i].content.$t.match(/<img.*?src="(.*?)"/)) {
-								postThumbnail = json.feed.entry[i].content.$t.match(/<img.*?src="(.*?)"/)[1].replace(/\/s[0-9]+(-w[0-9]+)?(-c)?(-h[0-9]+)?$/, '=s300');
-							}
-
-							output += `
-								<div class="row">
-									<div class="item">
-										<div class="col-sm-13">
-											<h3><b><a href="${postUrl}" target="_blank">${postTitle}</a></b></h3>
-											<p>${postSummary}</p>
-										</div>
-									</div>
-								</div>
-							`;
-						}
-
-						document.getElementById('blog-posts').innerHTML = output;
-					}
-				</script>
-				
-				<!-- Blogger feed script -->
-				<script src="https://www.blogger.com/feeds/5452681278479740088/posts/summary?max-results=5&alt=json-in-script&callback=recentPost"></script>
-			</p>
-		</div>
+<!-- ==========================================================================
+     Publications Section (NEW)
+     ========================================================================== -->
+<section class="section-wrapper publications-section" id="publications">
+  <div class="container-main">
+    <div class="section-head-wrap">
+      <span class="section-pretitle"><i class="fa fa-book"></i> Scholarly Research</span>
+      <h2 class="section-title-main">Peer-Reviewed <span>Publications</span></h2>
+      <p class="section-subtitle-main">
+        Research exploring the intersections of Artificial Intelligence, Human Resource Management, Green Computing, Psychological Capital, and Human-Computer Interaction.
+      </p>
     </div>
-	
-	
-    <div class="col-sm-3 sidenav">
-      <div class="well">
-		<img width="100%" alt="Amazing Vangari" src="//2.bp.blogspot.com/-Gr6Gyllv860/XC5molIPjVI/AAAAAAAAHPA/pvnJMSqriAcrj_dbBWBAQcCH_S3uDsQuQCK4BGAYYCw/s1600/title.png">
-		</br>
-		Amazing Vangari is a content project of mine running from 2017.</br>
-		</br>
-		<h4><i class="fa fa-rss-square" aria-hidden="true"></i>  Latest Posts,</h4>
-		<div id="blogfeed2"></div>
-		<script>
-		function getPosts2(json) {
-			var list = [];
-			var data = json.feed.entry;
-			for (var i = 0; i < data.length; i++) {
-				list.push("<a class='bloglinks' href='" + data[i].link.pop().href + "'>"+ (i+1) + ". " + data[i].title.$t + "</a></br>");
-			}
-			document.getElementById('blogfeed2').innerHTML = list.join('');
 
-		}
-		</script>
-		<script src="https://www.blogger.com/feeds/4355066399501426132/posts/default?alt=json&max-results=6&callback=getPosts2"></script>
-		<br>
-		<h4><i class="fa fa-rss-square" aria-hidden="true"></i>  Subscribe</h4>
-		<script src="https://apis.google.com/js/platform.js"></script>
-		<script data-ad-client="ca-pub-5553672506839384" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		</br>
-		<div class="g-ytsubscribe" data-channelid="UCXrPAMIYuwg3MqdBqJ6Cfkw" data-layout="full" data-count="default"></div>
-		<br>
-		<h4>Facebook Page</h4>
-		<div class="fb-page" data-href="https://www.facebook.com/amazingvangari/" data-tabs="timeline" data-width="" data-height="70" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/amazingvangari/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/amazingvangari/">Mr. Vangari</a></blockquote></div>
+    <!-- Scholar Profile Quick Banner -->
+    <div class="scholar-stat-banner">
+      <div class="scholar-info">
+        <div class="scholar-icon"><i class="fa fa-university"></i></div>
+        <div class="scholar-text">
+          <h4>Gazi Tawsif Turabi (Tawsif Torabi) on Google Scholar</h4>
+          <p>Affiliated with United International University • Focus: Robotics, AIoT, Green Computing, HCI</p>
+        </div>
+      </div>
+      <a href="https://scholar.google.com/citations?user=WMEc9UgAAAAJ&hl=en&authuser=1" target="_blank" class="btn-primary-action">
+        <i class="fa fa-external-link"></i> Open Scholar Profile
+      </a>
+    </div>
+
+    <!-- Publications List -->
+    <div class="publications-list">
+      
+      <!-- Publication 1 -->
+      <article class="publication-card">
+        <div class="pub-meta-top">
+          <span class="pub-badge-year">2026</span>
+          <span class="pub-badge-type">Empirical Research Study</span>
+          <span class="pub-badge-type">Higher Education &amp; Psychology</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WMEc9UgAAAAJ&citation_for_view=WMEc9UgAAAAJ:u5HHmVD_uO8C" target="_blank">
+            Academic Engagement in Private Universities of Bangladesh: Moderating the Relationship Between Psychological Capital and Student Performance
+          </a>
+        </h3>
+        <div class="pub-authors">
+          Authors: Sanjana Rahman Aurna, Md Yeahyea Hassan Siddique, Navid Ahmed, <strong>Tawsif Torabi</strong>
+        </div>
+        <p class="pub-abstract">
+          Drawing on Conservation of Resources (COR) theory, this empirical study investigates the moderating mechanism of academic engagement between psychological capital (PsyCap: self-efficacy, optimism, resilience, hope) and academic performance across 200 undergraduate students in Dhaka, Bangladesh. Statistical evaluation via IBM SPSS ANOVA and correlation analysis establishes that PsyCap significantly predicts academic engagement, directly accelerating student performance with actionable frameworks for UN Sustainable Development Goal 4 (Quality Education).
+        </p>
+        <div class="pub-tags">
+          <span class="pub-tag">Psychological Capital (PsyCap)</span>
+          <span class="pub-tag">Academic Engagement</span>
+          <span class="pub-tag">Student Performance</span>
+          <span class="pub-tag">SPSS &amp; ANOVA</span>
+          <span class="pub-tag">SDG 4: Quality Education</span>
+        </div>
+        <div class="pub-footer">
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WMEc9UgAAAAJ&citation_for_view=WMEc9UgAAAAJ:u5HHmVD_uO8C" target="_blank" class="pub-link-btn">
+            <i class="fa fa-external-link"></i> View Citation on Google Scholar
+          </a>
+        </div>
+      </article>
+
+      <!-- Publication 2 -->
+      <article class="publication-card">
+        <div class="pub-meta-top">
+          <span class="pub-badge-year">2026</span>
+          <span class="pub-badge-type">Systematic Review &amp; Synthesis</span>
+          <span class="pub-badge-type">AI &amp; Algorithmic Management</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WMEc9UgAAAAJ&citation_for_view=WMEc9UgAAAAJ:u-x6o8ySG0sC" target="_blank">
+            Algorithmic and AI-augmented Human Resource Management: A Review of Recruitment, Predictive Attrition Analytics, People Analytics, and Algorithmic Management Mechanisms
+          </a>
+        </h3>
+        <div class="pub-authors">
+          Authors: Sanjana Rahman, Md Yeahyea Hassan Siddique, Shaikh Navid Ahmed, <strong>Gazi Tawsif</strong>, Al-Araf Turabi
+        </div>
+        <p class="pub-abstract">
+          Organizations increasingly delegate candidate screening, workforce attrition forecasting, and algorithmic resource allocation to machine learning architectures. This survey provides a comprehensive synthesis comparing algorithmic mechanisms across operational performance, transparency, bias mitigation, and employee agency, identifying human-centered algorithmic governance as an imperative frontier in contemporary organizational engineering.
+        </p>
+        <div class="pub-tags">
+          <span class="pub-tag">AI in HRM</span>
+          <span class="pub-tag">People Analytics</span>
+          <span class="pub-tag">Predictive Attrition</span>
+          <span class="pub-tag">Algorithmic Governance</span>
+          <span class="pub-tag">Machine Learning</span>
+        </div>
+        <div class="pub-footer">
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WMEc9UgAAAAJ&citation_for_view=WMEc9UgAAAAJ:u-x6o8ySG0sC" target="_blank" class="pub-link-btn">
+            <i class="fa fa-external-link"></i> View Citation on Google Scholar
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ==========================================================================
+     Notable Projects Section
+     ========================================================================== -->
+<section class="section-wrapper" id="projects">
+  <div class="container-main">
+    <div class="section-head-wrap">
+      <span class="section-pretitle"><i class="fa fa-code-fork"></i> Selected Works</span>
+      <h2 class="section-title-main">Notable <span>Projects</span></h2>
+      <p class="section-subtitle-main">
+        Handcrafted autonomous robotics, embedded firmware, web applications, and developer utilities built across competitions and production environments.
+      </p>
+    </div>
+
+    <!-- Category Filter Bar -->
+    <div class="projects-filter-bar">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="robotics">Robotics &amp; Hardware</button>
+      <button class="filter-btn" data-filter="web">Web &amp; Systems</button>
+      <button class="filter-btn" data-filter="tools">Tools &amp; Extensions</button>
+    </div>
+
+    <!-- Dynamic Grid -->
+    <div class="projects-grid" id="portfolio-container">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ==========================================================================
+     Experience, Co-Curricular & Education Section
+     ========================================================================== -->
+<section class="section-wrapper timeline-section" id="experience">
+  <div class="container-main">
+    <div class="section-head-wrap">
+      <span class="section-pretitle"><i class="fa fa-briefcase"></i> Career &amp; Leadership</span>
+      <h2 class="section-title-main">Experience &amp; <span>Activities</span></h2>
+      <p class="section-subtitle-main">
+        A structured breakdown of my professional software engineering roles, co-curricular leadership in competitive robotics, and academic milestones.
+      </p>
+    </div>
+
+    <div class="timeline-columns-grid">
+      
+      <!-- Left Column: Professional Experience & Education -->
+      <div class="timeline-column">
+        <div class="timeline-col-head">
+          <i class="fa fa-building-o"></i>
+          <h3>Professional Experience &amp; Education</h3>
+        </div>
+
+        <div class="modern-timeline">
+
+          <!-- UIU Education Item -->
+          <div class="modern-timeline-item">
+            <div class="timeline-node-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-block">
+                <img src="assets/images/UIU.jfif" alt="UIU Logo" class="timeline-logo-img">
+                <div class="timeline-org-info">
+                  <h4><a href="https://uiu.ac.bd" target="_blank">United International University</a></h4>
+                  <div class="timeline-org-location">Dhaka, Bangladesh • 2021 - Present</div>
+                </div>
+              </div>
+              <details class="timeline-role-accordion" open>
+                <summary>
+                  <div class="role-title-text">
+                    <span>B.Sc in Computer Science &amp; Engineering</span>
+                    <span class="role-date-badge">Undergraduate</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Major coursework: Data Structures, Algorithms, Microcontrollers &amp; Embedded Systems, Database Design, Software Engineering, Computer Networks.</li>
+                    <li>Active researcher at CAIR (Center for Artificial Intelligence and Robotics).</li>
+                    <li>Multi-time Champion &amp; Runner-Up at UIU CSE Project Shows (Microprocessors, Software Engineering, System Analysis).</li>
+                  </ul>
+                </div>
+              </details>
+              <div class="badge-row-wrap">
+                <span class="skill-badge badge-blue">Computer Science</span>
+                <span class="skill-badge badge-teal">Embedded Systems</span>
+                <span class="skill-badge badge-purple">Research</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Xceptionist Item -->
+          <div class="modern-timeline-item">
+            <div class="timeline-node-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-block">
+                <img src="assets/images/logo-DgzR_ioo.svg" alt="Xceptionist Logo" class="timeline-logo-img">
+                <div class="timeline-org-info">
+                  <h4><a href="https://xceptionist.com/" target="_blank">Xceptionist</a></h4>
+                  <div class="timeline-org-location">Dhaka, Bangladesh • Dec 2025 - Present</div>
+                </div>
+              </div>
+              <details class="timeline-role-accordion" open>
+                <summary>
+                  <div class="role-title-text">
+                    <span>Senior Software Engineer</span>
+                    <span class="role-date-badge">Dec 2025 - Present</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Organizing team sprints, architectural reviews, and coordinating project timelines.</li>
+                    <li>Development and maintenance of web applications and software solutions using PHP stacks.</li>
+                    <li>Engineered and implemented high-throughput RESTful APIs for seamless integrations.</li>
+                  </ul>
+                </div>
+              </details>
+              <div class="badge-row-wrap">
+                <span class="skill-badge badge-blue">Leadership</span>
+                <span class="skill-badge badge-teal">API Development</span>
+                <span class="skill-badge badge-purple">PHP</span>
+                <span class="skill-badge badge-amber">Project Management</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artspace Item -->
+          <div class="modern-timeline-item">
+            <div class="timeline-node-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-block">
+                <img src="assets/images/artspace.png" alt="Artspace Logo" class="timeline-logo-img">
+                <div class="timeline-org-info">
+                  <h4><a href="https://www.facebook.com/ArtspaceInteriorSolutions/" target="_blank">Artspace Interior Solutions</a></h4>
+                  <div class="timeline-org-location">Dhaka, Bangladesh • Dec 2025 - Jan 2026</div>
+                </div>
+              </div>
+              <details class="timeline-role-accordion">
+                <summary>
+                  <div class="role-title-text">
+                    <span>Content Strategist (Contract)</span>
+                    <span class="role-date-badge">Dec 2025 - Jan 2026</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Handled social media marketing and brand engagement channels.</li>
+                    <li>Architected marketing strategies and authored visual branding guidelines.</li>
+                  </ul>
+                </div>
+              </details>
+              <div class="badge-row-wrap">
+                <span class="skill-badge badge-teal">Client Management</span>
+                <span class="skill-badge badge-rose">Branding</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yeasin Arena Item -->
+          <div class="modern-timeline-item">
+            <div class="timeline-node-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-block">
+                <img src="assets/images/ya.png" alt="Yeasin Arena Logo" class="timeline-logo-img">
+                <div class="timeline-org-info">
+                  <h4><a href="https://robotics.uiu.ac.bd/" target="_blank">Yeasin Arena Excelytics</a></h4>
+                  <div class="timeline-org-location">Dhaka, Bangladesh • Jun 2023 - Jan 2025</div>
+                </div>
+              </div>
+              <details class="timeline-role-accordion">
+                <summary>
+                  <div class="role-title-text">
+                    <span>Full-stack Developer (Contract)</span>
+                    <span class="role-date-badge">Jun 2023 - Jan 2025</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Built full-featured Restaurant POS Systems and managed end-to-end client training.</li>
+                    <li>Database schema design and query optimization for high concurrency.</li>
+                    <li>Developed web applications with Laravel / CodeIgniter and custom WordPress sites.</li>
+                  </ul>
+                </div>
+              </details>
+              <div class="badge-row-wrap">
+                <span class="skill-badge badge-blue">Laravel</span>
+                <span class="skill-badge badge-teal">MySQL</span>
+                <span class="skill-badge badge-amber">POS Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Innovasi Films Item -->
+          <div class="modern-timeline-item">
+            <div class="timeline-node-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-block">
+                <img src="assets/images/innovasi.png" alt="Innovasi Logo" class="timeline-logo-img">
+                <div class="timeline-org-info">
+                  <h4><a href="https://www.facebook.com/BanglaSpotlight" target="_blank">Innovasi Films</a></h4>
+                  <div class="timeline-org-location">Dhaka, Bangladesh • Feb 2022 - Apr 2022</div>
+                </div>
+              </div>
+              <details class="timeline-role-accordion">
+                <summary>
+                  <div class="role-title-text">
+                    <span>Video Editor (Contract)</span>
+                    <span class="role-date-badge">Feb 2022 - Apr 2022</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Edited 10+ documentary films for NATP-II of Ministry of Agriculture, Bangladesh.</li>
+                    <li>Processed and mastered radio broadcasts using digital audio workstations (DAW).</li>
+                  </ul>
+                </div>
+              </details>
+              <div class="badge-row-wrap">
+                <span class="skill-badge badge-rose">Video Editing</span>
+                <span class="skill-badge badge-amber">Audio Mastering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Travelia Item -->
+          <div class="modern-timeline-item">
+            <div class="timeline-node-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-block">
+                <img src="assets/images/travelia.png" alt="Travelia Logo" class="timeline-logo-img">
+                <div class="timeline-org-info">
+                  <h4><a href="https://travelia.com.bd" target="_blank">Travelia</a></h4>
+                  <div class="timeline-org-location">Dhaka, Bangladesh • Aug 2019 - Apr 2021</div>
+                </div>
+              </div>
+              <details class="timeline-role-accordion">
+                <summary>
+                  <div class="role-title-text">
+                    <span>Jr. Executive (Media &amp; CRM)</span>
+                    <span class="role-date-badge">Aug 2019 - Apr 2021</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Contributed to "Partner Creation Program" of Travelia.</li>
+                    <li>Handled partner communications, CRM workflows, and campaign execution.</li>
+                  </ul>
+                </div>
+              </details>
+              <div class="badge-row-wrap">
+                <span class="skill-badge badge-amber">CRM</span>
+                <span class="skill-badge badge-teal">Partner Management</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sulov IT Item -->
+          <div class="modern-timeline-item">
+            <div class="timeline-node-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-block">
+                <img src="assets/images/sulov.png" alt="Sulov IT Logo" class="timeline-logo-img">
+                <div class="timeline-org-info">
+                  <h4><a href="https://www.my.sulovit.com/" target="_blank">Sulov IT Ltd.</a></h4>
+                  <div class="timeline-org-location">Dhaka, Bangladesh • Aug 2016 - Apr 2018</div>
+                </div>
+              </div>
+              <details class="timeline-role-accordion">
+                <summary>
+                  <div class="role-title-text">
+                    <span>Web Developer (Part-time)</span>
+                    <span class="role-date-badge">Aug 2016 - Apr 2018</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Developed web app on PHP/MongoDB for a publication house to manage magazine distribution.</li>
+                    <li>Deployed and maintained client portfolio websites and cPanel configurations.</li>
+                  </ul>
+                </div>
+              </details>
+              <div class="badge-row-wrap">
+                <span class="skill-badge badge-teal">PHP</span>
+                <span class="skill-badge badge-blue">MongoDB</span>
+                <span class="skill-badge badge-amber">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Co-curricular Activities -->
+      <div class="timeline-column">
+        <div class="timeline-col-head">
+          <i class="fa fa-trophy"></i>
+          <h3>Co-curricular Activities &amp; Leadership</h3>
+        </div>
+
+        <div class="modern-timeline">
+
+          <!-- Mars Rover Team Item -->
+          <div class="modern-timeline-item">
+            <div class="timeline-node-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-block">
+                <img src="assets/images/umrt.png" alt="UMRT Logo" class="timeline-logo-img">
+                <div class="timeline-org-info">
+                  <h4><a href="https://uiumarsrover.org" target="_blank">UIU Mars Rover Team</a></h4>
+                  <div class="timeline-org-location">Dhaka, Bangladesh • 2023 - 2026</div>
+                </div>
+              </div>
+
+              <!-- Co-Team Lead -->
+              <details class="timeline-role-accordion" open>
+                <summary>
+                  <div class="role-title-text">
+                    <span>Co-Team Lead</span>
+                    <span class="role-date-badge">Mar 2025 - Jan 2026</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Led entire technical integration and logistics for University Rover Challenge (URC 2025, Utah, USA) and Anatolian Rover Challenge (ARC 2025, Turkiye).</li>
+                    <li>Oversaw Electrical Sub-team, Talent Recruitment, and Public Relations.</li>
+                    <li>Coordinated SAR (System Acceptance Review) submission videos and competition freight logistics.</li>
+                    <li>Initiated the "2 Minutes Robotics" knowledge-sharing initiative.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <!-- Electrical Sub-Team Lead -->
+              <details class="timeline-role-accordion">
+                <summary>
+                  <div class="role-title-text">
+                    <span>Electrical Sub-Team Lead</span>
+                    <span class="role-date-badge">Dec 2024 - Sep 2025</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Designed Main Control Circuits and differential drive system with articulating steering.</li>
+                    <li>Led development of Electrical Control &amp; Communication System for Mars Rover <strong>AXIOS</strong>.</li>
+                    <li>Contributed to fail-safe recovery systems and autonomous relay mechanisms.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <!-- Electrical Sub-Team Member -->
+              <details class="timeline-role-accordion">
+                <summary>
+                  <div class="role-title-text">
+                    <span>Electrical Sub-Team Member</span>
+                    <span class="role-date-badge">Jan 2024 - Dec 2024</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Contributed to manipulator robotic arm control circuits for Mars Rover <strong>Yggdrasil</strong>.</li>
+                    <li>Implemented long-range RF communication fail-safes and telemetry links.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <div class="badge-row-wrap">
+                <span class="skill-badge badge-world"><i class="fa fa-globe"></i> 6th Worldwide - URC 2025</span>
+                <span class="skill-badge badge-world"><i class="fa fa-trophy"></i> 3rd Worldwide - ARC 2025</span>
+                <span class="skill-badge badge-world"><i class="fa fa-star"></i> Science 100/100 - URC 2025</span>
+                <span class="skill-badge badge-blue">Robotics Leadership</span>
+                <span class="skill-badge badge-teal">Embedded Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- UIU Robotics Club Item -->
+          <div class="modern-timeline-item">
+            <div class="timeline-node-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-block">
+                <img src="assets/images/uiurc.png" alt="UIU Robotics Logo" class="timeline-logo-img">
+                <div class="timeline-org-info">
+                  <h4><a href="https://robotics.uiu.ac.bd/" target="_blank">UIU Robotics Club</a></h4>
+                  <div class="timeline-org-location">Dhaka, Bangladesh • 2023 - 2025</div>
+                </div>
+              </div>
+
+              <!-- Secretary of R&D -->
+              <details class="timeline-role-accordion" open>
+                <summary>
+                  <div class="role-title-text">
+                    <span>Secretary of R&amp;D</span>
+                    <span class="role-date-badge">Jan 2025 - Nov 2025</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Mentored multiple student teams for national robotics contests.</li>
+                    <li>Designed an advanced Line Follower Robot (LFR) with custom sensor arrays and PID control.</li>
+                    <li>Engineered an Automatic Lap-Tracking System with Digital Scoreboard for competitions.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <!-- Executive of R&D -->
+              <details class="timeline-role-accordion">
+                <summary>
+                  <div class="role-title-text">
+                    <span>Executive of R&amp;D</span>
+                    <span class="role-date-badge">Mar 2024 - Aug 2025</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Competed in national hackathons and co-organized "UIU CSE Fest 2025".</li>
+                    <li>Coordinated intra-university robotics event "Robo Rush".</li>
+                  </ul>
+                </div>
+              </details>
+
+              <div class="badge-row-wrap">
+                <span class="skill-badge badge-world"><i class="fa fa-star"></i> 3rd in Technocrats v2</span>
+                <span class="skill-badge badge-blue">R&amp;D Management</span>
+                <span class="skill-badge badge-teal">Mentorship</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- UIU Theatre & Film Club Item -->
+          <div class="modern-timeline-item">
+            <div class="timeline-node-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header-block">
+                <img src="assets/images/uiutfc.png" alt="UIUTFC Logo" class="timeline-logo-img">
+                <div class="timeline-org-info">
+                  <h4><a href="https://www.facebook.com/profile.php?id=61566442053812" target="_blank">UIU Theatre &amp; Film Club</a></h4>
+                  <div class="timeline-org-location">Dhaka, Bangladesh • 2021 - 2023</div>
+                </div>
+              </div>
+              <details class="timeline-role-accordion">
+                <summary>
+                  <div class="role-title-text">
+                    <span>Head of Film &amp; Creative Lead</span>
+                    <span class="role-date-badge">2021 - 2023</span>
+                  </div>
+                  <i class="fa fa-angle-down accordion-arrow"></i>
+                </summary>
+                <div class="timeline-role-content">
+                  <ul class="timeline-bullets">
+                    <li>Wrote and produced a full-length thriller short film under UIUTFC.</li>
+                    <li>Coordinated "Jiboner Golpe Nagad" ad-making competition and "Tokkor 11" drama festival.</li>
+                  </ul>
+                </div>
+              </details>
+              <div class="badge-row-wrap">
+                <span class="skill-badge badge-rose"><i class="fa fa-trophy"></i> 1st in Tokkor 11</span>
+                <span class="skill-badge badge-amber">Event Management</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Achievements & Volunteering Section -->
+    <div style="margin-top: 60px;">
+      <div class="timeline-columns-grid">
+        
+        <!-- Achievements Column -->
+        <div>
+          <div class="timeline-col-head">
+            <i class="fa fa-star"></i>
+            <h3>Major Achievements &amp; Awards</h3>
+          </div>
+          <div class="achievements-grid">
+            
+            <div class="achievement-card-item">
+              <div class="achievement-icon"><i class="fa fa-trophy"></i></div>
+              <div class="achievement-details">
+                <b>6th Worldwide Rank &amp; Best Science Team Award - URC 2025</b>
+                <span>University Rover Challenge (URC) 2025, Hanksville, Utah, USA</span>
+              </div>
+            </div>
+
+            <div class="achievement-card-item">
+              <div class="achievement-icon"><i class="fa fa-trophy"></i></div>
+              <div class="achievement-details">
+                <b>3rd Worldwide Rank &amp; Best Science and Autonomous System Award - ARC 2025</b>
+                <span>UKET, Turkiye Space Exploration Society, Ankara, Turkiye</span>
+              </div>
+            </div>
+
+            <div class="achievement-card-item">
+              <div class="achievement-icon"><i class="fa fa-certificate"></i></div>
+              <div class="achievement-details">
+                <b>Champion - Microcontroller &amp; Microprocessor Project Show</b>
+                <span>UIU CSE Project Show Fall '25, United International University</span>
+              </div>
+            </div>
+
+            <div class="achievement-card-item">
+              <div class="achievement-icon"><i class="fa fa-certificate"></i></div>
+              <div class="achievement-details">
+                <b>Champion - Software Engineering Project Show</b>
+                <span>UIU CSE Project Show Summer '25, United International University</span>
+              </div>
+            </div>
+
+            <div class="achievement-card-item">
+              <div class="achievement-icon"><i class="fa fa-rocket"></i></div>
+              <div class="achievement-details">
+                <b>5th Worldwide Rank at URC 2024</b>
+                <span>The Mars Society, University Rover Challenge 2024, Utah, USA</span>
+              </div>
+            </div>
+
+            <div class="achievement-card-item">
+              <div class="achievement-icon"><i class="fa fa-star-o"></i></div>
+              <div class="achievement-details">
+                <b>2nd Runner-Up in Techathon - TechnoCrats v2 in IUBAT</b>
+                <span>IUBAT Technocrats v2.0 by IIEC Innovation Center, 2024, Dhaka</span>
+              </div>
+            </div>
+
+            <div class="achievement-card-item">
+              <div class="achievement-icon"><i class="fa fa-star-o"></i></div>
+              <div class="achievement-details">
+                <b>1st Runner-Up - System Analysis &amp; Design Project Show</b>
+                <span>UIU CSE Project Show Summer '23, United International University</span>
+              </div>
+            </div>
+
+            <div class="achievement-card-item">
+              <div class="achievement-icon"><i class="fa fa-star-o"></i></div>
+              <div class="achievement-details">
+                <b>1st Place - Tokkor 11 Theatrical Competition</b>
+                <span>Intra-University Theatrical Competition by UIUTFC, Dhaka</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Volunteering Column -->
+        <div>
+          <div class="timeline-col-head">
+            <i class="fa fa-heart-o"></i>
+            <h3>Volunteering &amp; Mentorship</h3>
+          </div>
+          <div class="modern-timeline">
+            
+            <div class="modern-timeline-item">
+              <div class="timeline-node-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header-block">
+                  <img src="assets/images/WROBd-Logo.png" alt="WRO BD" class="timeline-logo-img">
+                  <div class="timeline-org-info">
+                    <h4>Junior Judge at World Robot Olympiad Bangladesh</h4>
+                    <div class="timeline-org-location">WRO Bangladesh National Round • Sep 2025</div>
+                  </div>
+                </div>
+                <p class="timeline-bullets" style="padding-left:0; list-style:none;">
+                  Conducted technical evaluations for teams from all over Bangladesh competing for spots in the WRO International Final 2025.
+                </p>
+              </div>
+            </div>
+
+            <div class="modern-timeline-item">
+              <div class="timeline-node-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header-block">
+                  <img src="assets/images/UIU.jfif" alt="UIU" class="timeline-logo-img">
+                  <div class="timeline-org-info">
+                    <h4>Mentor in UIU CSE Project Show</h4>
+                    <div class="timeline-org-location">United International University • Sep 2024 - Oct 2024</div>
+                  </div>
+                </div>
+                <p class="timeline-bullets" style="padding-left:0; list-style:none;">
+                  Mentored multiple student teams with microcontrollers, circuit debugging, and embedded sensor integration.
+                </p>
+              </div>
+            </div>
+
+            <div class="modern-timeline-item">
+              <div class="timeline-node-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header-block">
+                  <img src="assets/images/uiurc.png" alt="UIURC" class="timeline-logo-img">
+                  <div class="timeline-org-info">
+                    <h4>Instructor at 'TechTrove' &amp; 'Symptronic' Workshops</h4>
+                    <div class="timeline-org-location">UIU Robotics Club • 2024</div>
+                  </div>
+                </div>
+                <p class="timeline-bullets" style="padding-left:0; list-style:none;">
+                  Designed curriculum and trained freshers on basic electronics, microcontrollers, and line follower robot programming.
+                </p>
+              </div>
+            </div>
+
+            <div class="modern-timeline-item">
+              <div class="timeline-node-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header-block">
+                  <img src="assets/images/nagad_mini.png" alt="Nagad" class="timeline-logo-img">
+                  <div class="timeline-org-info">
+                    <h4>Coordinator at "Jiboner Golpe Nagad"</h4>
+                    <div class="timeline-org-location">UIUTFC x Nagad • Aug 2022</div>
+                  </div>
+                </div>
+                <p class="timeline-bullets" style="padding-left:0; list-style:none;">
+                  Managed logistics and submission screening for national student film production.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
+
   </div>
-</div>
-<!-- Blog Section Ends -->
+</section>
 
+<hr class="section-divider">
 
-<!-- Gallery Section -->
-<a name="gallery"></a>
-<!-- Dynamic Gallery Section -->
-<!-- Dynamic Gallery Section -->
+<!-- ==========================================================================
+     Image Cloud Gallery Section
+     ========================================================================== -->
+<section class="section-wrapper" id="gallery">
+  <div class="container-main">
+    <div class="section-head-wrap" style="text-align: center;">
+      <span class="section-pretitle"><i class="fa fa-camera"></i> Moments &amp; Expeditions</span>
+      <h2 class="section-title-main">Photo <span>Gallery</span></h2>
+      <p class="section-subtitle-main" style="margin: 0 auto;">
+        Glimpses from the Mars Desert Research Station in Utah, international rover arenas in Turkiye, hackathons, and robotics workshops.
+      </p>
+    </div>
 
-<!-- Image Cloud Gallery Section -->
-<div class="container-fluid text-center" style="padding: 50px 30px;">
-	<h2><span class="namehead">Gallery</span></h2>
-</br>
-</br>
-  <div id="gallery-cloud" class="image-cloud">
-    <!-- Images will be injected here -->
+    <!-- Image Cloud Grid -->
+    <div class="gallery-cloud-grid" id="gallery-cloud">
+      <!-- Injected via JavaScript / JSON -->
+    </div>
   </div>
-</div>
+</section>
 
-<!-- Bootstrap Lightbox Modal -->
+<!-- Lightbox Modal -->
 <div class="modal fade" id="lightboxModal" tabindex="-1" role="dialog" aria-labelledby="lightboxLabel">
   <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body text-center">
-        <img id="lightboxImage" src="" class="img-responsive center-block" style="max-height: 75vh; margin: auto;">
-        <p id="lightboxCaption" class="caption" style="margin-top: 10px;"></p>
+    <div class="modal-content lightbox-modal-content">
+      <div class="modal-body lightbox-modal-body">
+        <button type="button" class="lightbox-close-btn" data-dismiss="modal" aria-label="Close">&times;</button>
+        <img id="lightboxImage" src="" alt="Gallery Image" class="img-responsive center-block">
+        <div id="lightboxCaption" class="lightbox-caption-text"></div>
       </div>
     </div>
   </div>
 </div>
-<!-- Gallery Section Ends-->
 
+<hr class="section-divider">
 
-<!-- Project Section -->
-<a name="projects"></a>
-</br>
-</br>
-<hr>
-<div class="container-fluid bg-3 text-center" style="margin-left: 50px; margin-right: 20px;">    
-  <h2><span class="namehead">Notable Projects</span></h2>
-  <br>
-  <br>
-  <div class="row" id="portfolio-container"></div>
-  <script>
+<!-- ==========================================================================
+     Recent Blogs Section
+     ========================================================================== -->
+<section class="section-wrapper blogs-section" id="blog">
+  <div class="container-main">
+    <div class="section-head-wrap">
+      <span class="section-pretitle"><i class="fa fa-rss"></i> Written Thoughts</span>
+      <h2 class="section-title-main">Recent <span>Blogs</span></h2>
+      <p class="section-subtitle-main">
+        Technical walkthroughs on DIY hardware, Python scripts, electronics debugging, and my creative channel writing.
+      </p>
+    </div>
+
+    <div class="blogs-grid-row">
+      <!-- Left Column: Faltu Coder -->
+      <div>
+        <div style="margin-bottom: 20px;">
+          <h3 style="font-size: 1.35rem; margin-bottom: 4px;">
+            <a href="https://faltucoder.blogspot.com" target="_blank" style="color: var(--text-primary);">
+              Programming &amp; Hardware Blogs <i class="fa fa-external-link" style="font-size: 0.85rem;"></i>
+            </a>
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
+            Latest feed from <a href="https://faltucoder.blogspot.com" target="_blank">FALTU CODER</a>
+          </p>
+        </div>
+
+        <div id="blog-posts">
+          <!-- Fallback or dynamic posts -->
+          <div class="blog-post-card">
+            <h4 class="blog-post-title">
+              <a href="https://faltucoder.blogspot.com" target="_blank">Auto-minimize your PC screen the second someone walks in?</a>
+            </h4>
+            <p class="blog-post-summary">
+              Hell yeah, bro! All you need is an Arduino, an IR sensor, and a tiny bit of Python magic. Whenever an approaching object is detected, an automated hotkey minimizes active screens...
+            </p>
+          </div>
+          <div class="blog-post-card">
+            <h4 class="blog-post-title">
+              <a href="https://faltucoder.blogspot.com" target="_blank">DIY RGB Video Light that you can control with Bluetooth?</a>
+            </h4>
+            <p class="blog-post-summary">
+              Is your studio room lacking dynamic color saturation? Build your own custom addressable LED array running on ESP32 / Arduino with wireless Bluetooth color wheel control...
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Amazing Vangari -->
+      <div>
+        <div class="sidebar-panel-card">
+          <img src="//2.bp.blogspot.com/-Gr6Gyllv860/XC5molIPjVI/AAAAAAAAHPA/pvnJMSqriAcrj_dbBWBAQcCH_S3uDsQuQCK4BGAYYCw/s1600/title.png" alt="Amazing Vangari" class="sidebar-banner-img">
+          <p class="sidebar-desc">
+            <strong>Amazing Vangari</strong> is a video &amp; content project of mine running since 2017, exploring bizarre technology experiments, comedy electronics, and DIY hacks.
+          </p>
+          
+          <div class="sidebar-subhead">
+            <i class="fa fa-rss-square"></i> Latest Content
+          </div>
+          <ul class="side-feed-links" id="blogfeed2">
+            <li><a href="https://amazingvangari.blogspot.com" target="_blank">PL2303HXA phased out since 2012 - Fix USB TTL Converter</a></li>
+            <li><a href="https://amazingvangari.blogspot.com" target="_blank">DIY RGB Video Light with Bluetooth Control</a></li>
+            <li><a href="https://amazingvangari.blogspot.com" target="_blank">DIY LED &amp; Diode Tester Circuit</a></li>
+          </ul>
+
+          <div class="sidebar-subhead" style="margin-top: 24px;">
+            <i class="fa fa-youtube-play"></i> YouTube Channel
+          </div>
+          <a href="https://youtube.com/amazingvangari" target="_blank" class="btn-yt-action" style="width: 100%; justify-content: center; font-size: 0.88rem;">
+            <i class="fa fa-youtube-play"></i> Subscribe to Channel
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blogger JSONP callback scripts -->
+<script>
+  function recentPost(json) {
+    if (!json || !json.feed || !json.feed.entry) return;
+    let output = '';
+    const entries = json.feed.entry.slice(0, 4);
+    for (let i = 0; i < entries.length; i++) {
+      let postUrl = entries[i].link.find(l => l.rel === 'alternate')?.href || '#';
+      let postTitle = entries[i].title.$t;
+      let postSummary = entries[i].summary 
+        ? entries[i].summary.$t.substring(0, 240) + '...' 
+        : (entries[i].content ? entries[i].content.$t.replace(/<[^>]+>/g, '').substring(0, 240) + '...' : 'Click to read full post.');
+      
+      output += `
+        <article class="blog-post-card">
+          <h4 class="blog-post-title"><a href="${postUrl}" target="_blank">${postTitle}</a></h4>
+          <p class="blog-post-summary">${postSummary}</p>
+          <a href="${postUrl}" target="_blank" style="font-size: 0.82rem; font-weight: 600; color: var(--accent-primary);">
+            Read Full Article &rarr;
+          </a>
+        </article>
+      `;
+    }
+    if (output) {
+      document.getElementById('blog-posts').innerHTML = output;
+    }
+  }
+
+  function getPosts2(json) {
+    if (!json || !json.feed || !json.feed.entry) return;
+    let list = [];
+    const entries = json.feed.entry.slice(0, 5);
+    for (let i = 0; i < entries.length; i++) {
+      let url = entries[i].link.find(l => l.rel === 'alternate')?.href || entries[i].link.slice(-1)[0].href;
+      list.push(`<li><a href="${url}" target="_blank">${i+1}. ${entries[i].title.$t}</a></li>`);
+    }
+    if (list.length) {
+      document.getElementById('blogfeed2').innerHTML = list.join('');
+    }
+  }
+</script>
+<script src="https://www.blogger.com/feeds/5452681278479740088/posts/summary?max-results=5&alt=json-in-script&callback=recentPost" async></script>
+<script src="https://www.blogger.com/feeds/4355066399501426132/posts/default?alt=json&max-results=6&callback=getPosts2" async></script>
+
+<hr class="section-divider">
+
+<!-- ==========================================================================
+     Repositories Section
+     ========================================================================== -->
+<section class="section-wrapper" id="repositories">
+  <div class="container-main">
+    <div class="section-head-wrap">
+      <span class="section-pretitle"><i class="fa fa-github"></i> Open Source Activity</span>
+      <h2 class="section-title-main">Project <span>Repositories</span></h2>
+      <p class="section-subtitle-main">
+        Real-time feed of public repositories, experimental prototypes, and open source utilities authored on GitHub.
+      </p>
+    </div>
+
+    <!-- Search Input -->
+    <div class="repo-search-wrap">
+      <i class="fa fa-search repo-search-icon"></i>
+      <input type="text" class="repo-search-input" id="searchBox" placeholder="Search repositories by name or tech..." oninput="filterRepos()">
+    </div>
+
+    <div class="repos-container-scroll">
+      <div class="repos-grid-list" id="repoList">
+        <!-- Injected via GitHub API -->
+        <div style="padding: 20px; color: var(--text-muted);">Loading repositories from GitHub...</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     Site Footer
+     ========================================================================== -->
+<footer class="site-footer">
+  <div class="container-main">
+    <div class="footer-grid">
+      <!-- Col 1 -->
+      <div class="footer-col">
+        <h4>Gazi Tawsif Turabi</h4>
+        <p>
+          Robotics &amp; Computer Science Enthusiast based in Dhaka, Bangladesh. Passionate about autonomous rovers, embedded firmware, web architectures, and human-computer interactions.
+        </p>
+        <p style="font-size: 0.85rem; margin-top: 14px;">
+          <i class="fa fa-envelope-o" style="color: var(--accent-primary);"></i> tawsiftorabi.jr@gmail.com<br>
+          <i class="fa fa-phone" style="color: var(--accent-primary);"></i> +880 186 2930 437
+        </p>
+        <div class="social-links-row" style="justify-content: flex-start; margin-top: 16px;">
+          <a class="social-icon-btn fb" href="https://facebook.com/tawsif.torabi" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a class="social-icon-btn yt" href="https://youtube.com/amazingvangari" target="_blank"><i class="fa fa-youtube-play"></i></a>
+          <a class="social-icon-btn gh" href="https://github.com/tawsiftorabi" target="_blank"><i class="fa fa-github"></i></a>
+          <a class="social-icon-btn in" href="https://www.linkedin.com/in/tawsiftorabi/" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a class="social-icon-btn scholar" href="https://scholar.google.com/citations?user=WMEc9UgAAAAJ&hl=en&authuser=1" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links-list">
+          <li><a href="#home"><i class="fa fa-angle-right"></i> Home / Bio</a></li>
+          <li><a href="#publications"><i class="fa fa-angle-right"></i> Publications</a></li>
+          <li><a href="#projects"><i class="fa fa-angle-right"></i> Notable Projects</a></li>
+          <li><a href="#experience"><i class="fa fa-angle-right"></i> Experience &amp; Activities</a></li>
+          <li><a href="#gallery"><i class="fa fa-angle-right"></i> Image Gallery</a></li>
+          <li><a href="#blog"><i class="fa fa-angle-right"></i> Recent Blogs</a></li>
+          <li><a href="resume"><i class="fa fa-angle-right"></i> Resume &amp; CV</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="footer-col">
+        <h4>Web Blogs &amp; Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="https://faltucoder.blogspot.com" target="_blank"><i class="fa fa-rss"></i> Faltu Coder Blog</a></li>
+          <li><a href="https://amazingvangari.blogspot.com" target="_blank"><i class="fa fa-rss"></i> Vangari Blog</a></li>
+          <li><a href="https://tawsiftorabi.blogspot.com" target="_blank"><i class="fa fa-rss"></i> Personal Blog</a></li>
+          <li><a href="https://uiumarsrover.org" target="_blank"><i class="fa fa-space-shuttle"></i> UIU Mars Rover Team</a></li>
+          <li><a href="https://github.com/TawsifTorabi/AurnaLightbox" target="_blank"><i class="fa fa-code"></i> Aurna Lightbox Library</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        Designed &amp; Developed with <i class="fa fa-heart" style="color: #ef4444;"></i> by <strong>Tawsif Torabi</strong>
+      </div>
+      <div>
+        Hosted with <i class="fa fa-github"></i> on GitHub Pages • Minimal &amp; Reader-Friendly Redesign
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Back To Top Button -->
+<button onclick="topFunction()" id="BTT" title="Scroll to top" aria-label="Back to top">
+  <i class="fa fa-chevron-up"></i>
+</button>
+
+<!-- ==========================================================================
+     Application Scripts (Caricature Engine, Theme, Projects, Gallery, GitHub API)
+     ========================================================================== -->
+<script>
+  // Static Fallback Data
+  const fallbackProjects = [{"title": "AETHER UAV", "description": "Advanced Electronic Tactical Hybrid Emergency Reconnaissance UAV is a UAS Platform prototype to deploy as a tactical or search-and-rescue assistance device", "image": "assets/images/aetheruav.jpg", "technologies": ["Embedded Systems", "Robotics", "UAV", "Aerial Systems", "CPP", "JavaScript", "Python"], "sourceLink": "https://github.com/TawsifTorabi/AETHER_UAV"}, {"title": "UIU Mars Rover - AXIOS", "description": "UIU 4th Gen Mars Rover. I worked as Co-Team Lead & Electrical System Sub-System Lead.", "image": "assets/images/axios.jpg", "technologies": ["Embedded Systems", "Robotics", "CPP"], "sourceLink": "https://uiumarsrover.org/projects/yggdrasil-details.html", "demoLink": "https://uiumarsrover.org/video/video_play.html?id=xgVbjqFUdvA&title=UIU%20MARS%20ROVER%20TEAM%20%7C%20AXIOS%20%7C%20URC%20SAR%202025"}, {"title": "PrinterWebsocket Framework", "description": "A Client-Server Framework to allow Web Apps to use POS Thermal Printers for Silent Printing.", "image": "assets/images/printerwebsocket.png", "technologies": ["Python", "javaScript", "WebSocket"], "sourceLink": "https://github.com/TawsifTorabi/PrinterWebsocket"}, {"title": "UIU Mars Rover - YGGDRASIL", "description": "UIU 3rd Gen Mars Rover. I worked as Embedded System Engineer in the Electrical System Sub-Team.", "image": "assets/images/yggdrasil.jpg", "technologies": ["Embedded Systems", "Robotics", "CPP"], "sourceLink": "https://uiumarsrover.org/projects/yggdrasil-details.html", "demoLink": "https://uiumarsrover.org/video/video_play.html?id=uKANf94gSFs&title=UIU%20MARS%20ROVER%20TEAM%20%7C%20YGGDRASIL%20%7C%20URC%20SAR%202024"}, {"title": "MiDI2Arduino", "description": "Converts MIDI files to Arduino Code with some MIDI presets.", "image": "assets/images/midi2arduino.jpeg", "technologies": ["JavaScript", "HTML", "CSS"], "demoLink": "https://tawsiftorabi.github.io/Midi2ArduinoTone", "sourceLink": "https://github.com/TawsifTorabi/Midi2ArduinoTone"}, {"title": "BDIXscannerWeb", "description": "A Javascript tool to scan for available BDIX FTP Servers", "image": "assets/images/bdix.jpeg", "technologies": ["JavaScript", "HTML", "CSS"], "demoLink": "https://tawsiftorabi.github.io/BDIXscannerWeb", "sourceLink": "https://github.com/TawsifTorabi/BDIXscannerWeb"}, {"title": "RealtimeHTML Editor", "description": "Javascript Based Realtime HTML Editor for HTML beginners", "image": "assets/images/realtimeHTML.png", "technologies": ["JavaScript", "HTML", "CSS"], "demoLink": "https://tawsiftorabi.github.io/realtimeHTML", "sourceLink": "https://github.com/TawsifTorabi/realtimeHTML"}, {"title": "UCAMextended Extension", "description": "A Browser Plugin for UIU UCAM Users to add Exam Routine on UIU UCAM", "image": "assets/images/ucamextended.png", "technologies": ["JavaScript"], "demoLink": "https://tawsiftorabi.github.io/ucamextended", "sourceLink": "https://github.com/TawsifTorabi/ucamextended"}, {"title": "Web Photobooth", "description": "A Web App for Kiosk Booths allows users to capture photos using esp32 remote & Hand Gesture", "image": "assets/images/webphotobooth.png", "technologies": ["JavaScript", "HTML", "CSS", "PHP", "Embedded Systems", "CPP", "WebSocket"], "demoLink": "https://tawsiftorabi.github.io/Web_Photobooth", "sourceLink": "https://github.com/TawsifTorabi/Web_Photobooth"}, {"title": "AurnaLightbox", "description": "Lightweight Vanilla JS Lightbox for Websites to showcase Iframes and Images", "image": "assets/images/AurnaLightbox.png", "technologies": ["JavaScript"], "demoLink": "https://tawsiftorabi.github.io/AurnaLightbox", "sourceLink": "https://github.com/TawsifTorabi/AurnaLightbox"}, {"title": "MiniForum", "description": "A Simple Social Platform using PHP & MySQL", "image": "assets/images/MiniForum.png", "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"], "sourceLink": "https://github.com/TawsifTorabi/MiniForum/"}, {"title": "UIUcse", "description": "A Simple JSON Search Engine for Recorded Course Contents for ease of access in COVID19 Lockdown", "image": "assets/images/UIUcse.png", "technologies": ["JavaScript", "HTML", "CSS"], "demoLink": "https://tawsiftorabi.github.io/UIUcse", "sourceLink": "https://github.com/TawsifTorabi/UIUcse"}, {"title": "DocChamber", "description": "Dynamic Appointment Management & Tokenization System for Hospitals & Medical Centers", "image": "assets/images/DocChamber.png", "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"], "sourceLink": "https://github.com/TawsifTorabi/DocChamber_Appointment_System"}, {"title": "WeeklySalesRegister", "description": "Weekly Magazine Sales Tracking System with Report Generation in PHP and SQLite. I had quite the challange to generate the Bangla Font PDFs using PHP mPDF Library.", "image": "assets/images/WeeklySalesRegister.png", "technologies": ["JavaScript", "HTML", "CSS", "PHP", "SQLite"], "sourceLink": "https://github.com/TawsifTorabi/WeeklySalesRegister"}];
+  const fallbackGallery = [{"src": "assets/images/team_1 (1).jpeg", "caption": "The UIU Mars Rover Team 2025"}, {"src": "assets/images/team_1 (1).jpg", "caption": "Axios Rover Performing the Science Life Searching Expedition Mission on the Mars Desert Research Station, Utah at URC 2025"}, {"src": "assets/images/team_1 (2).jpg", "caption": "After Taking the 6th Place and the best science team at URC 2025 Utah, USA"}, {"src": "assets/images/team_1 (3).jpg", "caption": "UIU Mars Rover Team 2025 Journey to URC"}, {"src": "assets/images/20260227_173558.jpg", "caption": "2026 Rover AURION, I retired midway from the team to focus on my researches and startups before the URC 2026"}, {"src": "assets/images/SAVE_20250805_233011.jpg", "caption": "With Axios Rover, at ARC 2025, Middle East Technical University, Ankara, Turkiye"}, {"src": "assets/images/IMG_20250531_084357710.jpg", "caption": "URC 2025 Utah, USA - Axios Rover Performing ERD Mission - camera: Myself"}, {"src": "assets/images/IMG-20250128-WA0049.jpg", "caption": "My Thesis Group"}, {"src": "assets/images/1734034841169.jpg", "caption": "2nd Runner-Up in Techathon - TechnoCrats v2 in IUBAT 2024"}, {"src": "assets/images/1749721704351.jpg", "caption": "UIU Mars Rover Team is 6th in Worldwide Rank at URC 2025"}, {"src": "assets/images/1750003527354.jpg", "caption": "Visit to Mars Desert Research Station at Hanksville, Utah, USA 2025"}, {"src": "assets/images/1749120493288.jpg", "caption": "Four Bangladeshi Team groups up for a Photo at Utah, USA 2025"}, {"src": "assets/images/1748963691174.jpg", "caption": "UIU Mars Rover Team at URC 2025 at Utah, USA"}, {"src": "assets/images/1748840697173.jpg", "caption": "Putting up the flag at URC 2025 at Utah, USA"}, {"src": "assets/images/1741142090778.jpg", "caption": "With AXIOS, UIU 4th Generation Mars Rover 2025"}, {"src": "assets/images/1734356266673.jpg", "caption": "Six Rover Teams of Bangladesh in One Frame at BRAC University, 2024"}, {"src": "assets/images/1734352552339.jpg", "caption": "At 'From Earth to Orbit' Seminar at BRAC University, 2024"}, {"src": "assets/images/1732561812911.jpg", "caption": "Taking a Robotics Workshop at UIU Robotics Club, United International University, 2024"}, {"src": "assets/images/1728679424061.jpg", "caption": "Champion in Software Engineering Category at UIU CSE Project Show Summer '24"}, {"src": "assets/images/1728574785480.jpg", "caption": "Freshers Reception and Robotics Workshop with UIU Robotics Club 2024"}];
+
+  // ==========================================================================
+  // Artistic Caricature Animation Engine
+  // ==========================================================================
+  const ORIGINAL_PROFILE_PHOTO = "https://blogger.googleusercontent.com/img/a/AVvXsEh3dKfSpSPGCfkHyiD0Ea7XgdtzdVz5LYj6Vd6ni5KPpfm7j3M0X14AFhqW_rNvxeZcPhVBVNTjqwFOFsrT3gPvRx6ma1yVPqfIXBs47iwEanyz6WRlh_Crivt2MevoQ3k5ri2mGYxe6eb7DbxpCTBbjqepyZ5bHc8Y3RevPBAJ5pwd3X8Vq2WAS6TMRf4V";
+
+  const CARICATURE_FRAMES = [
+    "assets/images/funCaricature_1.jpg",
+    "assets/images/funCaricature_2.jpg",
+    "assets/images/funCaricature_3.jpg",
+    "assets/images/funCaricature_4.jpg",
+    "assets/images/funCaricature_5.jpg",
+    "assets/images/funCaricature_6.jpg",
+    "assets/images/funCaricature_7.jpg",
+    "assets/images/funCaricature_8.jpg",
+    "assets/images/funCaricature_9.jpg"
+  ];
+
+  // Editable sequence durations in milliseconds:
+  // 7 and 8 are slower, 9 stays for a while, then returns to original photo
+  window.CARICATURE_TIMINGS = {
+    frame1: 220,
+    frame2: 220,
+    frame3: 220,
+    frame4: 220,
+    frame5: 220,
+    frame6: 220,
+    frame7: 520,   // "7 is a little slow"
+    frame8: 650,   // "8 is a little slow"
+    frame9: 2800   // "9 should come and stay for a while"
+  };
+
+  // Preload all frames for instant butter-smooth transitions
+  CARICATURE_FRAMES.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  let caricatureTimer = null;
+  let isCaricatureRunning = false;
+
+  /**
+   * Plays the caricature frame sequence animation.
+   * Can be called programmatically via JavaScript: playCaricatureAnimation()
+   */
+  window.playCaricatureAnimation = function() {
+    const avatar = document.getElementById("profileAvatar");
+    if (!avatar) return;
+
+    if (caricatureTimer) {
+      clearTimeout(caricatureTimer);
+    }
+
+    isCaricatureRunning = true;
+    avatar.classList.add("caricature-active");
+
+    const durations = [
+      window.CARICATURE_TIMINGS.frame1,
+      window.CARICATURE_TIMINGS.frame2,
+      window.CARICATURE_TIMINGS.frame3,
+      window.CARICATURE_TIMINGS.frame4,
+      window.CARICATURE_TIMINGS.frame5,
+      window.CARICATURE_TIMINGS.frame6,
+      window.CARICATURE_TIMINGS.frame7,
+      window.CARICATURE_TIMINGS.frame8,
+      window.CARICATURE_TIMINGS.frame9
+    ];
+
+    let currentIdx = 0;
+
+    function step() {
+      if (currentIdx < CARICATURE_FRAMES.length) {
+        avatar.src = CARICATURE_FRAMES[currentIdx];
+        const wait = durations[currentIdx] || 200;
+        currentIdx++;
+        caricatureTimer = setTimeout(step, wait);
+      } else {
+        // Return to original photo
+        avatar.src = ORIGINAL_PROFILE_PHOTO;
+        avatar.classList.remove("caricature-active");
+        isCaricatureRunning = false;
+        caricatureTimer = null;
+      }
+    }
+
+    step();
+  };
+
+  // Auto-play the caricature sequence on initial load after brief entry delay
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      window.playCaricatureAnimation();
+    }, 650);
+  });
+
+  // 1. Theme Toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  const root = document.documentElement;
+
+  function updateThemeIcon(theme) {
+    if (!themeIcon) return;
+    if (theme === 'dark') {
+      themeIcon.className = 'fa fa-sun-o';
+    } else {
+      themeIcon.className = 'fa fa-moon-o';
+    }
+  }
+
+  const currentTheme = root.getAttribute('data-theme') || 'light';
+  updateThemeIcon(currentTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const activeTheme = root.getAttribute('data-theme') || 'light';
+      const newTheme = activeTheme === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+  }
+
+  // 2. Mobile Nav Toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-link-item a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+  }
+
+  // 3. Scroll Progress & Back To Top
+  window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+    const prog = document.getElementById('scroll-progress');
+    if (prog) prog.style.width = scrolled + '%';
+
+    const btt = document.getElementById('BTT');
+    if (btt) {
+      if (winScroll > 300) {
+        btt.style.display = 'flex';
+      } else {
+        btt.style.display = 'none';
+      }
+    }
+
+    const nav = document.getElementById('mainNav');
+    if (nav) {
+      if (winScroll > 40) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+  });
+
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // 4. Easter Egg: toggleLeer
+  function toggleLeer() {
+    const leer = document.getElementById('leer');
+    const leerBg = document.getElementById('leerbg');
+    if (!leer || !leerBg) return;
+
+    if (leer.classList.contains('leerHide')) {
+      leer.classList.remove('leerHide');
+      leer.classList.add('leer');
+      leerBg.classList.remove('leerbgHide');
+      leerBg.classList.add('leerbg');
+    } else {
+      leer.classList.remove('leer');
+      leer.classList.add('leerHide');
+      leerBg.classList.remove('leerbg');
+      leerBg.classList.add('leerbgHide');
+    }
+  }
+
+  // 5. Load Gallery (with instant fallback)
+  function renderGallery(gallery) {
+    const container = document.getElementById('gallery-cloud');
+    if (!container) return;
+    container.innerHTML = '';
+
+    gallery.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'gallery-cloud-item';
+      div.innerHTML = `
+        <img src="${item.src}" alt="${item.caption}" loading="lazy">
+        <div class="gallery-caption-overlay">${item.caption}</div>
+      `;
+      div.addEventListener('click', () => {
+        openLightbox(item.src, item.caption);
+      });
+      container.appendChild(div);
+    });
+  }
+
   async function loadGallery() {
+    renderGallery(fallbackGallery); // Render instantly!
     try {
       const response = await fetch('gallery.json');
-      const gallery = await response.json();
-      const container = document.getElementById('gallery-cloud');
-
-      gallery.forEach(item => {
-        const wrapper = document.createElement('div');
-        wrapper.className = 'image-cloud-item';
-        wrapper.innerHTML = `
-			<div class="img-overlay-container">
-				<img src="${item.src}" alt="${item.caption}" onclick="openLightbox('${item.src}', \`${item.caption}\`)">
-				<div class="img-caption-overlay">
-				<span>${item.caption}</span>
-				</div>
-			</div>
-			`;
-        container.appendChild(wrapper);
-      });
-    } catch (error) {
-      console.error("Error loading gallery:", error);
+      if (response.ok) {
+        const gallery = await response.json();
+        if (Array.isArray(gallery) && gallery.length > 0) {
+          renderGallery(gallery);
+        }
+      }
+    } catch (err) {
+      // Fallback already rendered
     }
   }
 
   function openLightbox(src, caption) {
-    document.getElementById('lightboxImage').src = src;
-    document.getElementById('lightboxCaption').textContent = caption;
-    $('#lightboxModal').modal('show');
+    const img = document.getElementById('lightboxImage');
+    const cap = document.getElementById('lightboxCaption');
+    if (img) img.src = src;
+    if (cap) cap.textContent = caption;
+    if (typeof $ !== 'undefined' && $.fn && $.fn.modal) {
+      $('#lightboxModal').modal('show');
+    }
   }
-
   loadGallery();
 
-	// Function to load and display projects
-	async function loadProjects() {
-	  try {
-		const response = await fetch('projects.json'); // Fetch the JSON file
-		const projects = await response.json(); // Parse the JSON content
-		const container = document.getElementById('portfolio-container'); // Get the container element
-  
-		// Loop through each project and generate the HTML content
-		projects.forEach(project => {
-		  const projectElement = document.createElement('div');
-		  projectElement.className = 'portfolio-elements';
-  
-		  // Create the HTML content
-		  projectElement.innerHTML = `
-			<h3>${project.title}</h3>
-			<p class="detail-project">${project.description}</p>
-			<span class="image-portfolio"><img src="${project.image}" class="img-responsive" style="width:100%" alt="Image"></span>
-			<div class="used">
-			  ${project.technologies.map(tech => `<span class="cat ${tech.toLowerCase().replace(/\s+/g, '-')}">${tech}</span>`).join('')}
-			</div>
-			${project.demoLink ? `<a target="_blank" href="${project.demoLink}" class="button"><i class="fa fa-external-link-square" aria-hidden="true"></i> Demo</a>` : ''}
-			${project.downloadLink ? `<a target="_blank" href="${project.downloadLink}" class="button"><i class="fa fa-download" aria-hidden="true"></i> Download</a>` : ''}
-			<a target="_blank" href="${project.sourceLink}" class="button"><i class="fa fa-github" aria-hidden="true"></i> Source</a>
-		  `;
-  
-		  container.appendChild(projectElement); // Add the project to the container
-		});
-	  } catch (error) {
-		console.error('Error loading projects:', error);
-	  }
-	}
-  
-	// Call the function to load projects
-	loadProjects();
-  </script>
- <hr>
-</div>
+  // 6. Load Projects with Categorization & Instant Fallback
+  let allProjectsData = fallbackProjects;
 
+  function classifyProject(p) {
+    const t = (p.technologies || []).map(x => x.toLowerCase()).join(' ');
+    const title = (p.title || '').toLowerCase();
+    if (t.includes('robotics') || t.includes('embedded') || t.includes('uav') || title.includes('rover') || t.includes('arduino') || t.includes('aerial')) {
+      return 'robotics';
+    }
+    if (t.includes('php') || t.includes('mysql') || t.includes('sqlite') || t.includes('websocket') || title.includes('docchamber') || title.includes('forum')) {
+      return 'web';
+    }
+    return 'tools';
+  }
 
+  function renderProjects(category) {
+    const container = document.getElementById('portfolio-container');
+    if (!container) return;
+    container.innerHTML = '';
 
+    const filtered = category === 'all' 
+      ? allProjectsData 
+      : allProjectsData.filter(p => classifyProject(p) === category);
 
-<div class="container-fluid text-left" style="margin: 50px auto; padding: 0 50px;">
+    filtered.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'project-card';
+      
+      const techPills = (p.technologies || []).map(t => `<span class="tech-pill">${t}</span>`).join('');
+      
+      let linksHtml = '';
+      if (p.demoLink) {
+        linksHtml += `<a href="${p.demoLink}" target="_blank" class="btn-proj-link primary"><i class="fa fa-external-link"></i> Demo</a>`;
+      }
+      if (p.downloadLink) {
+        linksHtml += `<a href="${p.downloadLink}" target="_blank" class="btn-proj-link"><i class="fa fa-download"></i> Download</a>`;
+      }
+      if (p.sourceLink) {
+        linksHtml += `<a href="${p.sourceLink}" target="_blank" class="btn-proj-link"><i class="fa fa-github"></i> Source</a>`;
+      }
 
-    <div class="row">
-		<div class="col-sm-6 experience-container">
-            <a name="work"></a>
-            <h2 class="section-title">Professional <span>Experience</span></h2>
-            <br>
-            <div class="timeline">
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://xceptionist.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/logo-DgzR_ioo.svg" alt="Xceptionist Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Xceptionist</h3>
-                                <span class="subtext">Dhaka, Bangladesh (2025 - Present)</span>
-                            </div>
-                        </a>
-                    </div>
+      card.innerHTML = `
+        <div class="project-img-wrap">
+          <img src="${p.image}" alt="${p.title}" loading="lazy">
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">${p.title}</h3>
+          <p class="project-desc">${p.description}</p>
+          <div class="project-techs">${techPills}</div>
+          <div class="project-links-row">${linksHtml}</div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
 
-                    <details>
-                        <summary>
-                            <div class="role-title">Software Engineer</div>
-                        </summary>
-                        <div class="timeline-body">
-							 <span class="date">Dec 2025 - Present</span>
-                            <ul class="contributions">
-                                <li>Organizing team meetings and Co-ordinating project timelines.</li>
-                                <li>Development of web applications and software solutions using PHP Stacks.</li>
-                                <li>Developed and implemented RESTful APIs for seamless integration.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-                    <div class="badge-container">
-                        <span class="badge badge-indigo">Leadership</span>
-                        <span class="badge badge-cyan">Development</span>
-                        <span class="badge badge-rose">Teamwork</span>
-                        <span class="badge badge-amber">Project Management</span>
-                    </div>
-                </div>
+  async function loadProjects() {
+    renderProjects('all'); // Render instantly!
+    try {
+      const response = await fetch('projects.json');
+      if (response.ok) {
+        const projects = await response.json();
+        if (Array.isArray(projects) && projects.length > 0) {
+          allProjectsData = projects;
+          renderProjects('all');
+        }
+      }
+    } catch (err) {
+      // Fallback already rendered
+    }
+  }
 
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://www.facebook.com/ArtspaceInteriorSolutions/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/artspace.png" alt="Artspace Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Artspace Interior Solutions</h3>
-                                <span class="subtext">Dhaka, Bangladesh (2025 - 2026)</span>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <details>       
-                        <summary>
-                            <div class="role-title">Content Strategist (Contract)</div>
-                        </summary>
-                        <div class="timeline-body">
-							 <span class="date">Dec 2025 - Jan 2026</span>
-                            <ul class="contributions">
-                                <li>Handling Social Media Marketing.</li>
-                                <li>Created Social Media Marketing Strategies.</li>
-                                <li>Developed Branding Guidelines for Artspace Interiors.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-                    <div class="badge-container">
-						<span class="badge badge-indigo">PHP</span>
-                        <span class="badge badge-rose">Teamwork</span>
-                        <span class="badge badge-cyan">Client Management</span>
-                    </div>
-                </div>
+  // Filter Buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+      renderProjects(filter);
+    });
+  });
+  loadProjects();
 
+  // 7. Load Repositories from GitHub API
+  let fetchedRepos = [];
+  const username = "tawsiftorabi";
+  const repoApiUrl = `https://api.github.com/users/${username}/repos?per_page=50&sort=updated`;
 
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://robotics.uiu.ac.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/ya.png" alt="Yeasin Arena Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Yeasin Arena Excelytics</h3>
-                                <span class="subtext">Dhaka, Bangladesh (2023 - 2025)</span>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <details>       
-                        <summary>
-                            <div class="role-title">Full-stack Developer (Contract)</div>
-                        </summary>
-                        <div class="timeline-body">
-							 <span class="date">Jun 2023 - Jan 2025</span>
-                            <ul class="contributions">
-                                <li>Managing Client Relationships and training.</li>
-                                <li>Restaurant POS System Development.</li>
-                                <li>Database Design and Management.</li>
-                                <li>Web Application Development using Laravel/CodeIgniter.</li>
-                                <li>Wordpress Website Development.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-                    <div class="badge-container">
-						<span class="badge badge-indigo">PHP</span>
-                        <span class="badge badge-rose">Teamwork</span>
-                        <span class="badge badge-cyan">Client Management</span>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://www.facebook.com/BanglaSpotlight" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/innovasi.png" alt="Innovasi Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Innovasi Films</h3>
-                                <span class="subtext">Dhaka, Bangladesh (2022 - 2022)</span>
-                            </div>
-                        </a>
-                    </div>
-                        
-                    <details>       
-                        <summary>
-                            <div class="role-title">Video Editor (Contract)</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Feb 2022 - Apr 2022</span>
-                            <ul class="contributions">
-                                <li>Edited 10+ Documentary Films for NATP-II of Ministry of Agriculture, Bangladesh</li>
-                                <li>Edited Radio Programs using DAW</li>
-                                <li>Demonstrated Voice Overs for Rough Cuts.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-                    
-					<div class="badge-container">
-                        <span class="badge badge-rose">Video Editing</span>
-                        <span class="badge badge-amber">Audio Editing</span>
-                        <span class="badge badge-cyan">Content Creation</span>
-                    </div>
-                </div>
+  fetch(repoApiUrl)
+    .then(res => res.json())
+    .then(repos => {
+      if (!Array.isArray(repos)) return;
+      fetchedRepos = repos;
+      renderRepos(repos);
+    })
+    .catch(err => {
+      console.error('Error fetching repos:', err);
+      const repoList = document.getElementById('repoList');
+      if (repoList) {
+        repoList.innerHTML = `
+          <div style="padding: 15px; color: var(--text-muted);">
+            Could not load live GitHub repositories. You can explore all projects at <a href="https://github.com/tawsiftorabi" target="_blank">github.com/tawsiftorabi</a>.
+          </div>
+        `;
+      }
+    });
 
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://travelia.com.bd" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/travelia.png" alt="Travelia Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Travelia</h3>
-                                <span class="subtext">Dhaka, Bangladesh (2019 - 2021)</span>
-                            </div>
-                        </a>
-                    </div>
-                        
-                    <details>       
-                        <summary>
-                            <div class="role-title">Jr. Executive (Media & CRM)</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Aug 2019 - Apr 2021</span>
-                            <ul class="contributions">
-                                <li>Contributed to "Partner Creation Program" of Travelia</li>
-                                <li>Handled partner communications and follow-ups.</li>
-                                <li>Managed social media campaigns for partner engagement.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-                    
-					<div class="badge-container">
-                        <span class="badge badge-rose">Partner Management</span>
-                        <span class="badge badge-amber">CRM</span>
-                        <span class="badge badge-cyan">Social Media Marketing</span>
-                    </div>
-                </div>
+  function renderRepos(repos) {
+    const list = document.getElementById('repoList');
+    if (!list) return;
+    list.innerHTML = '';
 
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://www.my.sulovit.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/sulov.png" alt="Sulov IT Ltd. Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Sulov IT Ltd.</h3>
-                                <span class="subtext">Dhaka, Bangladesh (2016 - 2018)</span>
-                            </div>
-                        </a>
-                    </div>
-                        
-                    <details>       
-                        <summary>
-                            <div class="role-title">Web Developer (Part-time)</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Aug 2016 - Apr 2018</span>
-                            <ul class="contributions">
-                                <li>Developed a web app on PHP/MongoDB for a Magazine to manage sales and distribution. </li>
-                                <li>Deployed Portfolio Websites for Multiple Clients.</li>
-                                <li>Managed clients website CMS and CPanel.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-                    
-					<div class="badge-container">
-                        <span class="badge badge-rose">MongoDB</span>
-                        <span class="badge badge-amber">MySQL</span>
-                        <span class="badge badge-cyan">PHP</span>
-                    </div>
-                </div>
-            </div> 
-		</div> 
+    if (repos.length === 0) {
+      list.innerHTML = `<div style="padding: 15px; color: var(--text-muted);">No matching repositories found.</div>`;
+      return;
+    }
 
-        <div class="col-sm-6 experience-container">
-            <a name="cocurricular"></a>
-            <h2 class="section-title">Co-curricular <span>Activities</span></h2>
-            <br>
-            <div class="timeline">
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://uiumarsrover.org" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/umrt.png" alt="UMRT Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>UIU Mars Rover Team</h3>
-                                <span class="subtext">Dhaka, Bangladesh (2023 - 2026)</span>
-                            </div>
-                        </a>
-                    </div>
+    repos.forEach(repo => {
+      const card = document.createElement('div');
+      card.className = 'repo-card';
+      card.innerHTML = `
+        <div class="repo-card-head">
+          <div class="repo-card-name">
+            <i class="fa fa-folder-o" style="color: var(--accent-primary);"></i>
+            <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+          </div>
+          <span style="font-size: 0.75rem; color: var(--text-subtle);"><i class="fa fa-star"></i> ${repo.stargazers_count}</span>
+        </div>
+        <div class="repo-card-desc">${repo.description || 'No description provided.'}</div>
+        <div class="repo-card-meta">
+          <span><i class="fa fa-circle" style="font-size: 8px; color: var(--accent-primary);"></i> ${repo.language || 'Code'}</span>
+          <span>Updated: ${new Date(repo.updated_at).toLocaleDateString()}</span>
+        </div>
+      `;
+      list.appendChild(card);
+    });
+  }
 
-                    <details>
-                        <summary>
-                            <div class="role-title">Co-Team Lead</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Mar 2025 - Jan 2026</span>
-                            <ul class="contributions">
-                                <li>Organized team meetings and coordinated project timelines.</li>
-                                <li>Managed Public Relations and Sponsorship Co-ordinations.</li>
-                                <li>Managed Competition Logistics (Packaging and Tracking)</li>
-                                <li>Led Electrical Sub-team of the Team</li>
-                                <li>Talent Management and Recruitment</li>
-                                <li>Led Media & PR Wing of the Team</li>
-                                <li>Co-ordinated SAR Phase of the Competition 2025 & 2026</li>
-                                <li>Started and Co-ordinated "2 Minutes Robotics" Project</li>
-                                <li>Participated in URC 2025 (USA) & ARC 2025 (Turkiye).</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-
-                    <details>
-                        <summary>
-                            <div class="role-title">Electrical Sub-Team Lead</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Dec 2024 - Sep 2025</span>
-                            <ul class="contributions">
-                                <li>Designed Main Control Circuit.</li>
-                                <li>Developed and Implemented Differential Drive System with Articulating Steering.</li>
-                                <li>Designed and Developed Primary Command & Control System.</li>
-                                <li>Led development of Electrical Control & Communication System for Mars Rover <a href="https://uiumarsrover.org/projects/axios-details.html" target="_blank" rel="noopener noreferrer">AXIOS</a>.</li>
-                                <li>Contributed to Fail-safe Recovery System</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-
-                    <details>
-                        <summary>
-                            <div class="role-title">Electrical Sub-Team Member</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Jan 2024 - Dec 2024</span>
-                            <ul class="contributions">
-                                <li>Contributed to Development of all manipulator control circuit.</li>
-                                <li>Managed Competition Logistics (Packaging and Tracking)</li>
-                                <li>Assisted in the design and implementation of the Rover's communication system.</li>
-                                <li>Contributed to the development of Mars Rover <a href="https://uiumarsrover.org/projects/yggdrasil-details.html" target="_blank">Yggdrasil</a>.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-
-                    <details>
-                        <summary>
-                            <div class="role-title">Intern</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Sep 2023 - Jan 2024</span>
-                            <ul class="contributions">
-                                <li>Basic electronics and hardware programming.</li>
-                                <li>Designed and edited social media contents.</li>
-                                <li>Shot and Edited video for System Acceptance Review submission for URC 2024.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <br>
-                    <div class="badge-container">
-                        <span class="badge badge-world"><i class="fa fa-globe"></i> 6th in World Rank - URC 2025</span>
-                        <span class="badge badge-world"><i class="fa fa-globe"></i> 5th in World Rank - URC 2024</span>
-                        <span class="badge badge-world"><i class="fa fa-trophy"></i> 3rd in World Rank - ARC 2025</span>
-                        <span class="badge badge-world"><i class="fa fa-star"></i> Science Mission 100/100 - URC 2025</span>
-                        <span class="badge badge-intl">International Competition</span>
-                        <span class="badge badge-indigo">Leadership</span>
-                        <span class="badge badge-cyan">Team Management</span>
-                        <span class="badge badge-rose">Teamwork</span>
-                        <span class="badge badge-amber">Mentoring</span>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://robotics.uiu.ac.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/uiurc.png" alt="UIU Robotics Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>UIU Robotics</h3>
-                                <span class="subtext">Dhaka, Bangladesh (2023 - 2025)</span>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <details>       
-                        <summary>
-                            <div class="role-title">Secretary of R&D</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Jan 2025 - Nov 2025</span>
-                            <ul class="contributions">
-                                <li>Mentoring several teams from UIU Robotics, guiding them to participate in national competitions.</li>
-                                <li>Develop competitive robots and projects for national and international contests.</li>
-                                <li>Designed an advanced Line Follower Robot using custom control algorithm and custom sensor array.</li>
-                                <li>Developed a course for beginner robotics enthusiasts.</li>
-                                <li>Developed an Automatic Lap-Tracking System for Automated Digital Scoreboard of LFR Competition.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-
-                    <details>       
-                        <summary>
-                            <div class="role-title">Executive of R&D</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Mar 2024 - Aug 2025</span>
-                            <ul class="contributions">
-                                <li>Develop competitive robots and projects for national and international contests.</li>
-                                <li>Successfully competed in a national hackathon under UIU Robotics Banner.</li>
-                                <li>Organized "UIU CSE Fest 2025" Co-Hosted by UIU Robotics</li>
-                                <li>Co-ordinated Intra university Robotics Competition "Robo Rush"</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-
-                    <details>       
-                        <summary>
-                            <div class="role-title">Executive of Branding</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Mar 2023 - Mar 2024</span>
-                            <ul class="contributions">
-                                <li>Design printables and web banners.</li>
-                                <li>Create and edit videos for social media.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <br>
-
-                    <div class="badge-container">
-                        <span class="badge badge-world"><i class="fa fa-star"></i> 3rd in Technocrats v2</span>
-                        <span class="badge badge-intl">National Competition</span>
-                        <span class="badge badge-indigo">Leadership</span>
-                        <span class="badge badge-amber">Mentoring</span>
-                        <span class="badge badge-rose">Teamwork</span>
-                        <span class="badge badge-cyan">Event Management</span>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://www.facebook.com/profile.php?id=61566442053812" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/uiutfc.png" alt="UIU Theatre & Film Club Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>UIU Theatre & Film Club</h3>
-                                <span class="subtext">Dhaka, Bangladesh (2021 - 2023)</span>
-                            </div>
-                        </a>
-                    </div>
-                        
-                    <details>       
-                        <summary>
-                            <div class="role-title">Head of Film</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Mar 2023 - Apr 2023</span>
-                            <ul class="contributions">
-                                <li>Mentoring several teams filmmaking and writing.</li>
-                                <li>Arranged Filmmaking seminars.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-                    
-                    <details>
-                        <summary>
-                            <div class="role-title">Asst. Head of Film</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Mar 2022- Mar 2023</span>
-                            <ul class="contributions">
-                                <li>Arranged Filmmaking seminars.</li>
-                                <li>Wrote and Produced one full length thriller short-film under UIU Theatre and Film Club.</li>
-                                <li>Organized and Participated in "Tokkor 11" Intra University Threatrical Competition</li>
-                                <li>Co-ordinated Intra university Ad-making Competition "Jiboner Golpe Nagad"</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <hr>
-
-                    <details>
-                        <summary>
-                            <div class="role-title">Executive of Film</div>
-                        </summary>
-                        <div class="timeline-body">
-							<span class="date">Nov 2021 - Mar 2022</span>
-                            <ul class="contributions">
-                                <li>Create and edit videos for social media.</li>
-                                <li>Produced Short Films for Club.</li>
-                                <li>Design printables and web banners.</li>
-                                <li>Participated in Theatrical Perfomances.</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <br>
-                    <div class="badge-container">
-                        <span class="badge badge-world"><i class="fa fa-star"></i> 1st in Tokkor 11</span>
-                        <span class="badge badge-intl">Intra University Competition</span>
-                        <span class="badge badge-indigo">Leadership</span>
-                        <span class="badge badge-rose">Teamwork</span>
-                        <span class="badge badge-amber">Mentoring</span>
-                        <span class="badge badge-cyan">Event Management</span>
-                    </div>
-                </div>
-            </div> 
-		</div> 
-	</div> 
-	<hr>
-
-    <div class="row">
-
-		<div class="col-sm-6 experience-container">
-            <a name="volunteering"></a>
-            <h2 class="section-title"><span>Volunteering</span></h2>
-            <br>
-            <div class="timeline">
-                
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://uiu.ac.bd" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/UIU.jfif" alt="UIU Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Mentor in UIU CSE Project Show Summer '24</h3>
-                                <span class="subtext">United International University - Dhaka, Bangladesh</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <details>
-                        <summary>
-							<span class="date">Sep 2024 - Oct 2024</span>
-                            <ul class="contributions">
-                                <li>I mentored multiple student groups with their project to perform in the UIU CSE Project Show. For my specialty in Hardware and Programming, I was assigned to mentor students with problems in Electronics and Microcontroller & Microprocessor Projects.</li>
-                            </ul>
-                        </summary>
-                    </details>
-                    <hr>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://wrobd.org/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/WROBd-Logo.png" alt="WRO BD Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Junior Judge</h3>
-                                <span class="subtext">World Robotic Olympiad Bangladesh - Dhaka, Bangladesh</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <details>
-                        <summary>
-							<span class="date">Sep 2025</span>
-                            <ul class="contributions">
-                                <li>I was invited to conduct a judging at the World Robot Olympiad - Bangladesh National Round. Students from all over Bangladesh who were selected at the regional round came to compete in the National round, where the winners will have the opportunity to participate in the WRO International Final 2025.</li>
-                            </ul>
-                        </summary>
-                    </details>
-                    <hr>
-                </div>
-                
-				
-				<div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://robotics.uiu.ac.bd" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/uiurc.png" alt="UIU Robotics Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Instructor at Basic LFR Workshop 'TechTrove' - Summer '24 and Fall '24</h3>
-                                <span class="subtext">UIU Robotics Club - Dhaka, Bangladesh</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <details>
-                        <summary>
-							<span class="date">Sep 2024</span>
-                            <ul class="contributions">
-                                <li>Robotics is revolutionizing industries and shaping our future. Whether it's healthcare, manufacturing, or everyday life, understanding robotics is essential for staying ahead. Practice in robotics and engineering equips a person with problem-solving skills, creativity, and technical expertise. For the freshers of UIU Robotics, we arranged a Kickstarter workshop for beginners in this field.</li>
-                            </ul>
-                        </summary>
-                    </details>
-                    <hr>
-                </div>
-
-
-				<div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://robotics.uiu.ac.bd" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/uiurc.png" alt="UIU Robotics Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Instructor at Basic Electronics Workshop 'Symptronic' - Fall '23 and Spring '24</h3>
-                                <span class="subtext">UIU Robotics Club - Dhaka, Bangladesh</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <details>
-                        <summary>
-							<span class="date">feb 2024</span>
-                            <ul class="contributions">
-                                <li>I mentored in a basic electronics workshop in the orientation program of UIU Robotics.</li>
-                            </ul>
-                        </summary>
-                    </details>
-                    <hr>
-                </div>
-
-				<div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="https://nagad.com.bd" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/nagad_mini.png" alt="Nagad Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Event Coordinator at Short Film Competition "Jiboner Golpe Nagad"</h3>
-                                <span class="subtext">UIU Theatre & Film Club x Nagad - Dhaka, Bangladesh</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <details>
-                        <summary>
-							<span class="date">Aug 2022</span>
-                            <ul class="contributions">
-                                <li>I coordinated the event for the short film competition "Jiboner Golpe Nagad" in collaboration with UIU Theatre & Film Club.</li>
-                            </ul>
-                        </summary>
-                    </details>
-                    <hr>
-                </div>
-				
-				<div class="timeline-item">
-                    <div class="timeline-header">
-                        <a href="#" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:flex; align-items:center;">
-                            <img src="assets/images/pixel.png" alt="Pixel Logo" class="exp-logo">
-                            <div class="header-text">
-                                <h3>Event Organizer at "Renaissance - The Light for Humanity"</h3>
-                                <span class="subtext">Pix-L - Dhaka, Bangladesh</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <details>
-                        <summary>
-							<span class="date">Sep 2020</span>
-                            <ul class="contributions">
-                                <li> Renaissance - The Light for Humanity " was a charity fundraising event where we would donate 60% of the total registration fees to the "Donate for Survivors" project of the Ahoban Foundation to fight against COVID-19!  and the rest would be given to the prize pool.</li>
-                            </ul>
-                        </summary>
-                    </details>
-                    <hr>
-                </div>
-
-                
-            </div>
-        </div> 
-
-
-		<!-- <div class="col-sm-6">
-            <a name="publications"></a>
-            <h2><span class="namehead">Publications</span></h2>
-            <ul class="parentdetail">
-                <li>No Publications are Public Yet.</li>
-            </ul>
-        </div> -->
-
-
-		<div class="col-sm-6">
-			<a name="achievements"></a>
-			<h2 class="section-title"> <span>Achievements</span></h2>
-			
-			<ul class="achievement-list">
-				
-				<li class="achievement-item">
-					<i class="fa fa-trophy"></i>
-					<div class="achievement-text">
-						<b>6th Worldwide Rank & Best Science Team Award - URC 2025</b>
-						<span>University Rover Challenge (URC) 2025, Utah, USA</span>
-					</div>
-				</li>
-
-				<li class="achievement-item">
-					<i class="fa fa-trophy"></i>
-					<div class="achievement-text">
-						<b>3rd Worldwide Rank & Best Science and Autonomous System Award at ARC 2025</b>
-						<span>UKET, Turkiye Space Exploration Society, 2025, Ankara, Turkiye</span>
-					</div>
-				</li>
-
-				<li class="achievement-item">
-					<i class="fa fa-star"></i>
-					<div class="achievement-text">
-						<b>Champion - Microcontroller & Microprocessor Project Show</b>
-						<span>UIU CSE Project Show Fall '25 by Department of CSE, UIU, Dhaka, Bangladesh</span>
-					</div>
-				</li>
-
-				<li class="achievement-item">
-					<i class="fa fa-star"></i>
-					<div class="achievement-text">
-						<b>Champion - Software Engineering Project Show</b>
-						<span>UIU CSE Project Show Summer '25 by Department of CSE, UIU, Dhaka, Bangladesh</span>
-					</div>
-				</li>
-
-				<li class="achievement-item">
-					<i class="fa fa-rocket"></i>
-					<div class="achievement-text">
-						<b>5th Worldwide Rank at URC 2024</b>
-						<span>The Mars Society, University Rover Challenge (URC) 2024, Utah, USA</span>
-					</div>
-				</li>
-
-				<li class="achievement-item">
-					<i class="fa fa-star"></i>
-					<div class="achievement-text">
-						<b>2nd Runner-Up in Techathon - TechnoCrats v2 in IUBAT</b>
-						<span>IUBAT Technocrats v2.0 by IIEC Innovation Center, 2024, Dhaka, Bangladesh</span>
-					</div>
-				</li>
-
-				<li class="achievement-item">
-					<i class="fa fa-star"></i>
-					<div class="achievement-text">
-						<b>1st Runner-Up - System Analysis & Design Project Show</b>
-						<span>UIU CSE Project Show Summer '23 by Department of CSE, UIU, Dhaka, Bangladesh</span>
-					</div>
-				</li>
-
-				<li class="achievement-item">
-					<i class="fa fa-star"></i>
-					<div class="achievement-text">
-						<b>2nd Runner-Up - Database Management System Project Show</b>
-						<span>UIU CSE Project Show Summer '22 by Department of CSE, UIU, Dhaka, Bangladesh</span>
-					</div>
-				</li>
-
-				<li class="achievement-item">
-					<i class="fa fa-certificate"></i>
-					<div class="achievement-text">
-						<b>1st Place - Tokkor 11</b>
-						<span>Intra-University Theatrical Competition by UIUTFC, Dhaka, Bangladesh</span>
-					</div>
-				</li>
-
-			</ul>
-		</div>
-		
-    </div>
-
-</div>
-
-
-
-
-
-
-<a name="repositories"></a>
-</br>
-</br>
-<div class="row content">
-    <div class="col-sm-11 text-left"> 
-		<div style="display: inline-block;text-align: left;margin-left: 32px;">
-			<div class='clearfix'></div>
-			<span class="thishead">Repositories</span>
-			<br>
-			<a style='text-decoration: none;' href='https://faltucoder.blogspot.com' target='_blank'><span class="namehead">All Project Repositories</span></a>
-			<br>
-			<p class="parentdetail">
-				<b>All the projects that I've been worked on...</b><br/>
-				
-				<!-- Search Box -->
-				<input type="text" class="form-control" id="searchBox" placeholder="Search repositories..." oninput="filterRepos()">
-
-				<!-- Repository List -->
-				<div class="scrolldiv">
-					<ul id="repoList"></ul>
-				</div>
-				
-			
-				<script>
-					const username = "tawsiftorabi";
-					const apiUrl = `https://api.github.com/users/${username}/repos?per_page=50`;
-			
-					// Fetch the repositories
-					fetch(apiUrl)
-						.then(response => {
-							if (!response.ok) {
-								throw new Error('Network response was not ok');
-							}
-							return response.json();
-						})
-						.then(repos => {
-							const repoList = document.getElementById('repoList');
-			
-							// Display the repositories
-							repos.forEach(repo => {
-								const listItem = document.createElement('li');
-								listItem.textContent = repo.name;  // Use textContent to easily search/filter
-								listItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description || 'No description'}`;
-								repoList.appendChild(listItem);
-							});
-						})
-						.catch(error => console.error('Error fetching repositories:', error));
-			
-					// Function to filter the repositories based on the search input
-					function filterRepos() {
-						const searchQuery = document.getElementById('searchBox').value.toLowerCase();
-						const repoItems = document.querySelectorAll('#repoList li');
-			
-						repoItems.forEach(item => {
-							const repoName = item.textContent.toLowerCase();
-							if (repoName.includes(searchQuery)) {
-								item.style.display = ''; // Show the item
-							} else {
-								item.style.display = 'none'; // Hide the item
-							}
-						});
-					}
-				</script>
-			</p>
-		</div>
-    </div>
-</div>
-
-<div class="clearfix"></div>
- 
-<!-- Footer -->
-<footer class="footersec container-fluid">
-  <div class="row"> 
-	<div class="col-sm-3" style="margin-left: 48px;">
-		<h3>Contact</h3>
-		<b>Gazi Tawsif Turabi</b></br>
-		<b>Phone:</b> +880 186 2930 437</br>
-		<b>E-mail:</b> tawsiftorabi.jr@gmail.com
-		<div class="footsoc">
-			<a class="footsoc" href="https://facebook.com/tawsif.torabi"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-			<a class="footsoc" href="https://twitter.com/tawsiftorabi"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-			<a class="footsoc" href="https://youtube.com/amazingvangari"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-			<a class="footsoc" href="https://github.com/tawsiftorabi"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-			<a class="footsoc" href="https://www.linkedin.com/in/tawsiftorabi/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-		</div>
-		<div class="clearfix"></div>
-		</br>
-    </div>
-
-	<div class="col-sm-5">
-		<center>
-		<div class="clearfix"></div>
-		<small>Developed with&nbsp;<i style="transform: rotate(0deg);color: #3fb1df;" class="fa fa-heart" aria-hidden="true"></i> by <a href='https://fb.com/tawsif.torabi' target='_blank'>Tawsif Torabi</a></small>					
-		<div class="clearfix"></div>
-		<div class="footnav">
-			<small>
-				Web Technologies and Libraries Used:</br>
-				<a href='https://fonts.google.com' target='_blank'>Google Fonts</a> | 
-				<a href='https://fontawesome.com/' target='_blank'>Font Awesome</a> | 
-				<a href='https://github.com/TawsifTorabi/AurnaLightbox' target='_blank'>Aurna LightBox</a> |
-				Bootstrap |
-				Jquery
-			</small>
-		</div>	
-		<div class="footnav">
-			<a href='https://pages.github.com/' target='_blank'>
-				Hosted on  <i class="fa fa-github" aria-hidden="true"></i> Github Pages
-			</a>
-		</div>						
-		<div class="clearfix"></div>
-		<a class="btn usersc" style="font-size: 15px; font-family: unset;" onclick="topFunction()">
-			Back to Top <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
-		</a>
-		</br>
-		</center>
-    </div>
-
-	<div class="col-sm-3">
-		My Other Blogs 📚</br>
-		<ul style="list-style: none; margin-left: -39px;">
-			<li>
-				<i class="fa fa-rss-square" aria-hidden="true"></i> 
-				<b><a target="_blank" href="https://faltucoder.blogspot.com">Faltu Coder</a></b>
-			</li>
-			<li>
-				<i class="fa fa-rss-square" aria-hidden="true"></i> 
-				<b><a target="_blank" href="https://amazingvangari.blogspot.com">Vangari Blog</a></b>
-			</li>
-			<li>
-				<i class="fa fa-rss-square" aria-hidden="true"></i> 
-				<b><a target="_blank" href="https://tawsiftorabi.blogspot.com">Personal Blog</a></b>
-			</li>
-    </div>
-	
-
-  </div>
-</footer>
-<!-- Footer Ends -->
-	
-<!-- Back to Top -->
-<i onclick="topFunction()" id="BTT" title="Go to top" class="fa fa-chevron-circle-up" aria-hidden="true"></i>
-<script>
-	//W3Schools
-	//Get the button
-	var mybutton = document.getElementById("BTT");
-	// When the user scrolls down 20px from the top of the document, show the button
-	window.onscroll = function() {scrollFunction()};
-	function scrollFunction() {
-	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		mybutton.style.display = "block";
-	  } else {
-		mybutton.style.display = "none";
-	  }
-	}
-	// When the user clicks on the button, scroll to the top of the document
-	function topFunction() {
-	  document.body.scrollTop = 0;
-	  document.documentElement.scrollTop = 0;
-	}
-
-	loaded();
+  function filterRepos() {
+    const q = (document.getElementById('searchBox').value || '').toLowerCase();
+    const filtered = fetchedRepos.filter(r => {
+      const name = (r.name || '').toLowerCase();
+      const desc = (r.description || '').toLowerCase();
+      const lang = (r.language || '').toLowerCase();
+      return name.includes(q) || desc.includes(q) || lang.includes(q);
+    });
+    renderRepos(filtered);
+  }
 </script>
-<!-- Back to top Ends -->
 
 </body>
 </html>
