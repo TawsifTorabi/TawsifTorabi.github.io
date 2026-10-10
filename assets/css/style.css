@@ -219,8 +219,6 @@ a:hover {
 [data-theme="dark"] .loaderSVG {
   filter: brightness(0) invert(1);
 }
-  50% { opacity: 1; transform: scale(1.02); }
-}
 
 /* --- Navigation Bar --- */
 .site-nav {
